@@ -1,4 +1,4 @@
-import numpy
+import numpy as np
 import random
 from numpy import arange
 from sklearn import metrics
