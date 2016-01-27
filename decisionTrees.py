@@ -37,62 +37,11 @@ def number_encode_features(df):
     return result, encoders
 
 
-def ImportSparse(datasetname, settype='train', binary_formatted_input_file=False, numcols=[]):
-        ds = []
-        load_start_time = time.time()
-        print("filename:%s" % datasetname)
-        with open(datasetname, 'r') as readfile:
-            for line in readfile:
-                print("line:%s" % line)
-                if line == 1 or line == -1:
-                    item_to_append = line
-                else:
-                    item_to_append = line.split(' ')[:-2]
-                # print(len(item_to_append))
-                ds.append(item_to_append)
-        i = 0
-        rows, cols, vals = [], [], []
-        for d in ds:
-            # print("d:%s" %d)
-            for loc in d:
-                print("loc:%s" %loc)
-                rows.append(int(i))
-                if binary_formatted_input_file:
-                    cols.append(int(loc))
-                    vals.append(int(1))
-                else:
-                    entry = loc.split(':')
-                    cols.append(int(entry[0]))
-                    vals.append(int(entry[1]))
-            i += 1
-        if numcols == []: numcols = max(cols) + 1
-        # print('\n' + 'Used {0:.3f} '.format((time.time() - load_start_time)) + \
-        #       'seconds to load one part of the ' + datasetname + \
-        #       ' data into a sparse matrix format prior to inflating.')
-        print("shape  of dexter %s data:%s,%s" %(settype, i, numcols))
-        return csc_matrix((vals, (rows, cols)), shape=(i, numcols))
-
-
-def sparsedataload(data_set_name, train_test_validate_designation, data_file_extension, native_binary=True):
-        print("datatype:%s" % data_file_extension)
-        data_file_name = "datasets/mldata/" + data_set_name + '_' + train_test_validate_designation + '.' + data_file_extension
-        if native_binary:
-            loaded_sparse_data = ImportSparse(data_file_name,
-                                              settype=train_test_validate_designation,
-                                              binary_formatted_input_file=True)
-        else:
-            loaded_sparse_data = ImportSparse(data_file_name, settype=train_test_validate_designation)
-        return csc_matrix.todense(loaded_sparse_data)
-
-
 def load_data(dataset, data_type="train"):
-
+    print()
     if dataset == "dexter":
         print("Dataset %s selected" % dataset)
-        data_set_name_to_use = 'dexter'
-        data_set_name_to_save = 'Dexter'
-        train_data = sparsedataload(data_set_name_to_use, data_type, 'data', native_binary=False)
-        train_label = sparsedataload(data_set_name_to_use, data_type, 'labels', native_binary=True)
+
         print("Finished Loading Data")
 
     elif dataset == "mnist":
@@ -107,12 +56,12 @@ def load_data(dataset, data_type="train"):
         original_data = pd.read_csv(
             "datasets/mldata/adult (copy).data",
             names=[
-                    "Age", "Workclass", "fnlwgt", "Education", "Education-Num", "Martial Status",
-                    "Occupation", "Relationship", "Race", "Sex", "Capital Gain", "Capital Loss",
-                    "Hours per week", "Country", "Target"],
-                    sep=r'\s*,\s*',
-                    engine='python',
-                    na_values="?")
+                "Age", "Workclass", "fnlwgt", "Education", "Education-Num", "Martial Status",
+                "Occupation", "Relationship", "Race", "Sex", "Capital Gain", "Capital Loss",
+                "Hours per week", "Country", "Target"],
+            sep=r'\s*,\s*',
+            engine='python',
+            na_values="?")
         # Calculate the correlation and plot it
         encoded_data, encoders = number_encode_features(original_data)
         train_data = encoded_data[encoded_data.columns.difference(["Target"])]
@@ -135,50 +84,53 @@ def load_data(dataset, data_type="train"):
         sys.exit()
 
     # print(train_data[0])
-    print("Dimensions of data are %s,%s" %(train_data.shape[0], train_data.shape[1]))
+    print("Dimensions of data are %s,%s" % (train_data.shape[0], train_data.shape[1]))
     # sys.exit()
     return train_data, train_label
 
 
-def run():
-    print("start")
+def run(dataset):
 
-    # Define training and testing sets
+    num_runs = 50
     random.seed(0)
+
+    # datasize in percentage
     data_size = 90
-    training_size = list()
-    training_time = list()
-    dataset = "adult"
+
     train_data, train_label = load_data(dataset)
-    # print(train_data[0:10])
     x_runtime_train = np.zeros((data_size, 2))
     y_runtime_train = np.zeros((data_size, 1))
-    for ts in range(1, data_size + 1, 1):
-        tr_s = ts/100.0
-        x_train, x_test, y_train, y_test = train_test_split(train_data,
-                                                            train_label,
-                                                            train_size=tr_s, random_state=42)
-        # print("train_ratio:", tr_s, " length of training data:", len(x_train))
 
-        clf = tree.DecisionTreeClassifier()
+    for i in range(num_runs):
+        for ts in range(1, data_size + 1, 1):
+            tr_s = ts / 100.0
+            x_train, x_test, y_train, y_test = train_test_split(train_data,
+                                                                train_label,
+                                                                train_size=tr_s, random_state=42)
+            # print("train_ratio:", tr_s, " length of training data:", len(x_train))
 
-        start_time = time.time()
-        clf = clf.fit(x_train, y_train)
-        end_time = time.time()
-        training_size.append(tr_s)
-        training_time.append(end_time - start_time)
-        print("time taken:", end_time - start_time)
-        x_runtime_train[ts - 1] = [x_train.shape[0], x_train.shape[1]]
-        y_runtime_train[ts - 1] = [end_time - start_time]
+            clf = tree.DecisionTreeClassifier()
+
+            start_time = time.time()
+            clf = clf.fit(x_train, y_train)
+            end_time = time.time()
+            time_taken = end_time - start_time
+            print("run:", i, " %data:", tr_s, " time taken:", time_taken, " datasize:", x_train.shape[0], x_train.shape[1])
+
+            x_runtime_train[ts - 1] = [x_train.shape[0], x_train.shape[1]]
+            y_runtime_train[ts - 1] = [time_taken]
+
+    # take average of runtimes
+    y_runtime_train /= num_runs
 
     plt.xlabel("% training data")
     plt.ylabel("Time/s")
     plt.title("Time taken to train data")
-    plt.plot(training_size, training_time)
-    plt.savefig('DT time ' + dataset + '.png')
+    plt.plot(np.array([x for x in range(1, data_size + 1, 1)]) / 100.0, y_runtime_train)
+    plt.savefig('DT time ' + dataset + ' ' + str(num_runs) + ' runs.png')
 
-    # np.savetxt("x_runtime_train_c.np", x_runtime_train, fmt="%0.4f")
-    # np.savetxt("y_runtime_train_c.np", y_runtime_train, fmt="%0.4f")
+    np.savetxt("runtimes/x_runtime_train_" + dataset + ".np", x_runtime_train, fmt="%0.5f")
+    np.savetxt("runtimes/y_runtime_train_" + dataset + ".np", y_runtime_train, fmt="%0.5f")
 
     print("end")
 
@@ -195,8 +147,8 @@ def single_run():
     train_data, train_label = load_data(dataset, "train")
 
     x_train, x_test, y_train, y_test = train_test_split(train_data,
-                                                            train_label,
-                                                            train_size=.9, random_state=42)
+                                                        train_label,
+                                                        train_size=.9, random_state=42)
 
     print("length of training data:", len(x_train))
     clf = tree.DecisionTreeClassifier()
@@ -214,10 +166,25 @@ def single_run():
     print("Accuracy:%s" % accuracy)
     print("end")
 
+
 if __name__ == "__main__":
     print("Project ORACLE\nSyed Mohsin Ali\n")
     # single_run()
-    run()
+    print("Please select Dataset by entering its numeric id:")
+    print("1:Mnist\n2:Covertype\n3:Adult\n4:Dexter")
+    id = input("Enter Dataset id:")
+    id = int(id)
+    if id == 1:
+        dataset = "mnist"
+    elif id == 2:
+        dataset = "covertype"
+    elif id == 3:
+        dataset = "adult"
+    elif id == 4:
+        dataset = "dexter"
+    else:
+        print("\nwrong id selected,exiting program")
+        sys.exit()
+
+    run(dataset)
     # run()
-
-

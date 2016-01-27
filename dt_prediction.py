@@ -1,3 +1,6 @@
+import os
+import re
+import sys
 import numpy as np
 import matplotlib.pyplot as plt
 from pymc3 import Model, Normal, HalfNormal
@@ -78,12 +81,45 @@ def mcmc_fit(x_runtime, y_runtime):
 
     print("\nmcmc_fit end")
 
-if __name__ == "__main__":
 
-    x_runtime = np.loadtxt("x_runtime_train_a.np")
-    y_runtime = np.loadtxt("y_runtime_train_a.np")
-    mcmc_fit(x_runtime, y_runtime)
-    print("plot saved in mcmc.png")
+def load_data():
+    name = next(os.walk(os.path.abspath("runtimes/")))[2]
+    names = list(set([x[16:-3] for x in name if re.search('np', x)]))
+    for i, j in enumerate(names):
+        print(i, ":", j)
+
+    ids = input("Enter data id:")
+    if re.search("[A-Za-z]", ids):
+        print("Error: Please enter id in numbers only")
+        sys.exit()
+    ids = int(ids)
+    if ids < 0 or ids >= len(names):
+        print("Wrong id: no data set with this id exist")
+        sys.exit()
+
+    files = [x for x in name if re.search("adult", x)]
+    print(files)
+
+    if len(files) != 2:
+        print("apparently one of files is missing, please investigate")
+        sys.exit()
+
+    x_path = os.path.join("runtimes/", list(filter(lambda x: x.startswith("x"), files))[0])
+    y_path = os.path.join("runtimes/", list(filter(lambda x: x.startswith("y"), files))[0])
+    print("Loading files:\n", x_path, y_path)
+    x_runtime = np.loadtxt(x_path)
+    y_runtime = np.loadtxt(y_path)
+
+    return x_runtime, y_runtime
+
+if __name__ == "__main__":
+    load_data()
+
+
+    # x_runtime =np.loadtxt("x_runtime_train_a.np")
+    # y_runtime = np.loadtxt("y_runtime_train_a.np")
+    # mcmc_fit(x_runtime, y_runtime)
+    # print("plot saved in mcmc.png")
 
     # percent_data = 10
     # train_size = x_runtime.shape[0]/percent_data
