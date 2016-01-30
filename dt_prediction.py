@@ -9,47 +9,42 @@ from pymc3 import NUTS, sample
 from scipy import optimize
 
 
-def likelihood_knlogn(w0, w1, k, n, base):
+def likelihood_knlogn(w0, w1, w2, k, n, base):
     n_mod = n ** 1
     k_mod = k ** 1
 
     if base == 1:
         val = w0 + w1 * (k_mod * n_mod * np.log(n))
     elif base == 2:
-        val = w0 + w1 * (k_mod * n_mod * np.log2(n))
+        val = w0 + w1 * (k_mod * n_mod * np.log2(n ** 2))
+        # val = w0 + w1 * (k_mod * n_mod * np.log2(n)) + w2 * (k_mod * n_mod ** 2 * np.log2(n))
     elif base == 10:
         val = w0 + w1 * (k_mod * n_mod * np.log10(n))
 
     return val
 
 
-def mcmc_fit(x_runtime, y_runtime, percent_data):
-    # true param values
-    alpha, sigma = 1, 1
-    beta = 3
-    print("training on %d percent data" % percent_data)
+# defining the model with given params
+def mcmc_model(parameters):
 
-    # variables
-    # length of runtime files is 90 (1% to 90% data)
-    x1_f = x_runtime[:, 1]
-    x2_f = x_runtime[:, 0]
-    x1 = x_runtime[:percent_data, 1]
-    x2 = x_runtime[:percent_data, 0]
-    y = y_runtime[:percent_data]
-    base = 2
+    x1 = parameters[0]
+    x2 = parameters[1]
+    y = parameters[2]
+    base = parameters[3]
 
-    # define MCMC model
     basic_model = Model()
     with basic_model:
 
         # Priors for unknown model params
         alpha = Normal('alpha', mu=0, sd=10)
         beta = Normal('beta', mu=0, sd=10, shape=1)
+        ceta = Normal('ceta', mu=0, sd=10, shape=1)
+
         sigma = HalfNormal('sigma', sd=1)
 
         # Expected value of outcome
         # mu = alpha + beta * (x1 * x2 ** 2 * np.log2(x2))
-        mu = likelihood_knlogn(alpha, beta, x1, x2, base)
+        mu = likelihood_knlogn(alpha, beta, ceta, x1, x2, base)
 
         # Likelihood of obs
         y_obs = Normal('Y_obs', mu=mu, sd=sigma, observed=y)
@@ -57,10 +52,14 @@ def mcmc_fit(x_runtime, y_runtime, percent_data):
         # obtain starting values via MAP
         start = find_MAP(fmin=optimize.fmin_powell)
 
-        # draw 2000 posterior samples
+        # draw posterior samples
         trace = sample(50, start=start)
 
-    # summary(trace)
+    return trace
+
+
+# predict values for y
+def mcmc_predict(trace, x1_f, x2_f, base):
     alpha = np.array(trace.get_values('alpha'))
     mu_alpha = np.average(alpha)
     std_alpha = 1 * np.std(alpha)
@@ -69,14 +68,29 @@ def mcmc_fit(x_runtime, y_runtime, percent_data):
     mu_beta = np.average(beta)
     std_beta = 1 * np.std(beta)
 
-    y_cal = likelihood_knlogn(mu_alpha, mu_beta, x1_f, x2_f, base)
-    y_cal_upper = likelihood_knlogn(mu_alpha + std_alpha, mu_beta + std_beta, x1_f, x2_f, base)
-    y_cal_lower = likelihood_knlogn(mu_alpha - std_alpha, mu_beta - std_beta, x1_f, x2_f, base)
+    ceta = np.array(trace.get_values('ceta'))
+    mu_ceta = np.average(ceta)
+    std_ceta = 1 * np.std(ceta)
 
-    sigma = np.array(trace.get_values('sigma'))
+    y_cal = likelihood_knlogn(mu_alpha, mu_beta, mu_ceta, x1_f, x2_f, base)
+    y_cal_upper = likelihood_knlogn(mu_alpha + std_alpha, mu_beta + std_beta, mu_ceta + std_ceta, x1_f, x2_f, base)
+    y_cal_lower = likelihood_knlogn(mu_alpha - std_alpha, mu_beta - std_beta, mu_ceta - std_ceta, x1_f, x2_f, base)
 
-    print("\nmcmc_fit end")
-    return [y_cal, y_cal_upper, y_cal_lower, percent_data]
+    return y_cal, y_cal_upper, y_cal_lower
+
+
+def mcmc_fit(xdata, ytime, size):
+
+    base = 2
+    print("training on %d percent data" % size)
+
+    params = [xdata[:size, 1], ytime[:size, 0], ytime[:size], base]
+
+    # creating mcmc model
+    trace = mcmc_model(params)
+
+    # [y_cal, y_cal_upper, y_cal_lower, size]
+    return trace
 
 
 def plot(x, y, y_calculated, data_name):
@@ -131,15 +145,34 @@ if __name__ == "__main__":
     # find and load data files
     x_data, y_data, data_name = load_data()
 
-    a = 2
+    # x_runtime = x_data
+    # y_runtime = y_data
+    # for testing only (refactor later)
+    data_name = "gisette"
+    x_runtime = np.loadtxt("runtimes/x_runtime_train_" + data_name + ".np")
+    y_runtime = np.loadtxt("runtimes/y_runtime_train_" + data_name + ".np")
+
+    x1_f = x_runtime[:, 1]
+    x2_f = x_runtime[:, 0]
+    base = 2
+
+    a = 6
     y_calculated = list()
-    for i in range(10):
+    for i in range(1):
+        # size of data used for training
         a = int(a * 1.5)
+        a = 25
+
         # find samples using mcmc
-        y_calculated.append(mcmc_fit(x_data, y_data, a))
+        # learn on x_data
+        trace = mcmc_fit(x_data, y_data, a)
+
+        # predict on data_name
+        y_cal, y_cal_upper, y_cal_lower = mcmc_predict(trace, x1_f, x2_f, base)
+        y_calculated.append([y_cal, y_cal_upper, y_cal_lower, a])
 
     # plot data
-    plot(x_data[:, 0], y_data, y_calculated, data_name)
+    plot(x2_f, y_runtime, y_calculated, data_name)
 
 
 

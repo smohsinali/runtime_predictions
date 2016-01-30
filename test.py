@@ -1,9 +1,13 @@
 files = ["xdsf", "ysdfaf"]
-y = list(filter(lambda x : x.startswith("y"), files))
-print(y[0])
-x = [[1,2], [2,3]]
-for i in x:
-    print(i)
+for i in range(3):
+    for t in range(5):
+        for k in range(2):
+            print(5 * 2 * i + (2 * t + k))
+# y = list(filter(lambda x : x.startswith("y"), files))
+# print(y[0])
+# x = [[1,2], [2,3]]
+# for i in x:
+#     print(i)
 # import numpy as np
 # from scipy.sparse import csr_matrix
 #
