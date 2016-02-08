@@ -124,10 +124,10 @@ def run(data_sets, data_name):
     num_runs = int(num_runs)
 
     # datasize in percentage
-    data_size = 90
+    data_size = 1
     total_data_size = data_size * num_runs * len(data_sets)
     print("total data size:%d" % total_data_size)
-    x_runtime_train = np.zeros((total_data_size, 2))
+    x_runtime_train = np.zeros((total_data_size, 4))
     y_runtime_train = np.zeros((total_data_size, 1))
 
     for d_num, data in enumerate(data_sets):
@@ -144,7 +144,7 @@ def run(data_sets, data_name):
 
                 start_time = time.process_time()
                 # time_taken = timeit.timeit(clf.fit(x_train, y_train))
-                # clf = clf.fit(x_train, y_train)
+                clf = clf.fit(x_train, y_train)
                 end_time = time.process_time()
                 time_taken = end_time - start_time
 
@@ -152,8 +152,9 @@ def run(data_sets, data_name):
                 # y_runtime_train[ts - 1] += time_taken
                 index = num_runs * data_size * d_num + (data_size * i + (ts - 1))
                 print("index", index, "data:", data, " run:", i, " %data:", tr_s, " time taken:", time_taken,
-                      " datasize:", x_train.shape[0], x_train.shape[1])
-                x_runtime_train[index] = [x_train.shape[0], x_train.shape[1]]
+                      " datasize:", x_train.shape[0], x_train.shape[1],
+                      " depth:", clf.tree_.max_depth, " # of nodes:", clf.tree_.node_count)
+                x_runtime_train[index] = [x_train.shape[0], x_train.shape[1], clf.tree_.max_depth, clf.tree_.node_count]
                 y_runtime_train[index] = time_taken
 
     # take average of runtimes
@@ -165,8 +166,8 @@ def run(data_sets, data_name):
     # plt.plot(np.array([x for x in range(1, total_data_size + 1, 1)]) / 100.0, y_runtime_train)
     plt.savefig('results/DT time ' + data_name + ' ' + str(num_runs) + ' runs.png')
 
-    np.savetxt("runtimes/x_runtime_train_" + data_name + ".np", x_runtime_train)
-    np.savetxt("runtimes/y_runtime_train_" + data_name + ".np", y_runtime_train)
+    np.savetxt("runtimes/x_runtime_train_" + data_name + ".np", x_runtime_train, fmt="%0.1f")
+    np.savetxt("runtimes/y_runtime_train_" + data_name + ".np", y_runtime_train, fmt="%0.5f")
     # np.savetxt("runtimes/y_runtime_train_" + dataset + ".np", y_runtime_train, fmt="%0.5f")
 
     print("end")
@@ -184,6 +185,8 @@ if __name__ == "__main__":
           "6:Mnist, Covertype and Gisette\n"
           "7:Mnist, Adult and Gisette\n"
           "8:Covertype, Adult and Gisette\n"
+          "9:Covertype, Adult, Gisette and Mnist\n"
+
           )
     ids = input("Enter Dataset id:")
     ids = int(ids)
@@ -201,7 +204,7 @@ if __name__ == "__main__":
         dataname = "gisette"
     elif ids == 5:
         datasets = ["mnist", "covertype", "adult"]
-        dataname = "mcs"
+        dataname = "mca"
     elif ids == 6:
         datasets = ["mnist", "covertype", "gisette"]
         dataname = "mcg"
@@ -211,6 +214,9 @@ if __name__ == "__main__":
     elif ids == 8:
         datasets = ["covertype", "adult", "gisette"]
         dataname = "cag"
+    elif ids == 9:
+        datasets = ["covertype", "adult", "gisette", "mnist"]
+        dataname = "cagm"
     else:
         print("\nwrong id selected,exiting program")
         sys.exit()
