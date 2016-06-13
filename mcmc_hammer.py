@@ -1,66 +1,53 @@
-#!/usr/bin/env python
-"""
-Sample code for sampling a multivariate Gaussian using emcee.
-"""
-
-from __future__ import print_function
-import numpy as np
 import emcee
+import corner
+import numpy as np
+import scipy.optimize as op
+import matplotlib.pyplot as pl
+from matplotlib.ticker import MaxNLocator
 
 
-# First, define the probability distribution that you would like to sample.
-def lnprob(x, mu, icov):
-    diff = x - mu
-    return -np.dot(diff, np.dot(icov, diff)) / 2.0
+def lnprior(theta):
+    m, b, lnf = theta
+    if -5.0 < m < 0.5 and 0.0 < b < 10.0 and -10.0 < lnf < 1.0:
+        return 0.0
+    return -np.inf
 
 
-# We'll sample a 50-dimensional Gaussian...
-ndim = 50
-# ...with randomly chosen mean position...
-means = np.random.rand(ndim)
-# ...and a positive definite, non-trivial covariance matrix.
-cov = 0.5 - np.random.rand(ndim ** 2).reshape((ndim, ndim))
-cov = np.triu(cov)
-cov += cov.T - np.diag(cov.diagonal())
-cov = np.dot(cov, cov)
+def likelihood_knlogn(theta, x, y, equation, yerr):
 
-# Invert the covariance matrix first.
-icov = np.linalg.inv(cov)
+    w, lnf = theta
+    n, k = x
 
-# We'll sample with 250 walkers.
-nwalkers = 250
+    if equation == 1:
+        n_log = np.log(n) ** 2
+        n_mod = n
+        model = w[0] + w[1] * (k * n_mod * n_log)
+        inv_sigma2 = 1.0/(yerr**2 + model**2*np.exp(2*lnf))
 
-# Choose an initial set of positions for the walkers.
-p0 = [np.random.rand(ndim) for i in range(nwalkers)]
+        return -0.5*(np.sum((y-model)**2*inv_sigma2 - np.log(inv_sigma2)))
 
-# Initialize the sampler with the chosen specs.
-sampler = emcee.EnsembleSampler(nwalkers, ndim, lnprob, args=[means, icov])
+    return 0
 
-# Run 100 steps as a burn-in.
-pos, prob, state = sampler.run_mcmc(p0, 100)
 
-# Reset the chain to remove the burn-in samples.
-sampler.reset()
+def lnprob(theta, x, y, yerr):
+    lp = lnprior(theta)
+    if not np.isfinite(lp):
+        return -np.inf
+    return lp + likelihood_knlogn(theta, x, y, yerr)
 
-# Starting from the final position in the burn-in chain, sample for 1000
-# steps.
-sampler.run_mcmc(pos, 1000, rstate0=state)
 
-# Print out the mean acceptance fraction. In general, acceptance_fraction
-# has an entry for each walker so, in this case, it is a 250-dimensional
-# vector.
-print("Mean acceptance fraction:", np.mean(sampler.acceptance_fraction))
+def ml(x, y):
+    m_true = b_true = f_true = 1
+    chi2 = lambda *args: -2 * likelihood_knlogn(*args)
+    result = op.minimize(chi2, [m_true, b_true, np.log(f_true)], args=(x, y, yerr))
+    m_ml, b_ml, lnf_ml = result["x"]
+    print("""Maximum likelihood result:
+        m = {0} (truth: {1})
+        b = {2} (truth: {3})
+        f = {4} (truth: {5})
+    """.format(m_ml, m_true, b_ml, b_true, np.exp(lnf_ml), f_true))
 
-# Estimate the integrated autocorrelation time for the time series in each
-# parameter.
-print("Autocorrelation time:", sampler.get_autocorr_time())
 
-# Finally, you can plot the projected histograms of the samples using
-# matplotlib as follows (as long as you have it installed).
-try:
-    import matplotlib.pyplot as pl
-except ImportError:
-    print("Try installing matplotlib to generate some sweet plots...")
-else:
-    pl.hist(sampler.flatchain[:, 0], 100)
-    pl.savefig("mcmc_hammer.png")
+
+
+

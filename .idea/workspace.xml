@@ -4,773 +4,40 @@
     <bookmark url="file://$PROJECT_DIR$/dt_prediction.py" line="36" mnemonic="0" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7f63254-29fd-48f3-bbc3-4e9800dff0ab" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/1/kw0+w1knlogn**2 nuts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/1/mc_adult_pred_b2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/1/mc_covertype_pred_b2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/1/mc_mnist_pred_b2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/1/mc_mnist_pred_b2_old.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/2/mc_adult_pred_b2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/2/mc_covertype_pred_b2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/2/mc_mnist_pred_b2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/3/kw0+w1knlogn**2 metropolis" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/3/mc_adult_pred_b2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/3/mc_covertype_pred_b2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/3/mc_gisette_pred_b2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/3/mc_mnist_pred_b2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/3/mcmc_adult.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/3/mcmc_covertype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/3/mcmc_gisette.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/3/mcmc_mnist.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/4/kw0+w1knlogn**2 mh NHN" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/4/mc_adult_pred_hn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/4/mc_adult_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/4/mc_covertype_pred_hn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/4/mc_covertype_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/4/mc_gisette_pred_hn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/4/mc_gisette_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/4/mc_mnist_pred_hn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/4/mc_mnist_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/4/mcmc_adultHN.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/4/mcmc_adultN.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/4/mcmc_covertypeHN.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/4/mcmc_covertypeN.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/4/mcmc_gisetteHN.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/4/mcmc_gisetteN.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/4/mcmc_mnistHN.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/4/mcmc_mnistN.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_1020_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_1050_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_1069_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_1119_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_1134_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_1146_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_16_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_179_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_184_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_26_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_300_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_389_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_38_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_398_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_720_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_734_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_752_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_806_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_823_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_847_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_897_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_913_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_953_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_976_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/mc_993_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5(sparse included)/model.pickle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/adult/mcmc_adult.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/adult/mcmc_adult1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/adult/mcmc_adult2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/adult/mcmc_adult3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/adult/mcmc_adult4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/adult/mcmc_adult5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/adult/mcmc_adult6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/b4 frank meeting/DT time cagm 1 runs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/b4 frank meeting/DT time mca 3 runs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/b4 frank meeting/depth_Gisette.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/b4 frank meeting/depth_covertype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/b4 frank meeting/depth_mnist.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/b4 frank meeting/mc_gisette10_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/b4 frank meeting/mc_gisette10_pred_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/b4 frank meeting/mc_mnist_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/b4 frank meeting/mc_mnist_pred_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/b4 frank meeting/mcmc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/b4 frank meeting/mcmc_gis28.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/b4 frank meeting/mcmc_gis42.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/ceta/mc_adult_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/ceta/mc_adult_pred_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/ceta/mc_covertype_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/ceta/mc_covertype_pred_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/ceta/mc_gisette10_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/ceta/mc_gisette10_pred_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/ceta/mc_mnist_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/ceta/mc_mnist_pred_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/ceta/mcmc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/ceta/mcmc_gis28.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/ceta/mcmc_gis42.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/ceta/mcmc_mnist19.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/diff data sizes/mc_covertype_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/diff data sizes/mc_covertype_pred1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/diff data sizes/mc_covertype_pred2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/diff data sizes/mc_mnist_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/diff data sizes/mc_mnist_pred1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/DT time adult 50 runs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/DT time cag 10 runs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/DT time covertype 50 runs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/DT time dexter 10000 runs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/DT time gissete 5 runs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/DT time mag 10 runs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/DT time mag 2 runs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/DT time mcs 10 runs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/DT time mnist 20 runs.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/mc_adult_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/mc_covertype_pred using adult.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/mc_covertype_pred using dexter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/mc_covertype_pred using mnist.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/mc_covertype_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/mc_dexter_pred using covertype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/mc_dexter_predusing adult.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/mc_gisette_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/mc_mnist_pred using covertype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/mc_mnist_pred using dexter.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/mc_mnist_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/mc_mnist_pred_slice.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/feb 6/mc_mnist_pred_traintestsplit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/final raw predictions/mc_adult_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/final raw predictions/mc_adult_pred_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/final raw predictions/mc_covertype_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/final raw predictions/mc_covertype_pred_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/final raw predictions/mc_gisette10_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/final raw predictions/mc_gisette10_pred_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/final raw predictions/mc_mnist_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/final raw predictions/mc_mnist_pred_1000samples.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/final raw predictions/mc_mnist_pred_1000samples_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/final raw predictions/mc_mnist_pred_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/final raw predictions/mcmc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/n1.2/mc_adult_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/n1.2/mc_covertype_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/n1.2/mc_dexter_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/n1.2/mc_mnist_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/n1/mc_adult_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/n1/mc_covertype_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/n1/mc_dexter_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/n1/mc_mnist_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/old/DT time adult.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/old/DT time covertype.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/old/DT time mnist.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/old/mc_adult.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/old/mc_adult_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/old/mc_cover.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/old/mc_cover_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/old/mc_mnist.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/old/mc_mnist_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/old/mcmc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/prediction tts/mc_adult_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/prediction tts/mc_adult_pred_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/prediction tts/mc_covertype_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/prediction tts/mc_covertype_pred_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/prediction tts/mc_gisette10_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/prediction tts/mc_gisette10_pred_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/prediction tts/mc_mnist_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/prediction tts/mc_mnist_pred_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/prediction tts/mcmc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/unknown 27apr/mc_covertype_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/unknown 27apr/mc_covertype_pred_wo2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/unknown 27apr/mc_gisette10_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/unknown 27apr/mc_gisette10_pred_wo2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/unknown 27apr/mc_mnist_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/unknown 27apr/mc_mnist_pred_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/unknown 27apr/mc_mnist_pred_wo2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/unknown 27apr/mc_mnist_pred_wo2ceta.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/using multiple datasets cag/mc_covertype_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/using multiple datasets cag/mc_covertype_pred_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/using multiple datasets cag/mc_gisette10_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/using multiple datasets cag/mc_gisette10_pred_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/using multiple datasets cag/mc_mnist_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/using multiple datasets cag/mc_mnist_pred_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/usnig multiple datasets mcg/mc_adult_pred_ceta.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/usnig multiple datasets mcg/mc_adult_pred_ceta_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/usnig multiple datasets mcg/mc_covertype_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/usnig multiple datasets mcg/mc_covertype_pred_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/usnig multiple datasets mcg/mc_gisette10_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/usnig multiple datasets mcg/mc_gisette10_pred_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/usnig multiple datasets mcg/mc_mnist_pred.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/usnig multiple datasets mcg/mc_mnist_pred_ceta.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/usnig multiple datasets mcg/mc_mnist_pred_ceta_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/usnig multiple datasets mcg/mc_mnist_pred_highres.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/before 14mai/usnig multiple datasets mcg/mcmc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_1002_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_1040_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_1056_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_1111_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_1120_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_1139_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_1166_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_185_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_18_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_26_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_36_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_3_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_60_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_720_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_734_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_741_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_761_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_806_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_822_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_845_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_871_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_910_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_923_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_962_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mc_979_bac__dt_pred_n.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/mcmc_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/model1.pickle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sgd_features.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1000_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1018_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1019_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1020_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1021_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1036_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1041_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1049_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1050_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1053_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1067_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1068_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1069_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1112_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1114_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1116_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1119_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1128_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1130_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1134_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1138_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1142_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1146_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1161_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_12_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_14_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_16_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_179_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_180_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_181_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_182_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_184_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_21_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_22_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_23_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_24_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_28_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_300_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_30_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_31_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_32_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_38_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_44_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_46_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_554_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_57_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_679_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_6_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_715_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_718_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_722_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_723_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_727_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_728_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_735_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_737_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_740_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_743_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_751_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_752_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_772_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_797_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_799_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_803_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_807_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_813_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_816_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_819_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_821_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_823_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_833_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_837_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_843_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_846_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_847_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_849_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_866_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_881_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_897_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_901_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_903_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_904_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_912_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_913_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_914_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_917_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_930_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_934_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_953_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_958_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_959_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_966_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_971_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_976_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_977_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_978_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_980_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_991_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_993_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_995_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_sparse/results_273_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_sparse/results_293_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_sparse/results_351_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_sparse/results_354_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_sparse/results_357_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_sparse/results_389_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_sparse/results_390_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_sparse/results_391_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_sparse/results_392_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_sparse/results_393_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_sparse/results_395_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_sparse/results_396_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_sparse/results_398_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_sparse/results_399_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_sparse/results_401_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_1002_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_1040_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_1056_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_1111_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_1120_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_1139_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_1166_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_185_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_18_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_26_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_36_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_3_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_60_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_720_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_734_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_741_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_761_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_806_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_822_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_845_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_871_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_910_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_923_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_962_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data_test/results_979_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dt_prediction_hammer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mcmc.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mcmc_eg.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mcmc_hammer.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/old_code_snippets.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plotAll.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_cag.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_cagm.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_gisette.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_gisette_bu.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_mca.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_mcg.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_mcg_bu (copy).np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_mcg_bu.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_mcgg.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_mcggg.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_mnistt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/old_17mai/y_runtime_train_cag.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/old_17mai/y_runtime_train_cagm.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/old_17mai/y_runtime_train_gisette.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/old_17mai/y_runtime_train_gisette_bu.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/old_17mai/y_runtime_train_mca.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/old_17mai/y_runtime_train_mcg.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/old_17mai/y_runtime_train_mcg_bu.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/old_17mai/y_runtime_train_mcgg.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/old_17mai/y_runtime_train_mcggg.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/old_17mai/y_runtime_train_mnistt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_1002_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_1040_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_1056_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_1111_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_1120_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_1139_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_1166_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_185_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_18_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_26_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_36_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_3_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_60_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_720_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_734_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_741_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_761_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_806_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_822_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_845_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_871_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_910_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_923_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_962_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/x_runtime_train_979_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_1002_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_1040_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_1056_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_1111_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_1120_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_1139_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_1166_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_185_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_18_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_26_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_36_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_3_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_60_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_720_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_734_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_741_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_761_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_806_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_822_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_845_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_871_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_910_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_923_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_962_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/y_runtime_train_979_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1000_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1018_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1019_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1020_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1021_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1036_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1041_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1049_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1050_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1053_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1067_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1068_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1069_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1112_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1114_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1116_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1119_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1128_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1130_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1134_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1138_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1142_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1146_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_1161_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_12_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_14_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_16_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_179_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_180_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_181_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_182_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_184_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_21_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_22_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_23_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_24_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_28_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_300_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_30_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_31_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_32_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_38_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_44_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_46_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_554_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_57_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_679_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_6_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_715_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_718_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_722_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_723_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_727_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_728_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_735_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_737_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_740_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_743_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_751_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_752_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_772_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_797_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_799_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_803_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_807_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_813_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_816_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_819_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_821_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_823_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_833_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_837_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_843_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_846_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_847_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_849_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_866_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_881_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_897_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_901_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_903_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_904_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_912_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_913_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_914_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_917_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_930_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_934_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_953_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_958_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_959_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_966_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_971_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_976_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_977_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_978_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_980_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_991_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_993_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/x_runtime_train_995_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1000_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1018_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1019_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1020_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1021_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1036_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1041_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1049_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1050_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1053_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1067_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1068_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1069_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1112_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1114_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1116_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1119_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1128_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1130_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1134_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1138_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1142_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1146_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_1161_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_12_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_14_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_16_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_179_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_180_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_181_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_182_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_184_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_21_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_22_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_23_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_24_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_28_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_300_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_30_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_31_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_32_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_38_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_44_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_46_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_554_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_57_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_679_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_6_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_715_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_718_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_722_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_723_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_727_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_728_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_735_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_737_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_740_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_743_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_751_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_752_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_772_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_797_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_799_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_803_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_807_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_813_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_816_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_819_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_821_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_823_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_833_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_837_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_843_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_846_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_847_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_849_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_866_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_881_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_897_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_901_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_903_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_904_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_912_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_913_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_914_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_917_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_930_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_934_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_953_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_958_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_959_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_966_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_971_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_976_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_977_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_978_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_980_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_991_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_993_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/train/y_runtime_train_995_bac__dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/x_runtime_train_allTest.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/x_runtime_train_allTrain.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/y_runtime_train_allTest.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/y_runtime_train_allTrain.np" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/covertype.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/depth_Gisette.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/depth_covertype.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/depth_mnist.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mcmc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mcmc_gis28.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mcmc_gis42.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mnist.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/DT time cagm 1 runs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/DT time mca 3 runs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/ceta/mc_adult_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/ceta/mc_adult_pred_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/ceta/mc_covertype_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/ceta/mc_covertype_pred_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/ceta/mc_gisette10_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/ceta/mc_gisette10_pred_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/ceta/mc_mnist_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/ceta/mc_mnist_pred_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/ceta/mcmc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/ceta/mcmc_gis28.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/ceta/mcmc_gis42.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/ceta/mcmc_mnist19.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/diff data sizes/mc_covertype_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/diff data sizes/mc_covertype_pred1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/diff data sizes/mc_covertype_pred2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/diff data sizes/mc_mnist_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/diff data sizes/mc_mnist_pred1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/DT time adult 50 runs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/DT time cag 10 runs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/DT time covertype 50 runs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/DT time dexter 10000 runs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/DT time gissete 5 runs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/DT time mag 10 runs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/DT time mag 2 runs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/DT time mcs 10 runs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/DT time mnist 20 runs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/mc_adult_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/mc_covertype_pred using adult.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/mc_covertype_pred using dexter.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/mc_covertype_pred using mnist.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/mc_covertype_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/mc_dexter_pred using covertype.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/mc_dexter_predusing adult.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/mc_gisette_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/mc_mnist_pred using covertype.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/mc_mnist_pred using dexter.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/mc_mnist_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/mc_mnist_pred_slice.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/feb 6/mc_mnist_pred_traintestsplit.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/final raw predictions/mc_adult_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/final raw predictions/mc_adult_pred_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/final raw predictions/mc_covertype_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/final raw predictions/mc_covertype_pred_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/final raw predictions/mc_gisette10_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/final raw predictions/mc_gisette10_pred_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/final raw predictions/mc_mnist_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/final raw predictions/mc_mnist_pred_1000samples.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/final raw predictions/mc_mnist_pred_1000samples_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/final raw predictions/mc_mnist_pred_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/final raw predictions/mcmc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_gisette10_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_gisette10_pred_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_mnist_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_mnist_pred_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/n1.2/mc_adult_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/n1.2/mc_covertype_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/n1.2/mc_dexter_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/n1.2/mc_mnist_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/n1/mc_adult_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/n1/mc_covertype_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/n1/mc_dexter_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/n1/mc_mnist_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/old/DT time adult.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/old/DT time covertype.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/old/DT time mnist.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/old/mc_adult.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/old/mc_adult_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/old/mc_cover.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/old/mc_cover_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/old/mc_mnist.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/old/mc_mnist_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/old/mcmc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/prediction tts/mc_adult_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/prediction tts/mc_adult_pred_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/prediction tts/mc_covertype_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/prediction tts/mc_covertype_pred_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/prediction tts/mc_gisette10_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/prediction tts/mc_gisette10_pred_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/prediction tts/mc_mnist_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/prediction tts/mc_mnist_pred_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/prediction tts/mcmc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/using multiple datasets cag/mc_covertype_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/using multiple datasets cag/mc_covertype_pred_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/using multiple datasets cag/mc_gisette10_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/using multiple datasets cag/mc_gisette10_pred_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/using multiple datasets cag/mc_mnist_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/using multiple datasets cag/mc_mnist_pred_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/usnig multiple datasets mcg/mc_adult_pred_ceta.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/usnig multiple datasets mcg/mc_adult_pred_ceta_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/usnig multiple datasets mcg/mc_covertype_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/usnig multiple datasets mcg/mc_covertype_pred_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/usnig multiple datasets mcg/mc_gisette10_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/usnig multiple datasets mcg/mc_gisette10_pred_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/usnig multiple datasets mcg/mc_mnist_pred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/usnig multiple datasets mcg/mc_mnist_pred_ceta.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/usnig multiple datasets mcg/mc_mnist_pred_ceta_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/usnig multiple datasets mcg/mc_mnist_pred_highres.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/usnig multiple datasets mcg/mcmc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/mcmc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/x_runtime_train_cag.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/x_runtime_train_cagm.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/x_runtime_train_gisette.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/x_runtime_train_gisette_bu.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/x_runtime_train_mca.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/x_runtime_train_mcg.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/x_runtime_train_mcg_bu (copy).np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/x_runtime_train_mcg_bu.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/x_runtime_train_mcgg.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/x_runtime_train_mcggg.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/x_runtime_train_mnistt.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_cag.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_cagm.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_gisette.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_gisette_bu.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_mca.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_mcg.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_mcg_bu.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_mcgg.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_mcggg.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_mnistt.np" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/dt_prediction.py" afterPath="$PROJECT_DIR$/dt_prediction_grid.py" />
+    <list default="true" id="f7f63254-29fd-48f3-bbc3-4e9800dff0ab" name="Default" comment="bu">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1002_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1002_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1040_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1040_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1056_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1056_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1111_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1111_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1120_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1120_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1139_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1139_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1166_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1166_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_185_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_185_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_18_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_18_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_26_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_26_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_36_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_36_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_3_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_3_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_60_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_60_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_720_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_720_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_734_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_734_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_741_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_741_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_761_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_761_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_806_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_806_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_822_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_822_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_845_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_845_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_871_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_871_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_910_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_910_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_923_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_923_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_962_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_962_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_979_bac__dt_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_979_bac__dt_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mcmc_1.png" afterPath="$PROJECT_DIR$/results/mcmc_1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/model1.pickle" afterPath="$PROJECT_DIR$/results/model1.pickle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runtime_prediction.iml" afterPath="$PROJECT_DIR$/.idea/runtime_prediction.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dt_prediction.py" afterPath="$PROJECT_DIR$/dt_prediction.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcmc.py" afterPath="$PROJECT_DIR$/mcmc.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcmc_eg.py" afterPath="$PROJECT_DIR$/mcmc_eg.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcmc_hammer.py" afterPath="$PROJECT_DIR$/mcmc_hammer.py" />
     </list>
     <ignored path="code.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -784,18 +51,18 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/runtime_prediction$plots.coverage" NAME="plots Coverage Results" MODIFIED="1463306603458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/oracle/lib/python3.4/site-packages/pymc3" />
-    <SUITE FILE_PATH="coverage/runtime_prediction$mcmc_pymc.coverage" NAME="dt_pred Coverage Results" MODIFIED="1453894602122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/runtime_prediction$decisionTrees.coverage" NAME="decisionTrees Coverage Results" MODIFIED="1454899453286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/runtime_prediction$plotAll.coverage" NAME="plotAll Coverage Results" MODIFIED="1464874229568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/runtime_prediction$test.coverage" NAME="test Coverage Results" MODIFIED="1461751382773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/runtime_prediction$dt_pred.coverage" NAME="dt_pred Coverage Results" MODIFIED="1464942412022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/runtime_prediction$mcmc_hammer.coverage" NAME="mcmc_hammer Coverage Results" MODIFIED="1461682957437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/runtimes" />
-    <SUITE FILE_PATH="coverage/code$mcmc_pymc.coverage" NAME="mcmc_pymc Coverage Results" MODIFIED="1452704719847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/runtime_prediction$dt_pred.coverage" NAME="dt_pred Coverage Results" MODIFIED="1465684712110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/runtime_prediction$mcmc_pymc.coverage" NAME="dt_pred Coverage Results" MODIFIED="1453894602122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/code$randForest.coverage" NAME="randForest Coverage Results" MODIFIED="1450682024435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/code$decisionTrees.coverage" NAME="decisionTrees Coverage Results" MODIFIED="1451176544108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/runtime_prediction$test.coverage" NAME="test Coverage Results" MODIFIED="1461751382773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/runtime_prediction$plots.coverage" NAME="plots Coverage Results" MODIFIED="1463306603458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/oracle/lib/python3.4/site-packages/pymc3" />
     <SUITE FILE_PATH="coverage/runtime_prediction$mcmc.coverage" NAME="mcmc Coverage Results" MODIFIED="1464929664018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/code$mcmc.coverage" NAME="mcmc Coverage Results" MODIFIED="1452633386479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/runtime_prediction$decisionTrees.coverage" NAME="decisionTrees Coverage Results" MODIFIED="1454899453286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/code$mcmc_pymc.coverage" NAME="mcmc_pymc Coverage Results" MODIFIED="1452704719847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/runtime_prediction$mcmc_hammer.coverage" NAME="mcmc_hammer Coverage Results" MODIFIED="1461682957437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/runtimes" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -814,7 +81,7 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/test.py">
               <provider selected="true" editor-type-id="text-editor">
@@ -839,24 +106,26 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="dt_prediction.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/dt_prediction.py">
+          <file leaf-file-name="mcmc_eg.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/mcmc_eg.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+                <state vertical-scroll-proportion="0.19381107">
+                  <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
                   <folding>
-                    <element signature="e#0#9#0" expanded="true" />
+                    <element signature="e#47#84#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="mcmc_eg.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/mcmc_eg.py">
+          <file leaf-file-name="dt_prediction.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/dt_prediction.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="2.8436806">
-                  <caret line="145" column="59" selection-start-line="145" selection-start-column="59" selection-end-line="145" selection-end-column="59" />
-                  <folding />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+                  <folding>
+                    <element signature="e#0#9#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -874,14 +143,14 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="mcmc_hammer.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/mcmc_hammer.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.45232815">
-                  <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+                <state vertical-scroll-proportion="1.2947882">
+                  <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
                   <folding>
-                    <element signature="e#93#130#0" expanded="true" />
+                    <element signature="e#0#12#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -891,7 +160,7 @@
             <entry file="file://$PROJECT_DIR$/mcmc.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+                  <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
                   </folding>
@@ -924,6 +193,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -945,9 +219,11 @@
         <option value="$PROJECT_DIR$/old_code_snippets.py" />
         <option value="$PROJECT_DIR$/data.py" />
         <option value="$PROJECT_DIR$/plotAll.py" />
-        <option value="$PROJECT_DIR$/mcmc.py" />
-        <option value="$PROJECT_DIR$/dt_prediction.py" />
         <option value="$PROJECT_DIR$/mcmc_eg" />
+        <option value="$PROJECT_DIR$/dt_prediction.py" />
+        <option value="$PROJECT_DIR$/mcmc.py" />
+        <option value="$PROJECT_DIR$/mcmc_hammer.py" />
+        <option value="$PROJECT_DIR$/mcmc_eg.py" />
       </list>
     </option>
   </component>
@@ -995,7 +271,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -1008,35 +284,10 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime_prediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime_prediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime_prediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Problems" />
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -1405,55 +656,61 @@
       <option name="project" value="LOCAL" />
       <updated>1454935136169</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="bu">
+      <created>1464943692973</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1464943692973</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="24" width="1879" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2111293" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951444" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24986361" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2111293" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.39914164" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="41" y="-4" width="1879" height="1084" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="2054" y="26" width="1879" height="1056" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951444" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32846716" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24941361" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Concurrent Activities Diagram" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="138" y="109" width="1130" height="446" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Concurrent Activities Diagram" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.39914164" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="41" y="-4" width="1879" height="1084" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Concurrent Activities Diagram" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="487" y="279" width="951" height="414" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2111293" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951444" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24986361" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Concurrent Activities Diagram" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.39914164" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="1961" y="24" width="1879" height="1056" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24986361" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2111293" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="487" y="279" width="951" height="414" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1474,7 +731,8 @@
     <MESSAGE value="add multiple datasize for prediction" />
     <MESSAGE value="add multiple datasets selection" />
     <MESSAGE value="8feb meeting" />
-    <option name="LAST_COMMIT_MESSAGE" value="8feb meeting" />
+    <MESSAGE value="bu" />
+    <option name="LAST_COMMIT_MESSAGE" value="bu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1512,7 +770,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="56" />
+      <option name="time" value="57" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -1532,6 +790,124 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/mcmc_hammer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mcmc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mcmc_eg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#47#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#1079#1097#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plotAll.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="87" column="44" selection-start-line="87" selection-start-column="44" selection-end-line="87" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dt_prediction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/old_code_snippets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mcmc_hammer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mcmc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mcmc_eg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#47#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dt_prediction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1547,7 +923,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#93#130#0" expanded="true" />
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1556,7 +932,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1584,7 +959,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1592,7 +966,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1600,7 +973,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="168" column="85" selection-start-line="168" selection-start-column="85" selection-end-line="168" selection-end-column="85" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1608,7 +980,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1616,7 +987,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1624,7 +994,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1632,7 +1001,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="146" column="4" selection-start-line="146" selection-start-column="4" selection-end-line="146" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1668,7 +1036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="74" column="4" selection-start-line="74" selection-start-column="4" selection-end-line="74" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1676,9 +1043,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#18#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1686,7 +1050,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1694,7 +1057,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1702,7 +1064,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4490022">
           <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1710,7 +1071,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48447895">
           <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1718,7 +1078,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9578714">
           <caret line="168" column="85" selection-start-line="168" selection-start-column="85" selection-end-line="168" selection-end-column="85" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1726,7 +1085,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1742,7 +1100,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1750,7 +1107,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1758,7 +1114,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3580931">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1766,7 +1121,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2949002">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1774,7 +1128,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5221729">
           <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1782,7 +1135,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33259425">
           <caret line="524" column="0" selection-start-line="524" selection-start-column="0" selection-end-line="524" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1790,7 +1142,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33259425">
           <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1814,36 +1165,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mcmc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mcmc_hammer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45232815">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="e#93#130#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dt_prediction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1854,11 +1175,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mcmc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dt_prediction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mcmc_hammer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2947882">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mcmc_eg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.8436806">
-          <caret line="145" column="59" selection-start-line="145" selection-start-column="59" selection-end-line="145" selection-end-column="59" />
-          <folding />
+        <state vertical-scroll-proportion="0.19381107">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding>
+            <element signature="e#47#84#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

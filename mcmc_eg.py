@@ -50,6 +50,7 @@ print("""Least-squares results:
 pl.plot(xl, m_ls*xl+b_ls, "--k")
 pl.savefig("line-least-squares.png")
 
+
 # Define the probability function as likelihood * prior.
 def lnprior(theta):
     m, b, lnf = theta
@@ -57,18 +58,19 @@ def lnprior(theta):
         return 0.0
     return -np.inf
 
+
 def lnlike(theta, x, y, yerr):
     m, b, lnf = theta
     model = m * x + b
     inv_sigma2 = 1.0/(yerr**2 + model**2*np.exp(2*lnf))
     return -0.5*(np.sum((y-model)**2*inv_sigma2 - np.log(inv_sigma2)))
 
+
 def lnprob(theta, x, y, yerr):
     lp = lnprior(theta)
     if not np.isfinite(lp):
         return -np.inf
     return lp + lnlike(theta, x, y, yerr)
-
 # Find the maximum likelihood value.
 chi2 = lambda *args: -2 * lnlike(*args)
 result = op.minimize(chi2, [m_true, b_true, np.log(f_true)], args=(x, y, yerr))

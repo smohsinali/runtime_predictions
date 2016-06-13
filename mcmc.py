@@ -18,7 +18,7 @@ def likelihood_knlogn(w, k, n, equation):
         k_mod = k * 0
 
         # val = w[0] + w[1] * k_mod + w[2] * (k * n_mod * n_log)
-        val = w[0] + w[1] * (k * n_mod * n_log)
+        val = w[0] + w[2] * (k * n_mod * n_log)
 
     if equation == 2:
         n_log = np.log2(n)
