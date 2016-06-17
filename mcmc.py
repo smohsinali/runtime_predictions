@@ -13,23 +13,23 @@ from scipy import optimize
 def likelihood_knlogn(w, k, n, equation):
 
     if equation == 1:
-        n_log = np.log(n) ** 2
+        n_log = np.log2(n) ** 2
         n_mod = n
         k_mod = k * 0
 
         # val = w[0] + w[1] * k_mod + w[2] * (k * n_mod * n_log)
-        val = w[0] + w[2] * (k * n_mod * n_log)
+        val = w[0] + w[1] * (k * n_mod * n_log)
 
     if equation == 2:
         n_log = np.log2(n)
         n_mod = n ** 2
-        k_mod = k * 0
+        k_mod = k * 1
         val = w[0] + w[1] * k_mod + w[2] * (k * n_mod * n_log)
 
     if equation == 3:
         n_log = np.log2(n)
         n_mod = n
-        k_mod = k * 0
+        k_mod = k * 1
         val = w[0] + w[1] * k_mod + w[2] * (k * n_mod**w[3] * n_log)
 
     return val
@@ -47,7 +47,7 @@ def mcmc_model(parameters):
     with basic_model:
 
         # ## Priors for unknown model params
-        alpha = Normal('alpha', mu=0, sd=1)
+        alpha = HalfNormal('alpha', sd=1)
         beta = Normal('beta', mu=0, sd=1)
         ceta = Normal('ceta', mu=0, sd=1)
         gamma = Normal('gamma', mu=0, sd=1)

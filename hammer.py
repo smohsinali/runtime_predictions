@@ -3,6 +3,7 @@ import corner
 import numpy as np
 import scipy.optimize as op
 import matplotlib.pyplot as pl
+from scipy import stats
 from matplotlib.ticker import MaxNLocator
 
 
@@ -13,18 +14,22 @@ def lnprior(theta):
     return -np.inf
 
 
-def likelihood_knlogn(theta, x, y, equation, yerr):
+def likelihood_knlogn(w, x, y):
 
-    w, lnf = theta
-    n, k = x
+    n = x[:, 0]
+    k = x[:, 1]
+
+    equation = 1
+    sd = w[2]
 
     if equation == 1:
         n_log = np.log(n) ** 2
         n_mod = n
         model = w[0] + w[1] * (k * n_mod * n_log)
-        inv_sigma2 = 1.0/(yerr**2 + model**2*np.exp(2*lnf))
 
-        return -0.5*(np.sum((y-model)**2*inv_sigma2 - np.log(inv_sigma2)))
+        likelihood = -np.sum(stats.norm.logpdf(y, loc=model, scale=.0005))
+
+        return likelihood
 
     return 0
 
@@ -36,16 +41,16 @@ def lnprob(theta, x, y, yerr):
     return lp + likelihood_knlogn(theta, x, y, yerr)
 
 
-def ml(x, y):
-    m_true = b_true = f_true = 1
-    chi2 = lambda *args: -2 * likelihood_knlogn(*args)
-    result = op.minimize(chi2, [m_true, b_true, np.log(f_true)], args=(x, y, yerr))
-    m_ml, b_ml, lnf_ml = result["x"]
+def hammer_fit(x, y, used_eq):
+    w0 = w1 = sd = 1
+    chi2 = lambda *args: likelihood_knlogn(*args)
+    result = op.minimize(chi2, [w0, w1, sd], args=(x, y))
+    w0, w1, sd = result["x"]
     print("""Maximum likelihood result:
-        m = {0} (truth: {1})
-        b = {2} (truth: {3})
-        f = {4} (truth: {5})
-    """.format(m_ml, m_true, b_ml, b_true, np.exp(lnf_ml), f_true))
+        w0 = {0} (truth: n/a)
+        w1 = {1} (truth: n/a)
+        w2 = {2} (truth: n/a)
+    """.format(w0, w1, sd))
 
 
 

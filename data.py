@@ -49,7 +49,7 @@ def load_data_pred(data_name_pred, test_folder_path):
     x1_features = x_runtime[:, 1]
     x2_size = x_runtime[:, 0]
 
-    return x1_features, x2_size, y_runtime, data_name_pred
+    return x1_features, x2_size, y_runtime
 
 
 def process_train_data(x_data, y_data, a, dtype=0):

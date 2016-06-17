@@ -4,9 +4,11 @@ import sys
 import pickle
 import numpy as np
 import matplotlib.pyplot as plt
+from pymc3 import Model
+
 from mcmc import mcmc_predict, mcmc_fit
 from data import load_data_pred, load_training_data
-from pymc3 import Model
+from hammer import hammer_fit
 
 
 def plot(x_features, x, y, y_predicted, data_pred, data_train):
@@ -34,26 +36,28 @@ def plot(x_features, x, y, y_predicted, data_pred, data_train):
 
 
 if __name__ == "__main__":
-    equations = ["w0+w1K+w2(KNlogN)", "w0+w1K+w2(KN²logN)", "w0+w1K+w2(KN^w3logN)"]
-    used_eq = [1]
-    # find and load training data files
-    x_data, y_data, data_name_train = load_training_data()
+    # equations = ["w0+w1K+w2(KNlogN)", "w0+w1K+w2(KN²logN)", "w0+w1K+w2(KN^w3logN)"]
+    equations = ["w0+w[1](KNlog²N)", "w0+w1K+w2(KN²logN)", "w0+w1K+w2(KN^w3logN)"]
+    used_eq = [1, 2, 3]  # likelihood function has multiple versions of eqs. here define which ones will be used.
 
-    equation = 2
-    total_data_size = len(y_data)
+    # find and load training data files
+    x_train, y_train, data_name_train = load_training_data()
+
+    total_data_size = len(y_train)
     print("total_data_size:", total_data_size)
 
     y_predicted = list()
 
     test_folder_path = "/home/alis/Desktop/project/runtime_prediction/runtimes/test"
     files = next(os.walk(test_folder_path))[2]
-    names = sorted(list(set([x[16:-3] for x in files if re.search('np', x)])))
+    test_data_sets = sorted(list(set([x[16:-3] for x in files if re.search('np', x)])))
 
     # x_train, y_train = process_train_data(x_data, y_data, 100.0, 1)
-    x_train = x_data
-    y_train = y_data
+    # x_train = x_data
+    # y_train = y_data
     # fit the model
-    trace_tmp = mcmc_fit(x_train, y_train, used_eq)
+    trace_pymc = mcmc_fit(x_train, y_train, used_eq)
+    # trace_hammer = hammer_fit(x_train, y_train, used_eq)
 
     # # save the learned mode in pickle file
     # pickle.dump(trace_tmp, open("results/model.pickle", "wb"), protocol=-1)
@@ -61,9 +65,9 @@ if __name__ == "__main__":
     # # move plot about learned param values to results folder
     # os.rename("mcmc.png", "results/mcmc_" + data_name_train + "N.png")
 
-    for name in names:
+    for data_name_pred in test_data_sets:
         # load dataset on which prediction of runtimes is desired
-        x1_features, x2_size, y_runtime, data_name_pred = load_data_pred(name, test_folder_path)
+        x1_features, x2_size, y_runtime = load_data_pred(data_name_pred, test_folder_path)
 
         for equation in used_eq:
             # load the model from pickle file
