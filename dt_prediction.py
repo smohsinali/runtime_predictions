@@ -4,17 +4,22 @@ import sys
 import pickle
 import numpy as np
 import matplotlib.pyplot as plt
+import pandas as pd
 from pymc3 import Model
-
+from tabulate import tabulate
 from mcmc import mcmc_predict, mcmc_fit
 from data import load_data_pred, load_training_data
 from hammer import hammer_fit
+import pdb
 
 
 def plot(x_features, x, y, y_predicted, data_pred, data_train):
     figtxt = "\n# features:" + str(int(x_features[0]))
     plt.plot(x, y, label="True-Runtime")
     colors = ["yellow", "red", "green"]
+    table_row = None
+    row = []
+    keys = []
     for i, predicted in enumerate(y_predicted):
         y_pred = predicted[0]
         y_pred_upper = predicted[1]
@@ -23,6 +28,9 @@ def plot(x_features, x, y, y_predicted, data_pred, data_train):
         plt.fill_between(x, y_pred_upper, y_pred_lower, facecolor=colors[i], alpha=0.2, label=predicted[3])
         print("DS:%s real:%0.3f predicted:%0.3f pU:%0.3f pL:%0.3f" %
               (data_pred.rjust(13), y[-1], y_pred[-1], y_pred_upper[-1], y_pred_lower[-1]))
+        row.append(pd.DataFrame({data_pred: [y[-1], y_pred[-1], 100*(abs(y[-1]-y_pred[-1]))/y[-1]]},
+                                index=['true', 'pred.', '%diff']))
+        keys.append(predicted[3])
 
     plt.xlabel("Number of Samples")
     plt.ylabel("Time(s)")
@@ -33,6 +41,9 @@ def plot(x_features, x, y, y_predicted, data_pred, data_train):
     # plt.savefig("results/mc_" + data_name_pred + "_pred_highres_wo2.png", dpi=300)
     plt.savefig("results/mc_" + data_pred + "_pred_n.png", dpi=200)
     plt.close()
+    table = pd.concat(row, keys=keys).T
+    # pdb.set_trace()
+    return table
 
 
 if __name__ == "__main__":
@@ -58,12 +69,7 @@ if __name__ == "__main__":
     # fit the model
     trace_pymc = mcmc_fit(x_train, y_train, used_eq)
     # trace_hammer = hammer_fit(x_train, y_train, used_eq)
-
-    # # save the learned mode in pickle file
-    # pickle.dump(trace_tmp, open("results/model.pickle", "wb"), protocol=-1)
-    #
-    # # move plot about learned param values to results folder
-    # os.rename("mcmc.png", "results/mcmc_" + data_name_train + "N.png")
+    table = pd.DataFrame()
 
     for data_name_pred in test_data_sets:
         # load dataset on which prediction of runtimes is desired
@@ -80,5 +86,12 @@ if __name__ == "__main__":
             y_predicted.append([y_pred, y_pred_upper, y_pred_lower, equations[equation - 1]])
 
         # plot data
-        plot(x1_features, x2_size, y_runtime, y_predicted, data_name_pred, data_name_train)
+        table = pd.concat([table, plot(x1_features, x2_size, y_runtime, y_predicted, data_name_pred, data_name_train)])
         y_predicted = list()
+
+    print("end")
+    pdb.set_trace()
+
+
+
+

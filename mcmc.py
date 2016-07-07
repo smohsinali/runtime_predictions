@@ -48,9 +48,9 @@ def mcmc_model(parameters):
 
         # ## Priors for unknown model params
         alpha = HalfNormal('alpha', sd=1)
-        beta = Normal('beta', mu=0, sd=1)
-        ceta = Normal('ceta', mu=0, sd=1)
-        gamma = Normal('gamma', mu=0, sd=1)
+        beta = Normal('beta', mu=0, sd=.00001)
+        ceta = Normal('ceta', mu=0, sd=.0001)
+        gamma = Normal('gamma', mu=0, sd=.5)
         sigma = HalfNormal('sigma', sd=1)
         # sigma = Normal('sigma', mu=0, sd=1)
 
@@ -71,8 +71,8 @@ def mcmc_model(parameters):
 
         # using metropolis hastings with 2000 burin steps
         step1 = Metropolis([alpha, beta, ceta, gamma, sigma])
-        sample(2000, start=start, step=step1)
-        trace = sample(10000, start=start, step=step1)
+        sample(20000, start=start, step=step1)
+        trace = sample(50000, start=start, step=step1)
 
     print("mcmc_model end")
     return trace

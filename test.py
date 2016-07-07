@@ -37,15 +37,13 @@
 #     data = open("datasets/mldata/dexter_train.data", "r")
 #     labels = open("datasets/mldata/dexter_train.labels", "r")
 #     load_dexter(data, labels)
-import numpy as np
-import matplotlib.pyplot as plt
-
-# x_runtime = np.loadtxt("mnist.np")
-x_runtime = np.genfromtxt("2016_runtime_data/results_3_bac.csv", skip_header=1, delimiter=',', dtype=None)
-# y_runtime = np.loadtxt("runtimes/y_train_mnist.np")
+# import numpy as np
+# import matplotlib.pyplot as plt
+#
+# # x_runtime = np.loadtxt("mnist.np")
+# x_runtime = np.genfromtxt("2016_runtime_data/results_3_bac.csv", skip_header=1, delimiter=',', dtype=None)
+# # y_runtime = np.loadtxt("runtimes/y_train_mnist.np")
 print("hello")
-
-
 
 # x = x_runtime[0:90]
 # arr = range(900)
@@ -66,12 +64,9 @@ print("hello")
 # #
 #
 #
+from tabulate import tabulate
 
-
-
-
-
-
+print(tabulate({"Name": ["Alice", "Bob"], "xcd": tabulate({"Age": [24, 19], "foo": [3, 4]}, headers="keys")}, headers="keys"))
 
 
 
