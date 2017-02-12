@@ -15,6 +15,7 @@ if __name__ == "__main__":
     # test = "_test/"
     test = "/"
     path = "datasets/2016_runtime_data" + test
+    # path = "datasets/allData" + test
     train = 1 if test == "/" else 0
 
     print(path)
@@ -105,13 +106,13 @@ if __name__ == "__main__":
     x_features = list()
     x_datasize = list()
     y_runtime = list()
-
+    data_name = list()
     fig = plt.figure()
     ax = fig.gca(projection='3d')
     plt.ion()
     # sgd = [#features, datasize, runtime]
-    for sgd in dt_graphs:
-        # print(sgd[1])
+    for sgd in sgd_graphs:
+        # print(sgd[1]a)
         # if sgd[2][-1] > 20:
         #     continue
         # plt.plot(sgd[0], sgd[1], label="raw")
@@ -119,31 +120,33 @@ if __name__ == "__main__":
 
         x_datasize.extend(sgd[1])
         x_features.extend(sgd[0])
-        y_runtime.extend(sgd[2])
+        y_runtime.extend([sgd[2][-1]])
+        data_name.extend([sgd[3]])
 
         x_tmp = np.column_stack((sgd[1], sgd[0]))
         y_tmp = np.array(sgd[2])
         y_tmp = y_tmp[:, np.newaxis]
 
         if test == "_test/":
-            np.savetxt("runtimes/test/x_runtime_train_" + sgd[3] + ".np", x_tmp, fmt="%0.1f")
-            np.savetxt("runtimes/test/y_runtime_train_" + sgd[3] + ".np", y_tmp, fmt="%0.5f")
+            np.savetxt("runtimes/test/sgd/x_runtime_train_" + sgd[3] + ".np", x_tmp, fmt="%0.1f")
+            np.savetxt("runtimes/test/sgd/y_runtime_train_" + sgd[3] + ".np", y_tmp, fmt="%0.5f")
         if train == 1:
-            np.savetxt("runtimes/train/x_runtime_train_" + sgd[3] + ".np", x_tmp, fmt="%0.1f")
-            np.savetxt("runtimes/train/y_runtime_train_" + sgd[3] + ".np", y_tmp, fmt="%0.5f")
+            np.savetxt("runtimes/train/sgd/x_runtime_train_" + sgd[3] + ".np", x_tmp, fmt="%0.1f")
+            np.savetxt("runtimes/train/sgd/y_runtime_train_" + sgd[3] + ".np", y_tmp, fmt="%0.5f")
 
     x = np.column_stack((x_datasize, x_features))
     y = np.array(y_runtime)
     y = y[:, np.newaxis]
-
+    # y = np.column_stack((data_name, y_runtime))
     if test == "_test/":
-        np.savetxt("runtimes/x_runtime_train_allTest.np", x, fmt="%0.1f")
-        np.savetxt("runtimes/y_runtime_train_allTest.np", y, fmt="%0.5f")
+        np.savetxt("runtimes/x_runtime_train_allTestSGD.np", x, fmt="%0.1f")
+        np.savetxt("runtimes/y_runtime_train_allTestSGD.np", y, fmt="%0.5f")
 
     else:
-        np.savetxt("runtimes/x_runtime_train_allTrain.np", x, fmt="%0.1f")
-        np.savetxt("runtimes/y_runtime_train_allTrain.np", y, fmt="%0.5f")
+        np.savetxt("runtimes/x_runtime_train_allTrainDT.np", x, fmt="%0.1f")
+        np.savetxt("runtimes/y_runtime_train_allTrainDT.np", y, fmt="%s")
 
+    print("done putting data in arrays, saved in .np files")
     # ax.zaxis.set_major_locator(LinearLocator(10))
     # ax.zaxis.set_major_formatter(FormatStrFormatter('%.02f'))
 
@@ -151,11 +154,12 @@ if __name__ == "__main__":
     # ax.set_zscale('log')
     # ax.set_zlim(0, 100)
     # ax.set_zlim(0, 2)
+    print("plotting data")
     ax.set_xlabel("data")
     ax.set_ylabel("features")
     ax.set_zlabel("runtimes")
-    # plt.show()
+    plt.show()
     plt.savefig("sgd_features.png", dpi=150)
-
+    input()
     print("exiting")
     # print(row['name'], row['model'], row['#data'], row['#features'], row['runtime'])

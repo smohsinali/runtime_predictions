@@ -8,7 +8,7 @@ import pandas as pd
 from pymc3 import Model
 from tabulate import tabulate
 from mcmc import mcmc_predict, mcmc_fit
-from data import load_data_pred, load_training_data
+from data import load_data_pred, load_training_data, data_sets_in_folder, load_data_set, process_train_data
 from hammer import hammer_fit
 import pdb
 
@@ -53,30 +53,29 @@ if __name__ == "__main__":
     # equations = ["w0+w1K+w2(KNlogN)", "w0+w1K+w2(KN²logN)", "w0+w1K+w2(KN^w3logN)"]
     equations = ["w0 + w1*(K*N*(logN)^2)", "w0 + w1*K + w2*(K*N^(2)*logN)", "w0 + w1*K + w2*(K*N^(w3)*logN)"]
     used_eq = [1, 2]  # likelihood function has multiple versions of eqs. here define which ones will be used.
-
-    # find and load training data files
-    x_train, y_train, data_name_train = load_training_data()
-
-    total_data_size = len(y_train)
-    print("total_data_size:", total_data_size)
-
-    y_predicted = list()
-
-    test_folder_path = "/home/alis/Desktop/project/runtime_prediction/runtimes/test/sgd"
-    files = next(os.walk(test_folder_path))[2]
-    test_data_sets = sorted(list(set([x[16:-3] for x in files if re.search('np', x)])))
-
-    # x_train, y_train = process_train_data(x_data, y_data, 100.0, 1)
-    # x_train = x_data
-    # y_train = y_data
-    # fit the model
-    trace_pymc = mcmc_fit(x_train, y_train, used_eq)
-    # trace_hammer = hammer_fit(x_train, y_train, used_eq)
     table = pd.DataFrame()
+    train_folder_path, training_data_sets = data_sets_in_folder()
+    # find and load training data files
+    for data_set in training_data_sets:
+        print("dataset", data_set)
+        x_data, y_data = load_data_set(data_set, train_folder_path)
+        # x_train, y_train, data_name_train = load_training_data()
 
-    for data_name_pred in test_data_sets:
-        # load dataset on which prediction of runtimes is desired
-        x1_features, x2_size, y_runtime = load_data_pred(data_name_pred, test_folder_path)
+        # sys.exit()
+        total_data_size = len(y_data)
+        print("total_data_size:", total_data_size)
+
+        y_predicted = list()
+
+        x_train, x_test, y_train, y_test = process_train_data(x_data, y_data, 0.28, 0)
+        # fit the model
+        trace_pymc = mcmc_fit(x_train, y_train, used_eq)
+        # trace_hammer = hammer_fit(x_train, y_train, used_eq)
+
+        # x1_features, x2_size, y_runtime = load_data_pred(data_name_pred, test_folder_path)
+        x1_features = x_test[:, 1]
+        x2_size = x_test[:, 0]
+        y_runtime = y_test
 
         for equation in used_eq:
             # load the model from pickle file
@@ -89,10 +88,10 @@ if __name__ == "__main__":
             y_predicted.append([y_pred, y_pred_upper, y_pred_lower, equations[equation - 1]])
 
         # plot data
-        table = pd.concat([table, plot(x1_features, x2_size, y_runtime, y_predicted, data_name_pred, data_name_train)])
+        table = pd.concat([table, plot(x1_features, x2_size, y_runtime, y_predicted, data_set, data_set)])
         y_predicted = list()
 
-    table.to_html("table2.html")
+    table.to_html("table3.html")
     print("end")
     # pdb.set_trace()
 

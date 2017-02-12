@@ -51,8 +51,8 @@ def plot(x_features, x, y, y_predicted, data_pred, data_train):
 
 if __name__ == "__main__":
     # equations = ["w0+w1K+w2(KNlogN)", "w0+w1K+w2(KN²logN)", "w0+w1K+w2(KN^w3logN)"]
-    equations = ["w0 + w1*(K*N*(logN)^2)", "w0 + w1*K + w2*(K*N^(2)*logN)", "w0 + w1*K + w2*(K*N^(w3)*logN)"]
-    used_eq = [1, 2]  # likelihood function has multiple versions of eqs. here define which ones will be used.
+    equations = ["w * K * N "]
+    used_eq = [1]  # likelihood function has multiple versions of eqs. here define which ones will be used.
 
     # find and load training data files
     x_train, y_train, data_name_train = load_training_data()
@@ -92,7 +92,7 @@ if __name__ == "__main__":
         table = pd.concat([table, plot(x1_features, x2_size, y_runtime, y_predicted, data_name_pred, data_name_train)])
         y_predicted = list()
 
-    table.to_html("table2.html")
+    table.to_html("table_sgd.html")
     print("end")
     # pdb.set_trace()
 
