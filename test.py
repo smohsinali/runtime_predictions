@@ -64,22 +64,37 @@ print("hello")
 # #
 #
 #
-from tabulate import tabulate
+# from tabulate import tabulate
+#
+# print(tabulate({"Name": ["Alice", "Bob"], "xcd": tabulate({"Age": [24, 19], "foo": [3, 4]}, headers="keys")}, headers="keys"))
 
-print(tabulate({"Name": ["Alice", "Bob"], "xcd": tabulate({"Age": [24, 19], "foo": [3, 4]}, headers="keys")}, headers="keys"))
-
-
-
-
-
+a = 2
+b = 3
 
 
+class SubValueError(ValueError):
+    def __init__(self, errorArgs, a, b):
+        ValueError.__init__(self, "custom value error")
+        self.eror = errorArgs
+        self.a = a
+        self.b = b
+        # print("error args were", errorArgs)
+
+try:
+    raise SubValueError('HiThere', a, b)
+except SubValueError as sve:
+    print('An exception flew by!')
+    print("sve", sve.eror)
+    print("a", sve.a)
+    raise
 
 
 
-
-
-
+try:
+    raise ValueError('HiThere')
+except ValueError:
+    print('An exception flew by!')
+    raise
 
 
 
