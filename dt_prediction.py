@@ -55,7 +55,7 @@ if __name__ == "__main__":
     used_eq = [1, 2]  # likelihood function has multiple versions of eqs. here define which ones will be used.
 
     # find and load training data files
-    x_train, y_train, data_name_train = load_training_data()
+    x_train, y_train, data_name_train = load_training_data(folder_path="runtimes/train/rf_graphs")
 
     total_data_size = len(y_train)
     print("total_data_size:", total_data_size)

@@ -13,9 +13,9 @@ if __name__ == "__main__":
     sgd_graphs = list()
     dt_graphs = list()
     rf_graphs = list()
-    # test = "_test/"
-    test = "/"
-    # path = "datasets/2016_runtime_data" + test
+    test = "_test/"
+    # test = "/"
+    # path = "datasets/2016_runtime_data_sparse" + test
     path = "datasets/randforest" + test
     # path = "datasets/allData" + test
     train = 1 if test == "/" else 0
@@ -107,13 +107,11 @@ if __name__ == "__main__":
                 sys.exit()
 
     print("Putting all data in arrays")
-    x_features = list()
-    x_datasize = list()
-    y_runtime = list()
-    data_name = list()
+
     fig = plt.figure()
     ax = fig.gca(projection='3d')
     plt.ion()
+    y_format = "%0.7f"
     # sgd = [#features, datasize, runtime]
     algorithms = [dt_graphs, rf_graphs, sgd_graphs]
     algo_string = ["dt_graphs", "rf_graphs", "sgd_graphs"]
@@ -122,36 +120,50 @@ if __name__ == "__main__":
             print('%s is empty' % algo_string[a])
             continue
         else:
+            x_features = list()
+            x_datasize = list()
+            y_runtime = list()
+            data_name = list()
             for dataset in algo:
                 surf = ax.plot(dataset[1], dataset[0], dataset[2])
 
                 x_datasize.extend(dataset[1])
                 x_features.extend(dataset[0])
-                y_runtime.extend([dataset[2][-1]])
-                data_name.extend([dataset[3]])
+                y_runtime.extend(dataset[2])
+                data_name.extend(dataset[3])
 
                 x_tmp = np.column_stack((dataset[1], dataset[0]))
+                x_tmp_csv = np.column_stack((dataset[1], dataset[0], dataset[2]))
                 y_tmp = np.array(dataset[2])
                 y_tmp = y_tmp[:, np.newaxis]
 
                 if test == "_test/":
                     np.savetxt("runtimes/test/" + algo_string[a] + "/x_runtime_train_" + dataset[3] + ".np", x_tmp, fmt="%0.1f")
-                    np.savetxt("runtimes/test/" + algo_string[a] + "/y_runtime_train_" + dataset[3] + ".np", y_tmp, fmt="%0.5f")
+                    np.savetxt("runtimes/test/" + algo_string[a] + "/y_runtime_train_" + dataset[3] + ".np", y_tmp, fmt=y_format)
+                    # np.savetxt("runtimes/test/" + algo_string[a] + "/y_runtime_train_" + dataset[3] + ".csv", x_tmp_csv,
+                    #            delimiter=",", fmt=["%d", "%d", "%0.6f"], header='#Data,#Feat,Runtime')
                 if train == 1:
                     np.savetxt("runtimes/train/" + algo_string[a] + "/x_runtime_train_" + dataset[3] + ".np", x_tmp, fmt="%0.1f")
-                    np.savetxt("runtimes/train/" + algo_string[a] + "/y_runtime_train_" + dataset[3] + ".np", y_tmp, fmt="%0.5f")
+                    np.savetxt("runtimes/train/" + algo_string[a] + "/y_runtime_train_" + dataset[3] + ".np", y_tmp, fmt=y_format)
+                    # np.savetxt("runtimes/train/" + algo_string[a] + "/y_runtime_train_" + dataset[3] + ".csv",x_tmp_csv,
+                    #            delimiter=",", fmt=["%d", "%d", "%0.6f"], header='#Data,#Feat,Runtime')
 
             x = np.column_stack((x_datasize, x_features))
             y = np.array(y_runtime)
             y = y[:, np.newaxis]
+            x_csv = np.column_stack((x_datasize, x_features, y_runtime))
             # y = np.column_stack((data_name, y_runtime))
             if test == "_test/":
                 np.savetxt("runtimes/x_runtime_train_allTest_" + algo_string[a] + ".np", x, fmt="%0.1f")
-                np.savetxt("runtimes/y_runtime_train_allTest_" + algo_string[a] + ".np", y, fmt="%0.5f")
+                np.savetxt("runtimes/y_runtime_train_allTest_" + algo_string[a] + ".np", y, fmt=y_format)
+                # np.savetxt("runtimes/y_runtime_train_allTest_" + algo_string[a] + ".csv", x_csv, delimiter=',',
+                #            fmt=["%d", "%d", "%0.6f"], header='#Data,#Feat,Runtime')
 
             else:
                 np.savetxt("runtimes/x_runtime_train_allTrain_" + algo_string[a] + ".np", x, fmt="%0.1f")
-                np.savetxt("runtimes/y_runtime_train_allTrain_" + algo_string[a] + ".np", y, fmt="%s")
+                np.savetxt("runtimes/y_runtime_train_allTrain_" + algo_string[a] + ".np", y, fmt=y_format)
+                # np.savetxt("runtimes/y_runtime_train_allTest_" + algo_string[a] + ".csv", x_csv, delimiter=',',
+                #            fmt=["%d", "%d", "%0.6f"], header='#Data,#Feat,Runtime')
 
             print("done putting data in arrays, saved in .np files")
             # ax.zaxis.set_major_locator(LinearLocator(10))
@@ -161,14 +173,17 @@ if __name__ == "__main__":
             # ax.set_zscale('log')
             # ax.set_zlim(0, 100)
             # ax.set_zlim(0, 2)
-            if algo_string[a] == "rf_graphs":
+            # if algo_string[a] == "rf_graphs":
+            if 1 == 2:
                 print("plotting data")
                 ax.set_xlabel("data")
                 ax.set_ylabel("features")
                 ax.set_zlabel("runtimes")
+                ax.set_title(algo_string[a])
                 plt.show()
-                plt.savefig(algo_string[a] + ".png", dpi=150)
+                # plt.savefig(algo_string[a] + ".png", dpi=150)
                 input()
+                ax.clear()
 
             print("exiting")
             # print(row['name'], row['model'], row['#data'], row['#features'], row['runtime'])

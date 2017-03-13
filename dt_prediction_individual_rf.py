@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from pymc3 import Model
 from tabulate import tabulate
-from mcmc_sgd import mcmc_predict, mcmc_fit
+from mcmc_rf import mcmc_predict, mcmc_fit
 from data import load_data_pred, load_training_data, data_sets_in_folder, load_data_set, process_train_data
 # from hammer import hammer_fit
 import pdb
@@ -54,7 +54,7 @@ if __name__ == "__main__":
     equations = ["w0 * N", "w0 * N + w1 * k", "w0 * N + w1 * k + w2"]
     used_eq = [1, 2, 3]  # likelihood function has multiple versions of eqs. here define which ones will be used.
     table = pd.DataFrame()
-    train_folder_path, training_data_sets = data_sets_in_folder()
+    train_folder_path, training_data_sets = data_sets_in_folder(folder_path="runtimes/train/rf_graphs")
     # find and load training data files
     for data_set in training_data_sets:
         print("dataset", data_set)
@@ -91,7 +91,7 @@ if __name__ == "__main__":
         table = pd.concat([table, plot(x1_features, x2_size, y_runtime, y_predicted, data_set, data_set)])
         y_predicted = list()
 
-    table.to_html("sgd_individual.html")
+    table.to_html("rf_individual.html")
     print("end")
     # pdb.set_trace()
 

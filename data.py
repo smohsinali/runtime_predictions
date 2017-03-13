@@ -5,10 +5,10 @@ import random
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 
 
-def data_sets_in_folder(folder_path="runtimes/train/sgd"):
+def data_sets_in_folder(folder_path="runtimes/train/sgd_graphs"):
     name = next(os.walk(os.path.abspath(folder_path)))[2]
     dataset_names = sorted(list(set([x[16:-3] for x in name if re.search('np', x)])))
     return folder_path, dataset_names
@@ -80,7 +80,7 @@ def process_train_data(x_data, y_data, percent_data, dtype=0):
     # split data
     # ratio = a / 100.0
     # ratio = 1
-    a = percent_data * len(y_data)
+    a = int(percent_data * len(y_data))
 
     print("ratio:", a)
     if dtype == 0:

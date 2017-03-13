@@ -68,40 +68,54 @@ print("hello")
 #
 # print(tabulate({"Name": ["Alice", "Bob"], "xcd": tabulate({"Age": [24, 19], "foo": [3, 4]}, headers="keys")}, headers="keys"))
 
-a = 2
-b = 3
+# a = 2
+# b = 3
+#
+#
+#
+# class SubValueError(ValueError):
+#     def __init__(self, errorArgs, a, b):
+#         ValueError.__init__(self, "custom value error")
+#         self.eror = errorArgs
+#         self.a = a
+#         self.b = b
+#
+# class SubValueError2(ValueError):
+#     pass
+#
+# try:
+#     raise SubValueError2('HiThere')
+# except:
+#     raise
+# except SubValueError as sve:
+#     print('An exception flew by!')
+#     print("sve", sve.eror)
+#     print("a", sve.a)
+#     raise
+#
+# except SubValueError2 as sve:
+#     print('An exception flew by!')
+#     raise
 
+#
+# def rec(a):
+#     if len(a) == 0:
+#         return
+#     rec(a[1:])
+#     return(a[0])
+#
+#
+#
+# a = rec("cdf")
+# print(a)
 
-class SubValueError(ValueError):
-    def __init__(self, errorArgs, a, b):
-        ValueError.__init__(self, "custom value error")
-        self.eror = errorArgs
-        self.a = a
-        self.b = b
-        # print("error args were", errorArgs)
+import numpy as np
 
-try:
-    raise SubValueError('HiThere', a, b)
-except SubValueError as sve:
-    print('An exception flew by!')
-    print("sve", sve.eror)
-    print("a", sve.a)
-    raise
-
-
-
-try:
-    raise ValueError('HiThere')
-except ValueError:
-    print('An exception flew by!')
-    raise
-
-
-
-
-
-
-
+a = np.array([
+            [2, 4, 5],
+            [3, 5, 3]
+            ])
+np.savetxt("test.csv", a, delimiter=",", fmt=["%d", "%d", "%0.6f"], header="fkd, djls, jdls")
 
 
 
