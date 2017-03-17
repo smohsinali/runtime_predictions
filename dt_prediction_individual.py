@@ -9,11 +9,10 @@ from pymc3 import Model
 from tabulate import tabulate
 from mcmc import mcmc_predict, mcmc_fit
 from data import load_data_pred, load_training_data, data_sets_in_folder, load_data_set, process_train_data
-from hammer import hammer_fit
 import pdb
 
 
-def plot(x_features, x, y, y_predicted, data_pred, data_train):
+def plot_prediction(x_features, x, y, y_predicted, data_pred, data_train):
     figtxt = "\n# features:" + str(int(x_features[0]))
     plt.plot(x, y, label="True-Runtime")
     colors = ["yellow", "red", "green"]
@@ -50,9 +49,15 @@ def plot(x_features, x, y, y_predicted, data_pred, data_train):
 
 
 if __name__ == "__main__":
-    # equations = ["w0+w1K+w2(KNlogN)", "w0+w1K+w2(KN²logN)", "w0+w1K+w2(KN^w3logN)"]
-    equations = ["w0 + w1*(K*N*(logN)^2)", "w0 + w1*K + w2*(K*N^(2)*logN)", "w0 + w1*K + w2*(K*N^(w3)*logN)"]
-    used_eq = [1, 2]  # likelihood function has multiple versions of eqs. here define which ones will be used.
+    old_equations = ["w0+w1K+w2(KNlogN)", "w0+w1K+w2(KN²logN)", "w0+w1K+w2(KN^w3logN)"]
+    # equations = ["w0 + w1*(K*N*(logN)^2)", "w0 + w1*K + w2*(K*N^(2)*logN)", "w0 + w1*K + w2*(K*N^(w3)*logN)"]
+    equations = {
+        'dt_lower' : 'w0+w1K+w2(KNlogN)', 'dt_avg' : '', 'dt_upper' : '',
+        'rf_lower' : '', 'rf_avg' : '', 'rf_upper' : '',
+        'sgd_lower' : '', 'sgd_avg' : '', 'sgd_upper' : ''
+
+    }
+    used_eq = ['dt_lower', 'dt_avg']  # likelihood function has multiple versions of eqs. here define which ones will be used.
     table = pd.DataFrame()
     train_folder_path, training_data_sets = data_sets_in_folder()
     # find and load training data files
@@ -81,14 +86,14 @@ if __name__ == "__main__":
             # load the model from pickle file
             model = Model()
             with model:
-                trace = pickle.load(open("results/model" + str(equation) + ".pickle", "rb"))
+                trace = pickle.load(open("results/model_" + str(equation) + ".pickle", "rb"))
 
             # predict on data_name_pred
             y_pred, y_pred_upper, y_pred_lower = mcmc_predict(trace, x1_features, x2_size, equation)
-            y_predicted.append([y_pred, y_pred_upper, y_pred_lower, equations[equation - 1]])
+            y_predicted.append([y_pred, y_pred_upper, y_pred_lower, equations[equation]])
 
         # plot data
-        table = pd.concat([table, plot(x1_features, x2_size, y_runtime, y_predicted, data_set, data_set)])
+        table = pd.concat([table, plot_prediction(x1_features, x2_size, y_runtime, y_predicted, data_set, data_set)])
         y_predicted = list()
 
     table.to_html("table3.html")

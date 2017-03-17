@@ -12,37 +12,73 @@ from scipy import optimize
 
 def likelihood_knlogn(w, k, n, equation):
 
-    if equation == 1:
+    if equation == 'dt_lower':
         n_log = np.log2(n) ** 2
         n_mod = n
         k_mod = k * 0
 
-        # val = w[0] + w[1] * k_mod + w[2] * (k * n_mod * n_log)
         val = w[0] + w[1] * (k * n_mod * n_log)
 
-    if equation == 2:
-        # n_log = np.log2(n)
+    if equation == 'dt_avg':
         n_mod = n ** 2
         k_mod = k * 1
-        # val = w[0] + w[1] * k_mod + w[2] * (k * n_mod * n_log)
+
         val = w[0] * n_mod + w[1] * k_mod
 
-    if equation == 3:
+    if equation == 'dt_upper':
         n_log = np.log2(n)
         n_mod = n
         k_mod = k * 1
+
         val = w[0] + w[1] * k_mod + w[2] * (k * n_mod**w[3] * n_log)
+
+    if equation == 'rf_lower':
+        n_log = np.log2(n)
+        n_mod = n ** 1
+        k_mod = k * 1
+        val = w[0] + w[1] * k_mod + w[2] * (k * n_mod * n_log)
+        # val = w[0] * n_mod
+
+    if equation == 'rf_avg':
+        n_log = np.log2(n)
+        n_mod = n ** 1
+        k_mod = k * 1
+        val = w[0] + w[1] * k_mod + w[2] * (k * n_mod * n_log)
+        # val = w[0] * n_mod + w[1] * k_mod
+
+    if equation == 'rf_upper':
+        n_log = np.log2(n)
+        n_mod = n ** 1.2
+        k_mod = k * 1
+        val = w[0] + w[1] * k_mod + w[2] * (k * n_mod * n_log)
+
+    if equation == 'sgd_lower':
+        n_mod = n ** 1
+
+        val = w[0] * n_mod
+
+    if equation == 'sgd_avg':
+        n_mod = n ** 1
+        k_mod = k * 1
+
+        val = w[0] * n_mod + w[1] * k_mod
+
+    if equation == 'sgd_upper':
+        n_mod = n ** 1.2
+        k_mod = k * 1
+
+        val = w[0] * n_mod + w[1] * k_mod + w[2]
 
     return val
 
 
 # defining the model with given params
-def mcmc_model(parameters):
+def mcmc_model(no_of_features, data_size, training_time, equation):
 
-    x1 = parameters[0]
-    x2 = parameters[1]
-    y = parameters[2]
-    equation = parameters[3]
+    # x1 = parameters[0]
+    # x2 = parameters[1]
+    # y = parameters[2]
+    # equation = parameters[3]
 
     basic_model = Model()
     with basic_model:
@@ -57,10 +93,10 @@ def mcmc_model(parameters):
 
         params = (alpha, beta, ceta, gamma)
         # ## Expected value of outcome
-        mu = likelihood_knlogn(params, x1, x2, equation)
+        mu = likelihood_knlogn(params, no_of_features, data_size, equation)
 
         # ## Likelihood of obs
-        y_obs = Normal('Y_obs', mu=mu, sd=sigma, observed=y)
+        y_obs = Normal('Y_obs', mu=mu, sd=sigma, observed=training_time)
 
         # ## obtain starting values via MAP
         start = find_MAP(fmin=optimize.fmin_powell)
@@ -80,7 +116,7 @@ def mcmc_model(parameters):
 
 
 # predict values for y
-def mcmc_predict(trace, x1_f, x2_f, equation):
+def mcmc_predict(trace, no_of_features, data_size, equation):
 
     standard_dev = 1
 
@@ -104,9 +140,9 @@ def mcmc_predict(trace, x1_f, x2_f, equation):
     params_upper = (mu_alpha + std_alpha, mu_beta + std_beta, mu_ceta + std_ceta, mu_gamma + std_gamma)
     params_lower = (mu_alpha - std_alpha, mu_beta - std_beta, mu_ceta - std_ceta, mu_gamma - std_gamma)
 
-    y_pred = likelihood_knlogn(params, x1_f, x2_f, equation)
-    y_pred_upper = likelihood_knlogn(params_upper, x1_f, x2_f, equation)
-    y_pred_lower = likelihood_knlogn(params_lower, x1_f, x2_f, equation)
+    y_pred = likelihood_knlogn(params, no_of_features, data_size, equation)
+    y_pred_upper = likelihood_knlogn(params_upper, no_of_features, data_size, equation)
+    y_pred_lower = likelihood_knlogn(params_lower, no_of_features, data_size, equation)
 
     return y_pred, y_pred_upper, y_pred_lower
 
@@ -117,13 +153,13 @@ def mcmc_fit(xdata, ytime, eq_used):
     print("length ytime:", len(ytime))
 
     for equation in eq_used:
-        params = [xdata[:, 1], xdata[:, 0], ytime, equation]
+        # params = [xdata[:, 1], xdata[:, 0], ytime, equation]
 
         # creating mcmc model
-        trace = mcmc_model(params)
+        trace = mcmc_model(xdata[:, 1], xdata[:, 0], ytime, equation)
 
         # save the learned mode in pickle file
-        pickle.dump(trace, open("results/model" + str(equation) + ".pickle", "wb"), protocol=-1)
+        pickle.dump(trace, open("results/model_" + str(equation) + ".pickle", "wb"), protocol=-1)
 
         # traceplot(trace)
         # move plot about learned param values to results folder

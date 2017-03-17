@@ -1,3 +1,7 @@
+# Mohsin Ali
+# This scripts is used to train decision trees on  mnist, covertype, dexter and gisette datasets
+# The training time of decision trees is recorded for different data sizes of these datasets and saved in numpy arrays
+
 import random
 from sklearn.datasets import fetch_mldata
 from sklearn.cross_validation import train_test_split

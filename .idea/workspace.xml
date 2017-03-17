@@ -6,8 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7f63254-29fd-48f3-bbc3-4e9800dff0ab" name="Default" comment="add rf to plotall">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dt_prediction_individual_rf.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mcmc_rf.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/alpha.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/beta.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/datasets/randforest/results_1002_bac.csv" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/datasets/randforest/results_1040_bac.csv" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/datasets/randforest/results_1056_bac.csv" afterPath="" />
@@ -48,21 +48,20 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/datasets/randforest/results_923_bac.csv" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/datasets/randforest/results_962_bac.csv" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/datasets/randforest/results_979_bac.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1000_bac__sgd_pred_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1018_bac__sgd_pred_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1019_bac__sgd_pred_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1020_bac__sgd_pred_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1021_bac__sgd_pred_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1036_bac__sgd_pred_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1041_bac__sgd_pred_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1049_bac__sgd_pred_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1050_bac__sgd_pred_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1053_bac__sgd_pred_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1067_bac__sgd_pred_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1068_bac__sgd_pred_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1069_bac__sgd_pred_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1116_bac__sgd_pred_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1119_bac__sgd_pred_n.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dt_prediction_grid.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dt_prediction_hammer.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dt_prediction_individual_rf.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dt_prediction_individual_sgd.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hammer.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hammer_eg.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/line-data.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mc2.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mc2_pred.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mcmc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mcmc_rf.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mcmc_sgd.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/my_file.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/old_code_snippets.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_12_bac__sgd_pred_n.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_14_bac__sgd_pred_n.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_16_bac__sgd_pred_n.png" afterPath="" />
@@ -142,6 +141,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_991_bac__sgd_pred_n.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_993_bac__sgd_pred_n.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_995_bac__sgd_pred_n.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/rf_graphs.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/train/dt/x_runtime_train_1000_bac__dt.np" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/train/dt/x_runtime_train_1018_bac__dt.np" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/train/dt/x_runtime_train_1019_bac__dt.np" afterPath="" />
@@ -760,11 +760,30 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_covertype.np" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_gisette10.np" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_mnist.np" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sgd_features.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/table.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/table2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/table3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/table_rf.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1000_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1000_bac__sgd_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1018_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1018_bac__sgd_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1019_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1019_bac__sgd_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1020_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1020_bac__sgd_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1021_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1021_bac__sgd_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1036_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1036_bac__sgd_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1041_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1041_bac__sgd_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1049_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1049_bac__sgd_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1050_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1050_bac__sgd_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1053_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1053_bac__sgd_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1067_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1067_bac__sgd_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1068_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1068_bac__sgd_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1069_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1069_bac__sgd_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1116_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1116_bac__sgd_pred_n.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1119_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1119_bac__sgd_pred_n.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/model1.pickle" afterPath="$PROJECT_DIR$/results/model1.pickle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/model2.pickle" afterPath="$PROJECT_DIR$/results/model2.pickle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/model3.pickle" afterPath="$PROJECT_DIR$/results/model3.pickle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data.py" afterPath="$PROJECT_DIR$/data.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1000_bac.csv" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1000_bac.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1018_bac.csv" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1018_bac.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1019_bac.csv" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1019_bac.csv" />
@@ -970,9 +989,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datasets/randforest/results_991_bac.csv" afterPath="$PROJECT_DIR$/datasets/randforest/results_991_bac.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datasets/randforest/results_993_bac.csv" afterPath="$PROJECT_DIR$/datasets/randforest/results_993_bac.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datasets/randforest/results_995_bac.csv" afterPath="$PROJECT_DIR$/datasets/randforest/results_995_bac.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dt_prediction.py" afterPath="$PROJECT_DIR$/dt_prediction.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dt_prediction_individual_sgd.py" afterPath="$PROJECT_DIR$/dt_prediction_individual_sgd.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plotAll.py" afterPath="$PROJECT_DIR$/plotAll.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/decisionTrees.py" afterPath="$PROJECT_DIR$/decisionTrees.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dt_prediction_individual.py" afterPath="$PROJECT_DIR$/dt_prediction_individual.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcmc.py" afterPath="$PROJECT_DIR$/mcmc.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtimes/train/dt_graphs/y_runtime_train_1000_bac__dt.np" afterPath="$PROJECT_DIR$/runtimes/train/dt_graphs/y_runtime_train_1000_bac__dt.np" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtimes/train/dt_graphs/y_runtime_train_1018_bac__dt.np" afterPath="$PROJECT_DIR$/runtimes/train/dt_graphs/y_runtime_train_1018_bac__dt.np" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtimes/train/dt_graphs/y_runtime_train_1019_bac__dt.np" afterPath="$PROJECT_DIR$/runtimes/train/dt_graphs/y_runtime_train_1019_bac__dt.np" />
@@ -1279,7 +1298,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_allTrain_dt_graphs.np" afterPath="$PROJECT_DIR$/runtimes/y_runtime_train_allTrain_dt_graphs.np" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_allTrain_rf_graphs.np" afterPath="$PROJECT_DIR$/runtimes/y_runtime_train_allTrain_rf_graphs.np" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_allTrain_sgd_graphs.np" afterPath="$PROJECT_DIR$/runtimes/y_runtime_train_allTrain_sgd_graphs.np" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
     </list>
     <ignored path="code.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1320,108 +1338,170 @@
     <favorites_list name="code" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dt_prediction_individual_sgd.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dt_prediction_individual_sgd.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mcmc_sgd.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mcmc_sgd.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="888">
-              <caret line="76" column="18" lean-forward="false" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dt_prediction.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dt_prediction.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="57" column="57" lean-forward="false" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dt_prediction_rf.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dt_prediction_rf.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dt_prediction_individual_rf.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dt_prediction_individual_rf.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="60" column="66" lean-forward="false" selection-start-line="60" selection-start-column="66" selection-end-line="60" selection-end-column="66" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dt_prediction_grid.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dt_prediction_grid.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2103">
-              <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mcmc_rf.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mcmc_rf.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mcmc.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mcmc.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="20" column="47" lean-forward="false" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5595391">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="merge.py" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/virtualOracle/lib/python3.5/site-packages/pandas/tools/merge.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="306">
+                  <caret line="1447" column="0" lean-forward="false" selection-start-line="1447" selection-start-column="0" selection-end-line="1447" selection-end-column="0" />
+                  <folding>
+                    <marker date="1489722751960" expanded="true" signature="45133:45293" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="45348:46477" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="45681:45794" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="45878:46243" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="45938:46243" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="45951:46069" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="46533:46801" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="46870:47846" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="46897:47400" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="47006:47291" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="47040:47290" ph="&quot;...&quot;" />
+                    <marker date="1489722751960" expanded="true" signature="47410:47538" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="47589:47750" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="47889:48002" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="48023:48158" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="48201:49185" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="48265:48311" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="48381:48531" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="48541:48638" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="48788:48886" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="49016:49155" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="49227:49595" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="49271:49331" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="49642:50548" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="50126:50220" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="50550:50653" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="50824:53397" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="50829:53094" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+                    <marker date="1489722751960" expanded="true" signature="53428:64191" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="53433:53505" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+                    <marker date="1489722751960" expanded="true" signature="53699:58519" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="53760:53970" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="53789:53941" ph="'...'" />
+                    <marker date="1489722751960" expanded="true" signature="54112:54260" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="54162:54259" ph="'...'" />
+                    <marker date="1489722751960" expanded="true" signature="54296:54404" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="54634:55009" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="54751:54884" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="55222:55443" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="55453:55572" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="55621:55806" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="55684:55806" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="55747:55806" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="55821:56319" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="55834:55975" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="56003:56098" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="56251:56319" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="56895:57039" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="56929:57012" ph="&quot;...&quot;" />
+                    <marker date="1489722751960" expanded="true" signature="57049:57147" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="57174:58105" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="57313:58105" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="57452:57595" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="57490:57594" ph="&quot;...&quot;" />
+                    <marker date="1489722751960" expanded="true" signature="57618:58066" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="57725:57815" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="57837:57921" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="58546:60762" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="58597:59728" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="58656:59345" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="59408:59728" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="59776:60762" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="59841:60340" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="59967:60279" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="60007:60101" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="60794:60913" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="60943:61669" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="61050:61201" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="61084:61201" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="61215:61590" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="61263:61405" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="61301:61387" ph="&quot;...&quot;" />
+                    <marker date="1489722751960" expanded="true" signature="61703:62125" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="61800:62050" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="61915:62050" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="62158:63885" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="62167:62240" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+                    <marker date="1489722751960" expanded="true" signature="62268:63364" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="62390:62474" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="62510:63298" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="62666:63144" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="62716:62920" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="62757:62900" ph="&quot;...&quot;" />
+                    <marker date="1489722751960" expanded="true" signature="62963:63046" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="63072:63144" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="63476:63566" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="63662:63807" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="63938:64191" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="63972:64191" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="64015:64191" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="64223:64265" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="64336:67644" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="64451:64703" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="64713:64931" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="64971:66580" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="65005:65140" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="65191:65609" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="65270:65552" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="65367:65492" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="65738:65836" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="65850:65996" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="66081:66456" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="66226:66371" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="66264:66370" ph="&quot;...&quot;" />
+                    <marker date="1489722751960" expanded="true" signature="66864:67165" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="66998:67116" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="67208:67331" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="67341:67436" ph="..." />
+                    <marker date="1489722751960" expanded="true" signature="67678:67835" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="data.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/data.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-783">
+                  <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+                  <folding>
+                    <element signature="e#0#9#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="mcmc.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/mcmc.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="469">
+                  <caret line="48" column="28" lean-forward="false" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="dt_prediction_individual.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/dt_prediction_individual.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="768">
+                  <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#9#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -1453,8 +1533,6 @@
         <option value="$PROJECT_DIR$/mcmc_pymc.py" />
         <option value="$PROJECT_DIR$/runtimes/y_runtime_train_mnist.np" />
         <option value="$PROJECT_DIR$/runtimes/x_runtime_train_mag.np" />
-        <option value="$PROJECT_DIR$/decisionTrees.py" />
-        <option value="$PROJECT_DIR$/decisionTrees.py" />
         <option value="$PROJECT_DIR$/runtimes/mcmc_hammer.py" />
         <option value="$PROJECT_DIR$/2016_runtime_data/sample.csv" />
         <option value="$USER_HOME$/oracle/lib/python3.4/site-packages/pymc3/plots.py" />
@@ -1464,14 +1542,18 @@
         <option value="$PROJECT_DIR$/mcmc_hammer.py" />
         <option value="$PROJECT_DIR$/mcmc_eg.py" />
         <option value="$PROJECT_DIR$/hammer.py" />
-        <option value="$PROJECT_DIR$/mcmc.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/plotAll.py" />
         <option value="$PROJECT_DIR$/dt_prediction_individual_sgd.py" />
         <option value="$PROJECT_DIR$/data.py" />
         <option value="$PROJECT_DIR$/dt_prediction.py" />
+        <option value="$PROJECT_DIR$/decisionTrees.py" />
+        <option value="$PROJECT_DIR$/decisionTrees.py" />
+        <option value="$PROJECT_DIR$/mcmc_sgd.py" />
+        <option value="$PROJECT_DIR$/mcmc.py" />
         <option value="$PROJECT_DIR$/mcmc_rf.py" />
         <option value="$PROJECT_DIR$/dt_prediction_individual_rf.py" />
+        <option value="$PROJECT_DIR$/dt_prediction_individual.py" />
       </list>
     </option>
   </component>
@@ -1481,10 +1563,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1920" />
-    <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1056" />
+    <option name="x" value="1918" />
+    <option name="y" value="-2" />
+    <option name="width" value="1924" />
+    <option name="height" value="1083" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1524,6 +1606,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1539,7 +1622,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1559,25 +1641,7 @@
       <recent name="$PROJECT_DIR$/datasets/mldata" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.dt_prediction_individual_rf">
-    <configuration default="false" name="dt_pred" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="runtime_prediction" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dt_prediction.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.dt_prediction_individual">
     <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -1646,6 +1710,24 @@
       <module name="runtime_prediction" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dt_prediction_individual_rf.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="dt_prediction_individual" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="runtime_prediction" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dt_prediction_individual.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -1802,19 +1884,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.dt_pred" />
-      <item index="1" class="java.lang.String" itemvalue="Python.test" />
-      <item index="2" class="java.lang.String" itemvalue="Python.plotAll" />
-      <item index="3" class="java.lang.String" itemvalue="Python.dt_prediction_individual_sgd" />
-      <item index="4" class="java.lang.String" itemvalue="Python.dt_prediction_individual_rf" />
+      <item index="0" class="java.lang.String" itemvalue="Python.test" />
+      <item index="1" class="java.lang.String" itemvalue="Python.plotAll" />
+      <item index="2" class="java.lang.String" itemvalue="Python.dt_prediction_individual_sgd" />
+      <item index="3" class="java.lang.String" itemvalue="Python.dt_prediction_individual_rf" />
+      <item index="4" class="java.lang.String" itemvalue="Python.dt_prediction_individual" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.dt_prediction_individual_rf" />
-        <item index="1" class="java.lang.String" itemvalue="Python.dt_prediction_individual_sgd" />
-        <item index="2" class="java.lang.String" itemvalue="Python.plotAll" />
-        <item index="3" class="java.lang.String" itemvalue="Python.test" />
-        <item index="4" class="java.lang.String" itemvalue="Python.dt_pred" />
+        <item index="0" class="java.lang.String" itemvalue="Python.dt_prediction_individual" />
+        <item index="1" class="java.lang.String" itemvalue="Python.dt_prediction_individual_rf" />
+        <item index="2" class="java.lang.String" itemvalue="Python.dt_prediction_individual_sgd" />
+        <item index="3" class="java.lang.String" itemvalue="Python.plotAll" />
+        <item index="4" class="java.lang.String" itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -1916,7 +1998,14 @@
       <option name="project" value="LOCAL" />
       <updated>1487268681864</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add rf to plotall">
+      <created>1489368117600</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1489368117600</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1929,29 +2018,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="23" width="1920" height="1056" extended-state="6" />
+    <frame x="1918" y="-2" width="1924" height="1083" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11708861" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16559829" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32814237" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44818377" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="789" y="267" width="932" height="743" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24941361" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.5641026" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="-2" y="25" width="1924" height="1032" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31036323" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="789" y="267" width="932" height="743" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951444" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Concurrent Activities Diagram" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39797008" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="41" y="52" width="1879" height="1002" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2008,7 +2097,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="69" />
+      <option name="time" value="76" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -2029,31 +2118,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dt_prediction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hammer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runtimes/x_runtime_train_adult.np" />
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plotAll.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2087,13 +2151,6 @@
     <entry file="file://$USER_HOME$/oracle/lib/python3.4/site-packages/pymc3/plots.py" />
     <entry file="file://$PROJECT_DIR$/runtimes/x_runtime_train_adult.np" />
     <entry file="file://$PROJECT_DIR$/runtimes/x_runtime_train_gisette10.np" />
-    <entry file="file://$PROJECT_DIR$/decisionTrees.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="168" column="85" lean-forward="false" selection-start-line="168" selection-start-column="85" selection-end-line="168" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/runtimes/y_runtime_train_mnist.np" />
     <entry file="file://$USER_HOME$/oracle/lib/python3.4/site-packages/pymc3/model.py" />
     <entry file="file://$USER_HOME$/oracle/lib/python3.4/site-packages/theano/tensor/type.py" />
@@ -2115,31 +2172,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mcmc_eg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1533">
-          <caret line="80" column="23" lean-forward="false" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hammer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dt_prediction_individual.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dt_prediction_hammer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -2199,10 +2235,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/virtualOracle/lib/python3.5/site-packages/pymc3/sampling.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="888">
+          <caret line="83" column="4" lean-forward="false" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dt_prediction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="57" column="57" lean-forward="false" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#9#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/decisionTrees.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="50" column="49" lean-forward="false" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+          <folding>
+            <element signature="e#230#243#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dt_prediction_rf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="276">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2215,77 +2278,221 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dt_prediction_individual_rf.py">
+    <entry file="file://$PROJECT_DIR$/hammer_eg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="60" column="66" lean-forward="false" selection-start-line="60" selection-start-column="66" selection-end-line="60" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="210">
+          <caret line="30" column="22" lean-forward="true" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mc2_pred.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mc2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2307">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dt_prediction_hammer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dt_prediction_grid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2103">
+        <state relative-caret-position="-327">
           <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mcmc_rf.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mcmc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="20" column="47" lean-forward="false" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/virtualOracle/lib/python3.5/site-packages/pymc3/sampling.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="83" column="4" lean-forward="false" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mcmc_sgd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="76" column="18" lean-forward="false" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dt_prediction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="57" column="57" lean-forward="false" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="390">
+          <caret line="29" column="10" lean-forward="false" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
+        <state relative-caret-position="-783">
           <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/virtualOracle/lib/python3.5/site-packages/theano/gof/link.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/virtualOracle/lib/python3.5/site-packages/pandas/tools/merge.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="1447" column="0" lean-forward="false" selection-start-line="1447" selection-start-column="0" selection-end-line="1447" selection-end-column="0" />
+          <folding>
+            <marker date="1489722751960" expanded="true" signature="45133:45293" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="45348:46477" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="45681:45794" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="45878:46243" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="45938:46243" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="45951:46069" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="46533:46801" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="46870:47846" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="46897:47400" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="47006:47291" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="47040:47290" ph="&quot;...&quot;" />
+            <marker date="1489722751960" expanded="true" signature="47410:47538" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="47589:47750" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="47889:48002" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="48023:48158" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="48201:49185" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="48265:48311" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="48381:48531" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="48541:48638" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="48788:48886" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="49016:49155" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="49227:49595" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="49271:49331" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="49642:50548" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="50126:50220" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="50550:50653" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="50824:53397" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="50829:53094" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1489722751960" expanded="true" signature="53428:64191" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="53433:53505" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1489722751960" expanded="true" signature="53699:58519" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="53760:53970" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="53789:53941" ph="'...'" />
+            <marker date="1489722751960" expanded="true" signature="54112:54260" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="54162:54259" ph="'...'" />
+            <marker date="1489722751960" expanded="true" signature="54296:54404" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="54634:55009" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="54751:54884" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="55222:55443" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="55453:55572" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="55621:55806" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="55684:55806" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="55747:55806" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="55821:56319" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="55834:55975" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="56003:56098" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="56251:56319" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="56895:57039" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="56929:57012" ph="&quot;...&quot;" />
+            <marker date="1489722751960" expanded="true" signature="57049:57147" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="57174:58105" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="57313:58105" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="57452:57595" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="57490:57594" ph="&quot;...&quot;" />
+            <marker date="1489722751960" expanded="true" signature="57618:58066" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="57725:57815" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="57837:57921" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="58546:60762" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="58597:59728" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="58656:59345" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="59408:59728" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="59776:60762" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="59841:60340" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="59967:60279" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="60007:60101" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="60794:60913" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="60943:61669" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="61050:61201" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="61084:61201" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="61215:61590" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="61263:61405" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="61301:61387" ph="&quot;...&quot;" />
+            <marker date="1489722751960" expanded="true" signature="61703:62125" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="61800:62050" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="61915:62050" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="62158:63885" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="62167:62240" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1489722751960" expanded="true" signature="62268:63364" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="62390:62474" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="62510:63298" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="62666:63144" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="62716:62920" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="62757:62900" ph="&quot;...&quot;" />
+            <marker date="1489722751960" expanded="true" signature="62963:63046" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="63072:63144" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="63476:63566" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="63662:63807" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="63938:64191" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="63972:64191" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="64015:64191" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="64223:64265" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="64336:67644" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="64451:64703" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="64713:64931" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="64971:66580" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="65005:65140" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="65191:65609" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="65270:65552" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="65367:65492" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="65738:65836" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="65850:65996" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="66081:66456" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="66226:66371" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="66264:66370" ph="&quot;...&quot;" />
+            <marker date="1489722751960" expanded="true" signature="66864:67165" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="66998:67116" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="67208:67331" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="67341:67436" ph="..." />
+            <marker date="1489722751960" expanded="true" signature="67678:67835" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mcmc_rf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1005">
+          <caret line="76" column="24" lean-forward="false" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dt_prediction_individual_rf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dt_prediction_individual.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mcmc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="48" column="28" lean-forward="false" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>

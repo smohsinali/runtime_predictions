@@ -73,8 +73,8 @@ def mcmc_model(parameters):
 
         # using metropolis hastings with 2000 burin steps
         step1 = Metropolis([alpha, beta, ceta, sigma])
-        sample(10000, start=start, step=step1)
-        trace = sample(20000, start=start, step=step1)
+        sample(1000, start=start, step=step1)
+        trace = sample(2000, start=start, step=step1)
 
     print("mcmc_model end")
     return trace

@@ -12,25 +12,32 @@ from scipy import optimize
 
 def likelihood_knlogn(w, k, n, equation):
 
-    if equation == 1:
-        # n_log = np.log2(n)
+    if equation == 'dt_lower':
         n_mod = n ** 1
-        k_mod = k * 1
-        # val = w[0] + w[1] * k_mod + w[2] * (k * n_mod * n_log)
         val = w[0] * n_mod
 
-    if equation == 2:
-        # n_log = np.log2(n)
+    if equation == 'dt_avg':
         n_mod = n ** 1
         k_mod = k * 1
-        # val = w[0] + w[1] * k_mod + w[2] * (k * n_mod * n_log)
         val = w[0] * n_mod + w[1] * k_mod
 
-    if equation == 3:
-        # n_log = np.log2(n)
-        n_mod = n ** 1.2 
+    if equation == 'dt_upper':
+        n_mod = n ** 1.2
         k_mod = k * 1
-        # val = w[0] + w[1] * k_mod + w[2] * (k * n_mod * n_log)
+        val = w[0] * n_mod + w[1] * k_mod + w[2]
+
+    if equation == 'sgd_lower':
+        n_mod = n ** 1
+        val = w[0] * n_mod
+
+    if equation == 'sgd_avg':
+        n_mod = n ** 1
+        k_mod = k * 1
+        val = w[0] * n_mod + w[1] * k_mod
+
+    if equation == 'sgd_upper':
+        n_mod = n ** 1.2
+        k_mod = k * 1
         val = w[0] * n_mod + w[1] * k_mod + w[2]
 
     return val

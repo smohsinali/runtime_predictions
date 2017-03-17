@@ -33,6 +33,7 @@ def plot(x_features, x, y, y_predicted, data_pred, data_train):
               (data_pred.rjust(13), y[-1], y_pred[-1], y_pred_upper[-1], y_pred_lower[-1]))
         row.append(pd.DataFrame({data_pred: [y[-1], y_pred[-1], 100*(abs(y[-1]-y_pred[-1]))/y[-1]]},
                                 index=['true', 'pred.', '%diff']))
+        print(predicted[3])
         keys.append(predicted[3])
 
     plt.xlabel("Number of Samples")
@@ -52,7 +53,7 @@ def plot(x_features, x, y, y_predicted, data_pred, data_train):
 if __name__ == "__main__":
     # equations = ["w0+w1K+w2(KNlogN)", "w0+w1K+w2(KN²logN)", "w0+w1K+w2(KN^w3logN)"]
     equations = ["w0 * N", "w0 * N + w1 * k", "w0 * N + w1 * k + w2"]
-    used_eq = [1, 2, 3]  # likelihood function has multiple versions of eqs. here define which ones will be used.
+    used_eq = [1, 2]  # likelihood function has multiple versions of eqs. here define which ones will be used.
     table = pd.DataFrame()
     train_folder_path, training_data_sets = data_sets_in_folder(folder_path="runtimes/train/rf_graphs")
     # find and load training data files
