@@ -51,8 +51,22 @@ def plot(x_features, x, y, y_predicted, data_pred, data_train):
 
 if __name__ == "__main__":
     # equations = ["w0+w1K+w2(KNlogN)", "w0+w1K+w2(KN²logN)", "w0+w1K+w2(KN^w3logN)"]
-    equations = ["w0 + w1*(K*N*(logN)^2)", "w0 + w1*K + w2*(K*N^(2)*logN)", "w0 + w1*K + w2*(K*N^(w3)*logN)"]
-    used_eq = [1, 2]  # likelihood function has multiple versions of eqs. here define which ones will be used.
+    # equations = ["w0 + w1*(K*N*(logN)^2)", "w0 + w1*K + w2*(K*N^(2)*logN)", "w0 + w1*K + w2*(K*N^(w3)*logN)"]
+    # used_eq = [1, 2]  # likelihood function has multiple versions of eqs. here define which ones will be used.
+
+    equations = {
+        'dt_lower': 'w0+w1K+w2(KNlogN)', 'dt_avg': '', 'dt_upper': '',
+        'rf_lower': '', 'rf_avg': '', 'rf_upper': '',
+        'sgd_lower': '', 'sgd_avg': '', 'sgd_upper': ''
+
+    }
+
+    # likelihood function has multiple versions of eqs. here define which ones will be used.
+    used_eq = [
+                'dt_lower', 'dt_avg', 'dt_upper',
+                # 'rf_lower', 'rf_avg', 'rf_upper',
+                # 'sgd_lower', 'sgd_avg', 'sgd_upper'
+    ]
 
     # find and load training data files
     x_train, y_train, data_name_train = load_training_data(folder_path="runtimes/train/rf_graphs")
@@ -86,7 +100,7 @@ if __name__ == "__main__":
 
             # predict on data_name_pred
             y_pred, y_pred_upper, y_pred_lower = mcmc_predict(trace, x1_features, x2_size, equation)
-            y_predicted.append([y_pred, y_pred_upper, y_pred_lower, equations[equation - 1]])
+            y_predicted.append([y_pred, y_pred_upper, y_pred_lower, equations[equation]])
 
         # plot data
         table = pd.concat([table, plot(x1_features, x2_size, y_runtime, y_predicted, data_name_pred, data_name_train)])

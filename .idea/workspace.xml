@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/dt_prediction.py" line="63" mnemonic="0" />
+    <bookmark url="file://$PROJECT_DIR$/dt_prediction.py" line="77" mnemonic="0" />
     <bookmark url="file://$PROJECT_DIR$/dt_prediction.py" line="47" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7f63254-29fd-48f3-bbc3-4e9800dff0ab" name="Default" comment="add rf to plotall">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/alpha.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/beta.png" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plotting.py" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/datasets/randforest/results_1002_bac.csv" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/datasets/randforest/results_1040_bac.csv" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/datasets/randforest/results_1056_bac.csv" afterPath="" />
@@ -48,20 +47,23 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/datasets/randforest/results_923_bac.csv" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/datasets/randforest/results_962_bac.csv" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/datasets/randforest/results_979_bac.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dt_prediction_grid.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dt_prediction_hammer.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dt_prediction_individual_rf.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dt_prediction_individual_sgd.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hammer.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hammer_eg.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/line-data.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mc2.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mc2_pred.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mcmc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mcmc_rf.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mcmc_sgd.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/my_file.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/old_code_snippets.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dt_prediction_rf.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dt_prediction_sgd.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1000_bac__sgd_pred_n.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1018_bac__sgd_pred_n.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1019_bac__sgd_pred_n.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1020_bac__sgd_pred_n.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1021_bac__sgd_pred_n.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1036_bac__sgd_pred_n.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1041_bac__sgd_pred_n.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1049_bac__sgd_pred_n.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1050_bac__sgd_pred_n.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1053_bac__sgd_pred_n.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1067_bac__sgd_pred_n.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1068_bac__sgd_pred_n.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1069_bac__sgd_pred_n.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1116_bac__sgd_pred_n.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_1119_bac__sgd_pred_n.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_12_bac__sgd_pred_n.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_14_bac__sgd_pred_n.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_16_bac__sgd_pred_n.png" afterPath="" />
@@ -141,7 +143,30 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_991_bac__sgd_pred_n.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_993_bac__sgd_pred_n.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/results/mc_995_bac__sgd_pred_n.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rf_graphs.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/model1.pickle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/model2.pickle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/results/model3.pickle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_cag.np" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_cagm.np" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_gisette.np" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_gisette_bu.np" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_mca.np" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_mcg.np" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_mcg_bu (copy).np" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_mcg_bu.np" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_mcgg.np" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_mcggg.np" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/old_17mai/x_runtime_train_mnistt.np" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/old_17mai/y_runtime_train_cag.np" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/old_17mai/y_runtime_train_cagm.np" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/old_17mai/y_runtime_train_gisette.np" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/old_17mai/y_runtime_train_gisette_bu.np" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/old_17mai/y_runtime_train_mca.np" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/old_17mai/y_runtime_train_mcg.np" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/old_17mai/y_runtime_train_mcg_bu.np" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/old_17mai/y_runtime_train_mcgg.np" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/old_17mai/y_runtime_train_mcggg.np" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/old_17mai/y_runtime_train_mnistt.np" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/train/dt/x_runtime_train_1000_bac__dt.np" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/train/dt/x_runtime_train_1018_bac__dt.np" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/train/dt/x_runtime_train_1019_bac__dt.np" afterPath="" />
@@ -760,29 +785,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_covertype.np" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_gisette10.np" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_mnist.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sgd_features.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/table.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/table2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/table3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/table_rf.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1000_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1000_bac__sgd_pred_n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1018_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1018_bac__sgd_pred_n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1019_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1019_bac__sgd_pred_n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1020_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1020_bac__sgd_pred_n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1021_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1021_bac__sgd_pred_n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1036_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1036_bac__sgd_pred_n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1041_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1041_bac__sgd_pred_n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1049_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1049_bac__sgd_pred_n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1050_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1050_bac__sgd_pred_n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1053_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1053_bac__sgd_pred_n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1067_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1067_bac__sgd_pred_n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1068_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1068_bac__sgd_pred_n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1069_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1069_bac__sgd_pred_n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1116_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1116_bac__sgd_pred_n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/mc_1119_bac__sgd_pred_n.png" afterPath="$PROJECT_DIR$/results/mc_1119_bac__sgd_pred_n.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/model1.pickle" afterPath="$PROJECT_DIR$/results/model1.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/model2.pickle" afterPath="$PROJECT_DIR$/results/model2.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/results/model3.pickle" afterPath="$PROJECT_DIR$/results/model3.pickle" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/plotAll.py" afterPath="$PROJECT_DIR$/csv2np.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1000_bac.csv" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1000_bac.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1018_bac.csv" afterPath="$PROJECT_DIR$/datasets/2016_runtime_data/results_1018_bac.csv" />
@@ -989,7 +992,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datasets/randforest/results_991_bac.csv" afterPath="$PROJECT_DIR$/datasets/randforest/results_991_bac.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datasets/randforest/results_993_bac.csv" afterPath="$PROJECT_DIR$/datasets/randforest/results_993_bac.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datasets/randforest/results_995_bac.csv" afterPath="$PROJECT_DIR$/datasets/randforest/results_995_bac.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/decisionTrees.py" afterPath="$PROJECT_DIR$/decisionTrees.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dt_prediction.py" afterPath="$PROJECT_DIR$/dt_prediction.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dt_prediction_individual.py" afterPath="$PROJECT_DIR$/dt_prediction_individual.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcmc.py" afterPath="$PROJECT_DIR$/mcmc.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtimes/train/dt_graphs/y_runtime_train_1000_bac__dt.np" afterPath="$PROJECT_DIR$/runtimes/train/dt_graphs/y_runtime_train_1000_bac__dt.np" />
@@ -1333,12 +1336,34 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="mcmc.py" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/mcmc.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="428">
+                    <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+                    <folding>
+                      <element signature="e#0#9#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="code" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5595391">
+    <splitter split-orientation="horizontal" split-proportion="0.49419832">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="merge.py" pinned="false" current-in-tab="false">
@@ -1464,8 +1489,8 @@
           <file leaf-file-name="data.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/data.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-783">
-                  <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+                <state relative-caret-position="150">
+                  <caret line="10" column="60" lean-forward="false" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
                   </folding>
@@ -1473,12 +1498,26 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="mcmc.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/mcmc.py">
+          <file leaf-file-name="dt_prediction.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/dt_prediction.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="469">
-                  <caret line="48" column="28" lean-forward="false" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
-                  <folding />
+                <state relative-caret-position="68">
+                  <caret line="16" column="51" lean-forward="false" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+                  <folding>
+                    <marker date="1489990440085" expanded="true" signature="1871:4311" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="plotting.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/plotting.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="529">
+                  <caret line="88" column="35" lean-forward="false" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="35" />
+                  <folding>
+                    <element signature="e#0#31#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -1490,10 +1529,10 @@
           <file leaf-file-name="dt_prediction_individual.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/dt_prediction_individual.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="768">
-                  <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+                <state relative-caret-position="221">
+                  <caret line="13" column="55" lean-forward="false" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
                   <folding>
-                    <element signature="e#0#9#0" expanded="true" />
+                    <element signature="e#0#13#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -1513,6 +1552,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>sgd_graphs</find>
+      <find>trace_pymc</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -1546,13 +1586,14 @@
         <option value="$PROJECT_DIR$/plotAll.py" />
         <option value="$PROJECT_DIR$/dt_prediction_individual_sgd.py" />
         <option value="$PROJECT_DIR$/data.py" />
-        <option value="$PROJECT_DIR$/dt_prediction.py" />
         <option value="$PROJECT_DIR$/decisionTrees.py" />
         <option value="$PROJECT_DIR$/decisionTrees.py" />
         <option value="$PROJECT_DIR$/mcmc_sgd.py" />
-        <option value="$PROJECT_DIR$/mcmc.py" />
         <option value="$PROJECT_DIR$/mcmc_rf.py" />
         <option value="$PROJECT_DIR$/dt_prediction_individual_rf.py" />
+        <option value="$PROJECT_DIR$/dt_prediction.py" />
+        <option value="$PROJECT_DIR$/plotting.py" />
+        <option value="$PROJECT_DIR$/mcmc.py" />
         <option value="$PROJECT_DIR$/dt_prediction_individual.py" />
       </list>
     </option>
@@ -1563,10 +1604,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1918" />
-    <option name="y" value="-2" />
+    <option name="x" value="-2" />
+    <option name="y" value="25" />
     <option name="width" value="1924" />
-    <option name="height" value="1083" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1673,7 +1714,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="runtime_prediction" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plotAll.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/csv2np.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -2005,7 +2046,21 @@
       <option name="project" value="LOCAL" />
       <updated>1489368117600</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add rf to plotall">
+      <created>1489724988627</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1489724988627</updated>
+    </task>
+    <task id="LOCAL-00015" summary="refactoring">
+      <created>1489725045600</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1489725045600</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2018,26 +2073,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1918" y="-2" width="1924" height="1083" extended-state="6" />
+    <frame x="-2" y="25" width="1924" height="1032" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16559829" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16346154" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32814237" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32814237" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44818377" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="789" y="267" width="932" height="743" />
+      <window_info id="Run" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44818377" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="789" y="267" width="932" height="743" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24941361" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.5641026" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="-2" y="25" width="1924" height="1032" />
+      <window_info id="Debug" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.5641026" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="1920" y="37" width="1920" height="1005" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951444" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Concurrent Activities Diagram" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2086,7 +2141,8 @@
     <MESSAGE value="bu" />
     <MESSAGE value="add table support" />
     <MESSAGE value="add rf to plotall" />
-    <option name="LAST_COMMIT_MESSAGE" value="add rf to plotall" />
+    <MESSAGE value="refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2097,7 +2153,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="76" />
+      <option name="time" value="77" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -2118,13 +2174,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/plotAll.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="16" column="16" lean-forward="false" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/runtimes/x_runtime_train_gisette10.np" />
     <entry file="file://$PROJECT_DIR$/randForest.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -2214,7 +2263,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plotAll.py">
+    <entry file="file://$PROJECT_DIR$/csv2np.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2235">
           <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
@@ -2239,16 +2288,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="888">
           <caret line="83" column="4" lean-forward="false" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dt_prediction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="57" column="57" lean-forward="false" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#9#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2323,16 +2362,6 @@
         <state relative-caret-position="390">
           <caret line="29" column="10" lean-forward="false" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-783">
-          <caret line="27" column="4" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2478,21 +2507,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dt_prediction_individual.py">
+    <entry file="file://$PROJECT_DIR$/dt_prediction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="16" column="51" lean-forward="false" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+          <folding>
+            <marker date="1489990440085" expanded="true" signature="1871:4311" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="60" lean-forward="false" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/plotting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="88" column="35" lean-forward="false" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mcmc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="48" column="28" lean-forward="false" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
-          <folding />
+        <state relative-caret-position="428">
+          <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dt_prediction_individual.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="55" lean-forward="false" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

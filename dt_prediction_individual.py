@@ -1,65 +1,34 @@
-import os
-import re
-import sys
 import pickle
-import numpy as np
-import matplotlib.pyplot as plt
 import pandas as pd
+import numpy as np
 from pymc3 import Model
-from tabulate import tabulate
 from mcmc import mcmc_predict, mcmc_fit
 from data import load_data_pred, load_training_data, data_sets_in_folder, load_data_set, process_train_data
-import pdb
-
-
-def plot_prediction(x_features, x, y, y_predicted, data_pred, data_train):
-    figtxt = "\n# features:" + str(int(x_features[0]))
-    plt.plot(x, y, label="True-Runtime")
-    colors = ["yellow", "red", "green"]
-    table_row = None
-    row = []
-    keys = []
-    row.append(pd.DataFrame({data_pred: [x[-1], x_features[-1]]},
-                                index=['N', 'K']))
-    keys.append('Dimensons')
-    for i, predicted in enumerate(y_predicted):
-        y_pred = predicted[0]
-        y_pred_upper = predicted[1]
-        y_pred_lower = predicted[2]
-        # plt.plot(x, y_cal, label=y[3])
-        plt.fill_between(x, y_pred_upper, y_pred_lower, facecolor=colors[i], alpha=0.2, label=predicted[3])
-        print("DS:%s real:%0.3f predicted:%0.3f pU:%0.3f pL:%0.3f" %
-              (data_pred.rjust(13), y[-1], y_pred[-1], y_pred_upper[-1], y_pred_lower[-1]))
-        row.append(pd.DataFrame({data_pred: [y[-1], y_pred[-1], 100*(abs(y[-1]-y_pred[-1]))/y[-1]]},
-                                index=['true', 'pred.', '%diff']))
-        keys.append(predicted[3])
-
-    plt.xlabel("Number of Samples")
-    plt.ylabel("Time(s)")
-    plt.title("Dataset:" + data_pred + figtxt + "\nPrediction using " + data_train, fontsize=12)
-    plt.legend(loc='best', fontsize=8)
-
-    # plt.figtext(10, 10, figtxt)
-    # plt.savefig("results/mc_" + data_name_pred + "_pred_highres_wo2.png", dpi=300)
-    plt.savefig("results/mc_" + data_pred + "_pred_n.png", dpi=200)
-    plt.close()
-    table = pd.concat(row, keys=keys).T
-    # pdb.set_trace()
-    return table
-
+from plotting import plot_prediction, plot_get_hp_table
 
 if __name__ == "__main__":
-    old_equations = ["w0+w1K+w2(KNlogN)", "w0+w1K+w2(KN²logN)", "w0+w1K+w2(KN^w3logN)"]
+    # old_equations = ["w0+w1K+w2(KNlogN)", "w0+w1K+w2(KN²logN)", "w0+w1K+w2(KN^w3logN)"]
     # equations = ["w0 + w1*(K*N*(logN)^2)", "w0 + w1*K + w2*(K*N^(2)*logN)", "w0 + w1*K + w2*(K*N^(w3)*logN)"]
+
     equations = {
-        'dt_lower' : 'w0+w1K+w2(KNlogN)', 'dt_avg' : '', 'dt_upper' : '',
+        'dt_lower' : '', 'dt_avg' : 'a + b*K*N*(logN)^2', 'dt_upper' : '',
         'rf_lower' : '', 'rf_avg' : '', 'rf_upper' : '',
         'sgd_lower' : '', 'sgd_avg' : '', 'sgd_upper' : ''
 
     }
-    used_eq = ['dt_lower', 'dt_avg']  # likelihood function has multiple versions of eqs. here define which ones will be used.
+
+    # likelihood function has multiple versions of eqs. here define which ones will be used.
+    used_eq = [
+        # 'dt_lower',
+        'dt_avg',
+        # 'dt_upper',
+        # 'rf_lower', 'rf_avg', 'rf_upper',
+        # 'sgd_lower', 'sgd_avg', 'sgd_upper'
+    ]
+
     table = pd.DataFrame()
-    train_folder_path, training_data_sets = data_sets_in_folder()
+    train_folder_path, training_data_sets = data_sets_in_folder(folder_path='runtimes/all_dt')
+
     # find and load training data files
     for data_set in training_data_sets:
         print("dataset", data_set)
@@ -75,28 +44,34 @@ if __name__ == "__main__":
         x_train, x_test, y_train, y_test = process_train_data(x_data, y_data, 0.28, 0)
         # fit the model
         trace_pymc = mcmc_fit(x_train, y_train, used_eq)
-        # trace_hammer = hammer_fit(x_train, y_train, used_eq)
 
         # x1_features, x2_size, y_runtime = load_data_pred(data_name_pred, test_folder_path)
         x1_features = x_test[:, 1]
         x2_size = x_test[:, 0]
         y_runtime = y_test
+        hp_values = []
 
         for equation in used_eq:
-            # load the model from pickle file
             model = Model()
             with model:
+                # load the model from pickle file
                 trace = pickle.load(open("results/model_" + str(equation) + ".pickle", "rb"))
 
+            mu_alpha = np.average(np.array(trace.get_values('alpha')))
+            mu_beta = np.average(np.array(trace.get_values('beta')))
+            mu_ceta = np.average(np.array(trace.get_values('ceta')))
+            hp_values = [mu_alpha, mu_beta, mu_ceta]
             # predict on data_name_pred
             y_pred, y_pred_upper, y_pred_lower = mcmc_predict(trace, x1_features, x2_size, equation)
             y_predicted.append([y_pred, y_pred_upper, y_pred_lower, equations[equation]])
 
         # plot data
-        table = pd.concat([table, plot_prediction(x1_features, x2_size, y_runtime, y_predicted, data_set, data_set)])
+        # table = pd.concat([table, plot_prediction(x1_features, x2_size, y_runtime, y_predicted, data_set, data_set)])
+        table = pd.concat([table, plot_get_hp_table(x1_features, x2_size, y_runtime, y_predicted, hp_values,
+                                                    data_set, data_set)])
         y_predicted = list()
 
-    table.to_html("table3.html")
+    table.to_html("testing_hp_table.html")
     print("end")
     # pdb.set_trace()
 
