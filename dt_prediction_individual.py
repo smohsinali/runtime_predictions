@@ -41,7 +41,7 @@ if __name__ == "__main__":
 
         y_predicted = list()
 
-        x_train, x_test, y_train, y_test = process_train_data(x_data, y_data, 0.28, 0)
+        x_train, x_test, y_train, y_test = process_train_data(x_data, y_data, 0.19, 0)
         # fit the model
         trace_pymc = mcmc_fit(x_train, y_train, used_eq)
 
@@ -71,7 +71,7 @@ if __name__ == "__main__":
                                                     data_set, data_set)])
         y_predicted = list()
 
-    table.to_html("testing_hp_table.html")
+    table.to_html("dt_avg_19.html")
     print("end")
     # pdb.set_trace()
 

@@ -86,7 +86,7 @@ def plot_get_hp_table(x_features, x_datasize, y_real, y_predicted, hp_values, da
               (data_pred.rjust(13), y_real[-1], y_pred[-1], y_pred_upper[-1], y_pred_lower[-1]))
         row.append(pd.DataFrame({data_pred: [hp_values[0], hp_values[1], 100 * (abs(y_real[-1] - y_pred[-1])) / y_real[-1]]},
                                 index=['alpha', 'beta', '%diff']))
-        keys.append(predicted[3] + '(28%)')
+        keys.append(predicted[3] + '(19%)')
 
     plt.xlabel("Number of Samples")
     plt.ylabel("Time(s)")
