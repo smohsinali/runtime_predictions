@@ -29,6 +29,8 @@ Scikit-learn is popular open source machine learning library, in this project it
 \end{itemize}
 
 \section{Analysis of Decision Trees}
+
+\subsection{Algorithm}
 Decision trees is among the basic machine learning algorithms and is also basis of Random Forests algorithm which is one of most used and powerful of ML algorithms. The algorithm of Decision Trees is as follows, For more formal definition look at \citep{}:\\
 \begin{addmargin}[1em]{0em}
 Create a root node t0 that contains all learning data L\\
@@ -36,12 +38,60 @@ Create a root node t0 that contains all learning data L\\
 	\begin{itemize}
 	    \item Find best split s* in all variables which maximizes impurity decrease
 	    \item Label the node with best split variable and its value
-	    \item Divide the available learning data L into Ll and Lr 
+	    \item Divide the available learning data L into Ll and Lr
 	    \item Create nodes tl and tr with Ll and Lr respectively
 	    \item Repeat with tl, Ll
 	    \item Repeat with tr, Lr
 	\end{itemize}
 \end{addmargin}
+
+\subsection{Implementation Details}
+The heart of algorithm is measuring changes in impurity and finding best split based on those measurements. The changes in impurity decrease are measured using impurity function which can be either Gini index or Shannon entropy:
+			\begin{itemize}
+			    \item Gini Index:
+			    \item Shannon Entropy:
+			\end{itemize}
+For each variable finding the best split can be expensive if impurity decrease is evaluated for each change in value of that variable. but exhaustive evaluations of all the splits can be carried out efficiently if the variable is sorted. for this sorted case each change in impurity can be computed from previous one in linear number of operations. So complexity of induction of decision tree is upper bounded by this sorting operation, which would be O(Nlog(N)).\\
+The Scikit-learn implementation of Decision trees has three main components:
+\begin{itemize}
+    \item First one is Builder object which creates tree array representation of the tree. the arrays contain for each node the information about its children, feature used for dividing it, the threshold value on which it is divided, impurity, number of samples that it divides and number of samples of each class that the node has. All this information is stored in dynamic tables so memory consumption is low and insertion of new node has amortized cost of O(1). Also to keep the track of samples at each node instead of making new arrays which would waste lot of memory the builder object just keeps all information in one array and use reordering  so elements from [start:pos] would represent elements going to left child and [pos:end] would represent elements in right child.
+
+    \item Second main component is Splitter object which searches for best split for given node. As mentioned previously this boils down keeping the values of each variable sorted so that impurity values can be calculated in linear time. Scikit learn uses Introsort which is combination of Heapsort and Quicksort algorithms. The idea is that sorting begins using Quicksort which has average complexity of O(Nlog(N)) in average case and towards the end the algorithm switches to Heap-sort which is upper bounded by O(Nlog(N)). Also Quicksort is implemented using median-of-three as pivot which has better than average performance if data has lot of similar values.
+
+    \item Third component is Criterion object which evaluates goodness of splits using Gini index or Shannon entropy for classification and MSE for regression. All of these evaluations are done using a special update procedure \citep{} which makes their complexity only O(Nt)
+\end{itemize}
+
+\newpage
+
+\subsection{Complexity Analysis}
+Suppose T(N) is time complexity of building tree from N samples. When the  node with N samples is split into two nodes with Nl and Nr samples then the T(N) can be written as sum of cost C(N) of finding the split and recursively splitting the children nodes with cost T(Nl) and T(Nr) respectively. This can be written in form of recurrence equation as follows:
+\begin{itemize}
+    \item
+\end{itemize}
+As mentioned previously the impurity criterion can be computed iteratively for consecutive thresholds and so most costly operation is sorting which has lower bound of O(Nlog(N)) so C(N) = O(pNlog(N)) where p is number of features.\\[10pt]
+Now for solving the above recurrence equation to find exact complexity three cases can be considered:
+\begin{itemize}
+    \item Best case would be when all nodes of size N are split into two nodes of size N/2
+    \item Worst case would be when all splits are uneven so nodes of size N are split into two nodes one with size N-1 and other 1
+    \item Average case corresponds to average time complexity and here in this analysis it is assumed that all splits are equiprobable.
+\end{itemize}
+
+\section{Stochastic Gradient Decent(SGD)}
+SGD is an optimization algorithm used to find parameter values of a function such that value of its cost function is minimized. The idea of the algorithm is very simple, it has following steps:
+\begin{itemize}
+    \item Parameters of the model are initialized with some random values.
+    \item Function is evaluated using those values.
+    \item Error rate is measured using expected output value and evaluated value and then parameter values are updated accordingly depending on error value.
+\end{itemize}
+New parameter values are used to repeat above steps until convergence.\\[10pt]
+In scikit-learn SGD is used to learn parameter values for a linear scoring function f(x)=wtx+b with model param w and intercept b. The param values are found by minimizing following error function:
+	E(w,b) = 1/n sum(L(y, f(x))) + aR(w)
+where L is some loss function like logistic regression, R is regularization term that penalizes model complexity and alpha is non negative hyperparameter.\\[10pt]
+SGD's complexity is linear in number of training examples. For learning data of N samples with p variables each the training cost is O(kNp).
+
+
+
+
 
 \begin{figure}[h!]
 \centering
