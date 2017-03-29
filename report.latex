@@ -1,0 +1,58 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{scrextend}
+
+\title{ML Training Time Prediction}
+\author{ }
+\date{January 2017}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Training times for machine learning algorithms can vary from few milliseconds to couple of days depending on couple of factors. These factors can include type of algorithm used, its hyperparameters, size of training data, data structures used in implementation of the algorithm and hardware resources available for the training.\\[10pt]
+Knowing how much training time will be taken by algorithm given all the factors can help algorithm designer make decisions about what hardware resources to use, which hyperparameters to use and how much data can be used for training model within some time constraints.\\[10pt]
+Some machine learning practitioners might do complexity analysis of the algorithms they use but unfortunately no work on predicting run times of these algorithms have been done until now. In this project first steps are taken towards this task by predicting training times of three of popular machine learning algorithms. They are decision trees, random forests and stochastic gradient decent (SGD).\\[10pt]
+We understand that predicting exact run times with full certainty might not be possible as there can be many factors which can be overlooked or not possible to consider. For example it is very hard to consider number of background processes and resources they consume. So to consider uncertainties due to such uncontrollable factors in our predictions we solve regression problem of run time prediction using Markov Chain Monte Carlo Methods (MCMC).
+
+\section{Methodology}
+Scikit-learn is popular open source machine learning library, in this project its implementation of Decision Trees, Random Forests and SGD is used to analyse their complexities and get their run time performances. For building Bayesian model and MCMC sampling PyMC3 is used which is python module for Bayesian statistical modeling and model fitting focusing on MCMC algorithms. Specifically following steps are used for predicting run times of these algorithms.\\[10pt]
+\begin{itemize}
+    \item Complexity of algorithm's implementation in scikit-learn is analysed. This is done by breaking the algorithm in its constituent steps and then for each step analysing its complexity depending on data structure used to implement it.
+    \item Using scikit-learn classifiers are trained for about 100 data sets of different dimensions. For each data set its dimensions and and time taken to train the classifier for given algorithm is recorded. 
+    \item Results of first step are used to create a model in PyMC3 and results of second step are used as observation to solve for parameter values of that model.
+    \item Once the model is fully known the run times for new data sets are easily predicted by using their dimensions as input variables to the model. Since MCMC sampling is used to find the model parameters we also have access to uncertainties in their values which in turn give uncertainties in the final predictions.
+\end{itemize}
+
+\section{Analysis of Decision Trees}
+Decision trees is among the basic machine learning algorithms and is also basis of Random Forests algorithm which is one of most used and powerful of ML algorithms. The algorithm of Decision Trees is as follows, For more formal definition look at \citep{}:\\
+\begin{addmargin}[1em]{0em}
+Create a root node t0 that contains all learning data L\\
+	Until stopping criteria is met:
+	\begin{itemize}
+	    \item Find best split s* in all variables which maximizes impurity decrease
+	    \item Label the node with best split variable and its value
+	    \item Divide the available learning data L into Ll and Lr 
+	    \item Create nodes tl and tr with Ll and Lr respectively
+	    \item Repeat with tl, Ll
+	    \item Repeat with tr, Lr
+	\end{itemize}
+\end{addmargin}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=1.7]{universe.jpg}
+\caption{The Universe}
+\label{fig:universe}
+\end{figure}
+
+\section{Conclusion}
+``I always thought something was fundamentally wrong with the universe'' \citep{adams1995hitchhiker}
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

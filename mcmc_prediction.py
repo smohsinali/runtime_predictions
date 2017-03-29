@@ -6,11 +6,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from pymc3 import Model
-from tabulate import tabulate
 from mcmc import mcmc_predict, mcmc_fit
-from data import load_data_pred, load_training_data
-from hammer import hammer_fit
-import pdb
+from data import load_test_data, load_training_data
 
 
 def plot(x_features, x, y, y_predicted, data_pred, data_train):
@@ -68,8 +65,13 @@ if __name__ == "__main__":
                 # 'sgd_lower', 'sgd_avg', 'sgd_upper'
     ]
 
+    train_folder_path = 'runtimes'
+    # train_folder_path = 'runtimes/train/rf_graphs'
+    # train_folder_path = 'runtimes/train/dt_graphs'
+    # train_folder_path = 'runtimes/train/sgd_graphs'
+
     # find and load training data files
-    x_train, y_train, data_name_train = load_training_data(folder_path="runtimes/train/rf_graphs")
+    x_train, y_train, dataset_train = load_training_data(folder_path=train_folder_path)
 
     total_data_size = len(y_train)
     print("total_data_size:", total_data_size)
@@ -88,9 +90,9 @@ if __name__ == "__main__":
     # trace_hammer = hammer_fit(x_train, y_train, used_eq)
     table = pd.DataFrame()
 
-    for data_name_pred in test_data_sets:
+    for dataset_test in test_data_sets:
         # load dataset on which prediction of runtimes is desired
-        x1_features, x2_size, y_runtime = load_data_pred(data_name_pred, test_folder_path)
+        x1_features, x2_size, y_runtime = load_test_data(dataset_test, test_folder_path)
 
         for equation in used_eq:
             # load the model from pickle file
@@ -103,7 +105,7 @@ if __name__ == "__main__":
             y_predicted.append([y_pred, y_pred_upper, y_pred_lower, equations[equation]])
 
         # plot data
-        table = pd.concat([table, plot(x1_features, x2_size, y_runtime, y_predicted, data_name_pred, data_name_train)])
+        table = pd.concat([table, plot(x1_features, x2_size, y_runtime, y_predicted, dataset_test, dataset_train)])
         y_predicted = list()
 
     table.to_html("table2.html")

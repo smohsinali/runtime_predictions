@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 from pymc3 import Model
 from mcmc import mcmc_predict, mcmc_fit
-from data import load_data_pred, load_training_data, data_sets_in_folder, load_data_set, process_train_data
+from data import load_test_data, load_training_data, datasets_names, load_dataset, process_train_data
 from plotting import plot_prediction, plot_get_hp_table
 
 if __name__ == "__main__":
@@ -27,12 +27,12 @@ if __name__ == "__main__":
     ]
 
     table = pd.DataFrame()
-    train_folder_path, training_data_sets = data_sets_in_folder(folder_path='runtimes/all_dt')
+    train_folder_path, training_data_sets = datasets_names(folder_path='runtimes/all_dt')
 
     # find and load training data files
     for data_set in training_data_sets:
         print("dataset", data_set)
-        x_data, y_data = load_data_set(data_set, train_folder_path)
+        x_data, y_data = load_dataset(data_set, train_folder_path)
         # x_train, y_train, data_name_train = load_training_data()
 
         # sys.exit()

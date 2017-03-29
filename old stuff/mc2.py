@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 # from pymc3 import NUTS, sample, Metropolis
 # from pymc3 import traceplot
 import pymc as pm
-from data import load_data_pred, load_training_data, plot_predictions
+from data import load_test_data, load_training_data, plot_predictions
 # def likelihood_knlogn(w, k, n, equation):
 #
 #     if equation == 1:
@@ -167,7 +167,7 @@ def mcmc_fit(xdata, ytime, eq_used):
 
 
 def simple_predict(trace):
-    x1_features, x2_size, y_runtime = load_data_pred('covertype', 'runtimes/')
+    x1_features, x2_size, y_runtime = load_test_data('covertype', 'runtimes/')
 
     alpha_samples = trace.trace('alpha')[20000:]
     beta_samples = trace.trace('beta')[20000:]

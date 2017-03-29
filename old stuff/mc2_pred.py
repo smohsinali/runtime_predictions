@@ -7,7 +7,7 @@ import pandas as pd
 from pymc3 import Model
 from tabulate import tabulate
 from mc2 import mcmc_fit, mcmc_predict
-from data import load_data_pred, load_training_data, plot_predictions
+from data import load_test_data, load_training_data, plot_predictions
 from hammer import hammer_fit
 import pdb
 
@@ -40,7 +40,7 @@ if __name__ == "__main__":
 
     for data_name_pred in test_data_sets:
         # load dataset on which prediction of runtimes is desired
-        x1_features, x2_size, y_runtime = load_data_pred(data_name_pred, test_folder_path)
+        x1_features, x2_size, y_runtime = load_test_data(data_name_pred, test_folder_path)
 
         for equation in used_eq:
             # load the model from pickle file
