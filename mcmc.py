@@ -13,64 +13,63 @@ from scipy import optimize
 def likelihood_knlogn(w, k, n, equation):
 
     if equation == 'dt_lower':
-        # a + bkn logn
+        # a + bn logn^2 + ck
         n_log = np.log2(n) ** 2
         n_mod = n
-        k_mod = k * 0
+        k_mod = k
 
-        val = w[0] + w[1] * (k * n_mod * n_log)
+        val = w[0]*k + w[1] * ( n_mod * n_log)
 
     if equation == 'dt_avg':
         # a + bkn logn
         n_log = np.log2(n) ** 2
         n_mod = n
-        k_mod = k * 0
+        k_mod = k
 
         val = w[0] + w[1] * (k * n_mod * n_log)
 
     if equation == 'dt_upper':
         # a + bk + ck n^d logn
         n_log = np.log2(n)
-        n_mod = n
-        k_mod = k * 1
+        n_mod = n ** 2
+        k_mod = k
 
-        val = w[0] + w[1] * k_mod + w[2] * (k * n_mod**w[3] * n_log)
+        val = w[0] + w[1] * (k * n_mod * n_log)
 
     if equation == 'rf_lower':
-        # a + bk + ckn logn
-        n_log = np.log2(n)
+        # 'a + bN*sqrt(K)*(log(N))^2'
+        n_log = np.log2(n)**2
         n_mod = n ** 1
-        k_mod = k * 1
-        val = w[0] + w[1] * k_mod + w[2] * (k * n_mod * n_log)
+        k_mod = np.sqrt(k)
+        val = w[0] + w[1] * k_mod * n_mod * n_log
         # val = w[0] * n_mod
 
     if equation == 'rf_avg':
-        # a + bk + ckn logn
-        n_log = np.log2(n)
+        # an + bkn (logn)^2
+        n_log = (np.log2(n))**2
         n_mod = n ** 1
-        k_mod = k * 1
-        val = w[0] + w[1] * k_mod + w[2] * (k * n_mod * n_log)
+        k_mod = k
+        val = w[0] +  w[1] * (k_mod * n_mod * n_log)
         # val = w[0] * n_mod + w[1] * k_mod
 
     if equation == 'rf_upper':
-        # a + bk + ckn logn
-        n_log = np.log2(n)
+        # an + bkn^1.2*(logn)^2
+        n_log = (np.log2(n))**2
         n_mod = n ** 1.2
         k_mod = k * 1
-        val = w[0] + w[1] * k_mod + w[2] * (k * n_mod * n_log)
+        val = w[0] + w[1] * (k * n_mod * n_log)
 
-    if equation == 'sgd_lower':
-        # an
-        n_mod = n ** 1
-
-        val = w[0] * n_mod
+    # if equation == 'sgd_lower':
+    #     # a+bkn
+    #     val = w[0] + w[1]*k*n
+    #     val
 
     if equation == 'sgd_avg':
-        # an + bk
-        n_mod = n ** 1
-        k_mod = k * 1
+        # an + bk + c
+        n_mod = n
+        k_mod = k
 
-        val = w[0] * n_mod + w[1] * k_mod
+        val = w[0] * n_mod + w[1] * k_mod + w[2]
 
     if equation == 'sgd_upper':
         # an^1.2 + bk + c
@@ -78,6 +77,14 @@ def likelihood_knlogn(w, k, n, equation):
         k_mod = k * 1
 
         val = w[0] * n_mod + w[1] * k_mod + w[2]
+
+    if equation == 'sgd_lower':
+        # an^1.2 + bk + c
+        n_mod = n
+        n_log = (np.log2(n))**2
+        k_mod = k * 1
+
+        val = w[0] * n_mod  * n_log + w[1] * k
 
     return val
 
@@ -90,13 +97,13 @@ def mcmc_model(no_of_features, data_size, training_time, equation):
 
         # ## Priors for unknown model params
         alpha = HalfNormal('alpha', sd=1)
-        beta = Normal('beta', mu=0, sd=.00001)
+        beta = Normal('beta', mu=0, sd=.0001)
         ceta = Normal('ceta', mu=0, sd=.0001)
-        gamma = Normal('gamma', mu=0, sd=.5)
+        # gamma = Normal('gamma', mu=0, sd=.5)
         sigma = HalfNormal('sigma', sd=1)
         # sigma = Normal('sigma', mu=0, sd=1)
 
-        params = (alpha, beta, ceta, gamma)
+        params = (alpha, beta, ceta)
         # ## Expected value of outcome
         mu = likelihood_knlogn(params, no_of_features, data_size, equation)
 
@@ -112,15 +119,15 @@ def mcmc_model(no_of_features, data_size, training_time, equation):
         # trace = sample(50, start=start)
 
         # using metropolis hastings with 2000 burin steps
-        step1 = Metropolis([alpha, beta, ceta, gamma, sigma])
-        sample(10000, start=start, step=step1)
-        trace = sample(20000, start=start, step=step1)
+        step1 = Metropolis([alpha, beta, ceta, sigma])
+        sample(2000, start=start, step=step1)
+        trace = sample(6000, start=start, step=step1)
 
     print("mcmc_model end")
     return trace
 
 
-def mcmc_fit(xdata, ytime, eq_used):
+def mcmc_fit(xdata, ytime, eq_used, data_set):
 
     print("length xdata:", len(xdata), "\nlength ytime:", len(ytime))
     trace = [] # [y_cal, y_cal_upper, y_cal_lower, size]
@@ -133,10 +140,10 @@ def mcmc_fit(xdata, ytime, eq_used):
         # save the learned mode in pickle file
         pickle.dump(trace, open("results/model_" + str(equation) + ".pickle", "wb"), protocol=-1)
 
-        # traceplot(trace)
+        traceplot(trace)
         # move plot about learned param values to results folder
-        # os.rename("mcmc.png", "results/mcmc_" + str(equation) + ".png")
-        # plt.close()
+        os.rename("param.png", "results/mcmc_" + data_set + "_" + str(equation) + ".png")
+        plt.close()
 
     print("mcmc_fit finish")
     return trace
@@ -157,14 +164,22 @@ def mcmc_predict(trace, no_of_features, data_size, equation):
     ceta = np.array(trace.get_values('ceta'))
     mu_ceta = np.average(ceta)
     std_ceta = standard_dev * np.std(ceta)
+    #
+    # gamma = np.array(trace.get_values('gamma'))
+    # mu_gamma = np.average(gamma)
+    # std_gamma = standard_dev * np.std(gamma)
 
-    gamma = np.array(trace.get_values('gamma'))
-    mu_gamma = np.average(gamma)
-    std_gamma = standard_dev * np.std(gamma)
+    # params = (mu_alpha, mu_beta, mu_ceta, mu_gamma)
+    # params_upper = (mu_alpha + std_alpha, mu_beta + std_beta, mu_ceta + std_ceta, mu_gamma + std_gamma)
+    # params_lower = (mu_alpha - std_alpha, mu_beta - std_beta, mu_ceta - std_ceta, mu_gamma - std_gamma)
 
-    params = (mu_alpha, mu_beta, mu_ceta, mu_gamma)
-    params_upper = (mu_alpha + std_alpha, mu_beta + std_beta, mu_ceta + std_ceta, mu_gamma + std_gamma)
-    params_lower = (mu_alpha - std_alpha, mu_beta - std_beta, mu_ceta - std_ceta, mu_gamma - std_gamma)
+    params = (mu_alpha, mu_beta, mu_ceta)
+    params_upper = (mu_alpha + std_alpha, mu_beta + std_beta, mu_ceta + std_ceta)
+    params_lower = (mu_alpha - std_alpha, mu_beta - std_beta, mu_ceta - std_ceta)
+
+    # params = (mu_alpha, mu_beta)
+    # params_upper = (mu_alpha + std_alpha, mu_beta + std_beta)
+    # params_lower = (mu_alpha - std_alpha, mu_beta - std_beta)
 
     y_pred = likelihood_knlogn(params, no_of_features, data_size, equation)
     y_pred_upper = likelihood_knlogn(params_upper, no_of_features, data_size, equation)

@@ -20,12 +20,12 @@ if __name__ == "__main__":
 
     # test_folder_path = "runtimes/test/dt_graphs"
     # test_folder_path = "runtimes/test/sgd_graphs"
-    test_folder_path = "runtimes/test/rf_graphs"
+    test_folder_path = "runtimes/test/sgd_graphs"
     files = next(os.walk(test_folder_path))[2]
     test_data_sets = sorted(list(set([x[16:-3] for x in files if re.search('np', x)])))
 
     clf = MLPRegressor(solver='lbfgs', alpha=1e-5,
-                        hidden_layer_sizes=(50000), random_state=1)
+                        hidden_layer_sizes=(10000), random_state=1)
     clf.fit(x_train, y_train)
 
     table = pd.DataFrame()
@@ -38,5 +38,5 @@ if __name__ == "__main__":
         y_predicted = clf.predict(x_test)
         table = pd.concat([table, plot_rf_results(x1_features, x2_size, y_runtime, y_predicted, dataset_test)])
 
-    table.to_html("mlp50k_predictions_rf.html")
+    table.to_html("mlp10k_predictions_sgd.html")
     print("end")
