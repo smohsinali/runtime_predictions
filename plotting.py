@@ -19,7 +19,7 @@ def plot_prediction(x_features, x_datasize, y_true, y_predicted, data_test, data
     '''
     figtxt = "\n# of Features:" + str(int(x_features[0]))
     plt.plot(x_datasize, y_true, label="True-Runtime")
-    colors = ["yellow", "red", "green"]
+    colors = ["yellow", "red", "green", "blue", "orange", "purple"]
     table_row = None
     row = []
     keys = []
@@ -37,7 +37,7 @@ def plot_prediction(x_features, x_datasize, y_true, y_predicted, data_test, data
 
         row.append(pd.DataFrame({data_test: [y_true[-1],
                                              y_pred[-1],
-                                             100 * (abs(y_true[-1] - y_pred[-1])) / y_true[-1],
+                                             100 * ((y_pred[-1] - y_true[-1])) / y_true[-1],
                                              100 * (abs(y_pred[-1] - y_pred_upper[-1])) / y_pred[-1]]
                                  },
                                 index=['true', 'pred.', '%diff', '%uncertainity']))

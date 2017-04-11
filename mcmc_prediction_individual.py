@@ -11,14 +11,17 @@ if __name__ == "__main__":
     # equations = ["w0 + w1*(K*N*(logN)^2)", "w0 + w1*K + w2*(K*N^(2)*logN)", "w0 + w1*K + w2*(K*N^(w3)*logN)"]
 
     equations = {
-        'dt_lower' : 'aK + bN(logN)^2',
+        'dt_lower' : 'a + bN(log(N))^2',
         'dt_avg' : 'a + bKN(logN)^2',
         'dt_upper' : 'a + bKN^2(log(N))',
         'rf_lower' : 'a + bN*sqrt(K)*(log(N))^2',
-        'rf_avg' : 'a + bKN*(logN)^2',
-        'rf_upper' : 'a + bKN^1.3*log(N)',
-        'sgd_lower' : 'aN(log(N))^2 + bK',
-        'sgd_avg' : 'aN + bK + c',
+        'rf_lower_2' : 'a + bN(log(N))^2 + c(sqrt(K))',
+        'rf_avg' : 'a + bKN(log(N))^2',
+        'rf_upper' : 'a + bN(log(N))^2',
+        'rf_upper_2' : 'a + bN^c(log(N))^2',
+        'sgd_lower' : 'a + bKN',
+        'sgd_lower_2': 'a + bN^1.3',
+        'sgd_avg': 'a + bN + cK',
         'sgd_upper' : 'aN^1.2 + bK + c'
 
     }
@@ -29,19 +32,22 @@ if __name__ == "__main__":
         # 'dt_avg',
         # 'dt_upper',
         # 'rf_lower',
-        'rf_avg',
+        # 'rf_lower_2'
+        # 'rf_avg',
         # 'rf_upper',
+        # 'rf_upper_2',
         # 'sgd_lower',
+        # 'sgd_lower_2',
         'sgd_avg',
-        'sgd_upper'
+        # 'sgd_upper'
     ]
 
     # table = pd.DataFrame()
-    train_folder_path, training_data_sets = datasets_names(folder_path='runtimes/all_rf')
+    train_folder_path, training_data_sets = datasets_names(folder_path='runtimes/all_sgd')
 
     # data_used = [9.0, 13.0, 19.0, 28.0]
     # for du in data_used:
-    du = 28
+    du = 19
     table=pd.DataFrame()
     # find and load training data files
     for data_set in training_data_sets:
@@ -84,8 +90,8 @@ if __name__ == "__main__":
         #                    plot_get_hp_table(x1_features, x2_size, y_runtime, y_predicted, hp_values, data_set,
         #                                      data_set, du)])
         y_predicted = list()
-
-        table.to_html("rf_" + str(du) + ".html")
+        # table.to_csv("rf_" + str(du) + ".csv")
+        table.to_html("sgd_avg_" + str(du) + ".html")
         print("end")
         # pdb.set_trace()
 

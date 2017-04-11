@@ -11,82 +11,93 @@ from scipy import optimize
 
 
 def likelihood_knlogn(w, k, n, equation):
-
+    val = 'not defined'
     if equation == 'dt_lower':
-        # a + bn logn^2 + ck
+        # a + bN(log(N))^2
         n_log = np.log2(n) ** 2
-        n_mod = n
-        k_mod = k
 
-        val = w[0]*k + w[1] * ( n_mod * n_log)
+        val = w[0] + w[1] * (n * n_log)
 
     if equation == 'dt_avg':
         # a + bkn logn
         n_log = np.log2(n) ** 2
-        n_mod = n
-        k_mod = k
 
-        val = w[0] + w[1] * (k * n_mod * n_log)
+        val = w[0] + w[1] * (k * n * n_log)
 
     if equation == 'dt_upper':
-        # a + bk + ck n^d logn
+        # a + bkN^2(log(N))
         n_log = np.log2(n)
         n_mod = n ** 2
-        k_mod = k
 
         val = w[0] + w[1] * (k * n_mod * n_log)
 
     if equation == 'rf_lower':
         # 'a + bN*sqrt(K)*(log(N))^2'
         n_log = np.log2(n)**2
-        n_mod = n ** 1
         k_mod = np.sqrt(k)
-        val = w[0] + w[1] * k_mod * n_mod * n_log
-        # val = w[0] * n_mod
+        val = w[0] + w[1] * k_mod * n * n_log
+
+    if equation == 'rf_lower_2':
+        # 'a + bN*sqrt(K)*(log(N))^2'
+        n_log = np.log2(n) ** 2
+        k_mod = np.sqrt(k)
+        val = w[0] + w[1]  * n * n_log + w[2] * k_mod
 
     if equation == 'rf_avg':
         # an + bkn (logn)^2
         n_log = (np.log2(n))**2
         n_mod = n ** 1
-        k_mod = k
-        val = w[0] +  w[1] * (k_mod * n_mod * n_log)
+        val = w[0] +  w[1] * (k * n_mod * n_log)
         # val = w[0] * n_mod + w[1] * k_mod
 
+    # if equation == 'rf_upper':
+    #     # an + bkn^1.2*(logn)^2
+    #     n_log = (np.log2(n))**2
+    #     n_mod = n ** 1.2
+    #     val = w[0] + w[1] * (k * n_mod * n_log)
     if equation == 'rf_upper':
-        # an + bkn^1.2*(logn)^2
-        n_log = (np.log2(n))**2
-        n_mod = n ** 1.2
-        k_mod = k * 1
-        val = w[0] + w[1] * (k * n_mod * n_log)
+        # a + bn(logn)^2
+        n_log = (np.log2(n)) ** 2
+        n_mod = n ** 1
+        val = w[0] + w[1]  * n * n_log
 
-    # if equation == 'sgd_lower':
-    #     # a+bkn
-    #     val = w[0] + w[1]*k*n
-    #     val
-
-    if equation == 'sgd_avg':
-        # an + bk + c
+    if equation == 'rf_upper_2':
+        # a + bn(logn)^2
+        n_log = (np.log2(n)) ** 2
         n_mod = n
-        k_mod = k
-
-        val = w[0] * n_mod + w[1] * k_mod + w[2]
-
-    if equation == 'sgd_upper':
-        # an^1.2 + bk + c
-        n_mod = n ** 1.2
-        k_mod = k * 1
-
-        val = w[0] * n_mod + w[1] * k_mod + w[2]
+        val = w[0] + w[1] * k * n_log
 
     if equation == 'sgd_lower':
-        # an^1.2 + bk + c
-        n_mod = n
-        n_log = (np.log2(n))**2
-        k_mod = k * 1
+        # a+bn
+        n_log = (np.log2(n))
+        # n_mod = n ** 1.2
+        val = w[0] + w[1]*k*n
 
-        val = w[0] * n_mod  * n_log + w[1] * k
+    if equation == 'sgd_lower_2':
+        # a + bn^1.3
+        val = w[0] + w[1] * n**1.3
 
-    return val
+
+    if equation == 'sgd_avg':
+        # a + bn + ck
+        val = w[0]  + w[1] * n +  w[2] * k
+
+    if equation == 'sgd_upper':
+        # a + bn^1.2 + ck
+        n_mod = n ** 1.2
+
+        val = w[0] + w[1] * n_mod + w[2] * k
+    #
+    # if equation == 'sgd_lower':
+    #     # an^1.2 + bk + c
+    #     n_log = (np.log2(n))**2
+    #
+    #     val = w[0] * n  * n_log + w[1] * k
+
+    if val == 'not defined':
+        print(equation + ' not defined')
+    else:
+        return val
 
 
 # defining the model with given params
@@ -97,8 +108,8 @@ def mcmc_model(no_of_features, data_size, training_time, equation):
 
         # ## Priors for unknown model params
         alpha = HalfNormal('alpha', sd=1)
-        beta = Normal('beta', mu=0, sd=.0001)
-        ceta = Normal('ceta', mu=0, sd=.0001)
+        beta = Normal('beta', mu=0, sd=1)
+        ceta = Normal('ceta', mu=1.2, sd=1)
         # gamma = Normal('gamma', mu=0, sd=.5)
         sigma = HalfNormal('sigma', sd=1)
         # sigma = Normal('sigma', mu=0, sd=1)
@@ -120,8 +131,8 @@ def mcmc_model(no_of_features, data_size, training_time, equation):
 
         # using metropolis hastings with 2000 burin steps
         step1 = Metropolis([alpha, beta, ceta, sigma])
-        sample(2000, start=start, step=step1)
-        trace = sample(6000, start=start, step=step1)
+        sample(10000, start=start, step=step1)
+        trace = sample(20000, start=start, step=step1)
 
     print("mcmc_model end")
     return trace
@@ -176,7 +187,7 @@ def mcmc_predict(trace, no_of_features, data_size, equation):
     params = (mu_alpha, mu_beta, mu_ceta)
     params_upper = (mu_alpha + std_alpha, mu_beta + std_beta, mu_ceta + std_ceta)
     params_lower = (mu_alpha - std_alpha, mu_beta - std_beta, mu_ceta - std_ceta)
-
+    #
     # params = (mu_alpha, mu_beta)
     # params_upper = (mu_alpha + std_alpha, mu_beta + std_beta)
     # params_lower = (mu_alpha - std_alpha, mu_beta - std_beta)

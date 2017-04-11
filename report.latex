@@ -1,10 +1,11 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{scrextend}
+\usepackage[margin=1in]{geometry}
 
 \title{ML Training Time Prediction}
 \author{ }
-\date{January 2017}
+\date{April 2017}
 
 \usepackage{natbib}
 \usepackage{graphicx}
@@ -23,11 +24,11 @@ We understand that predicting exact run times with full certainty might not be p
 Scikit-learn is popular open source machine learning library, in this project its implementation of Decision Trees, Random Forests and SGD is used to analyse their complexities and get their run time performances. For building Bayesian model and MCMC sampling PyMC3 is used which is python module for Bayesian statistical modeling and model fitting focusing on MCMC algorithms. Specifically following steps are used for predicting run times of these algorithms.\\[10pt]
 \begin{itemize}
     \item Complexity of algorithm's implementation in scikit-learn is analysed. This is done by breaking the algorithm in its constituent steps and then for each step analysing its complexity depending on data structure used to implement it.
-    \item Using scikit-learn classifiers are trained for about 100 data sets of different dimensions. For each data set its dimensions and and time taken to train the classifier for given algorithm is recorded. 
+    \item Using scikit-learn classifiers are trained for 125 datasets of different dimensions. For each data set its dimensions and and time taken to train the classifier for given algorithm is recorded.
     \item Results of first step are used to create a model in PyMC3 and results of second step are used as observation to solve for parameter values of that model.
-    \item Once the model is fully known the run times for new data sets are easily predicted by using their dimensions as input variables to the model. Since MCMC sampling is used to find the model parameters we also have access to uncertainties in their values which in turn give uncertainties in the final predictions.
+    \item Once the model is fully known the run times for new data sets are predicted by using their dimensions as input variables to the model. Since MCMC sampling is used to find the model parameters we also have access to uncertainties in their values which in turn give uncertainties in the final predictions.
 \end{itemize}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Analysis of Decision Trees}
 
 \subsection{Algorithm}
@@ -36,46 +37,45 @@ Decision trees is among the basic machine learning algorithms and is also basis 
 Create a root node t0 that contains all learning data L\\
 	Until stopping criteria is met:
 	\begin{itemize}
-	    \item Find best split s* in all variables which maximizes impurity decrease
+	    \item Find best split $s*$ in all variables which maximizes impurity decrease
 	    \item Label the node with best split variable and its value
 	    \item Divide the available learning data L into Ll and Lr
 	    \item Create nodes tl and tr with Ll and Lr respectively
-	    \item Repeat with tl, Ll
-	    \item Repeat with tr, Lr
+	    \item Repeat with $tl$, $Ll$
+	    \item Repeat with $tr$, $Lr$
 	\end{itemize}
 \end{addmargin}
 
 \subsection{Implementation Details}
 The heart of algorithm is measuring changes in impurity and finding best split based on those measurements. The changes in impurity decrease are measured using impurity function which can be either Gini index or Shannon entropy:
 			\begin{itemize}
-			    \item Gini Index:
-			    \item Shannon Entropy:
+			    \item Gini Index:$.$
+			    \item Shannon Entropy:$.$
 			\end{itemize}
 For each variable finding the best split can be expensive if impurity decrease is evaluated for each change in value of that variable. but exhaustive evaluations of all the splits can be carried out efficiently if the variable is sorted. for this sorted case each change in impurity can be computed from previous one in linear number of operations. So complexity of induction of decision tree is upper bounded by this sorting operation, which would be O(Nlog(N)).\\
 The Scikit-learn implementation of Decision trees has three main components:
 \begin{itemize}
-    \item First one is Builder object which creates tree array representation of the tree. the arrays contain for each node the information about its children, feature used for dividing it, the threshold value on which it is divided, impurity, number of samples that it divides and number of samples of each class that the node has. All this information is stored in dynamic tables so memory consumption is low and insertion of new node has amortized cost of O(1). Also to keep the track of samples at each node instead of making new arrays which would waste lot of memory the builder object just keeps all information in one array and use reordering  so elements from [start:pos] would represent elements going to left child and [pos:end] would represent elements in right child.
+    \item First one is Builder object which creates tree array representation of the tree. the arrays contain for each node the information about its children, feature used for dividing it, the threshold value on which it is divided, impurity, number of samples that it divides and number of samples of each class that the node has. All this information is stored in dynamic tables so memory consumption is low and insertion of new node has amortized cost of $O(1)$. Also to keep the track of samples at each node instead of making new arrays which would waste lot of memory the builder object just keeps all information in one array and use reordering  so elements from [start:pos] would represent elements going to left child and [pos:end] would represent elements in right child.
 
-    \item Second main component is Splitter object which searches for best split for given node. As mentioned previously this boils down keeping the values of each variable sorted so that impurity values can be calculated in linear time. Scikit learn uses Introsort which is combination of Heapsort and Quicksort algorithms. The idea is that sorting begins using Quicksort which has average complexity of O(Nlog(N)) in average case and towards the end the algorithm switches to Heap-sort which is upper bounded by O(Nlog(N)). Also Quicksort is implemented using median-of-three as pivot which has better than average performance if data has lot of similar values.
+    \item Second main component is Splitter object which searches for best split for given node. As mentioned previously this boils down keeping the values of each variable sorted so that impurity values can be calculated in linear time. Scikit learn uses Introsort which is combination of Heapsort and Quicksort algorithms. The idea is that sorting begins using Quicksort which has average complexity of $O(Nlog(N))$ in average case and towards the end the algorithm switches to Heap-sort which is upper bounded by $O(Nlog(N))$. Also Quicksort is implemented using median-of-three as pivot which has better than average performance if data has lot of similar values.
 
-    \item Third component is Criterion object which evaluates goodness of splits using Gini index or Shannon entropy for classification and MSE for regression. All of these evaluations are done using a special update procedure \citep{} which makes their complexity only O(Nt)
+    \item Third component is Criterion object which evaluates goodness of splits using Gini index or Shannon entropy for classification and MSE for regression. All of these evaluations are done using a special update procedure \citep{} which makes their complexity only $O(Nt)$
 \end{itemize}
 
 \newpage
-
 \subsection{Complexity Analysis}
-Suppose T(N) is time complexity of building tree from N samples. When the  node with N samples is split into two nodes with Nl and Nr samples then the T(N) can be written as sum of cost C(N) of finding the split and recursively splitting the children nodes with cost T(Nl) and T(Nr) respectively. This can be written in form of recurrence equation as follows:
+Suppose $T(N)$ is time complexity of building tree from $N$ samples. When the  node with $N$ samples is split into two nodes with $Nl$ and $Nr$ samples then the $T(N)$ can be written as sum of cost $C(N)$ of finding the split and recursively splitting the children nodes with cost $T(Nl)$ and $T(Nr)$ respectively. This can be written in form of recurrence equation as follows:
 \begin{itemize}
     \item
 \end{itemize}
-As mentioned previously the impurity criterion can be computed iteratively for consecutive thresholds and so most costly operation is sorting which has lower bound of O(Nlog(N)) so C(N) = O(pNlog(N)) where p is number of features.\\[10pt]
+As mentioned previously the impurity criterion can be computed iteratively for consecutive thresholds and so most costly operation is sorting which has lower bound of $O(Nlog(N))$ so $C(N) = O(pNlog(N))$ where $p$ is number of features.\\[11pt]
 Now for solving the above recurrence equation to find exact complexity three cases can be considered:
 \begin{itemize}
-    \item Best case would be when all nodes of size N are split into two nodes of size N/2
-    \item Worst case would be when all splits are uneven so nodes of size N are split into two nodes one with size N-1 and other 1
+    \item Best case would be when all nodes of size N are split into two nodes of size $N/2$
+    \item Worst case would be when all splits are uneven so nodes of size $N$ are split into two nodes one with size $N-1$ and other 1
     \item Average case corresponds to average time complexity and here in this analysis it is assumed that all splits are equiprobable.
 \end{itemize}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Stochastic Gradient Decent(SGD)}
 SGD is an optimization algorithm used to find parameter values of a function such that value of its cost function is minimized. The idea of the algorithm is very simple, it has following steps:
 \begin{itemize}
@@ -84,15 +84,104 @@ SGD is an optimization algorithm used to find parameter values of a function suc
     \item Error rate is measured using expected output value and evaluated value and then parameter values are updated accordingly depending on error value.
 \end{itemize}
 New parameter values are used to repeat above steps until convergence.\\[10pt]
-In scikit-learn SGD is used to learn parameter values for a linear scoring function f(x)=wtx+b with model param w and intercept b. The param values are found by minimizing following error function:
-	E(w,b) = 1/n sum(L(y, f(x))) + aR(w)
+In scikit-learn SGD is used to learn parameter values for a linear scoring function $f(x)=wtx+b$ with model param w and intercept b. The param values are found by minimizing following error function:
+	$E(w,b) = 1/n sum(L(y, f(x))) + aR(w)$
 where L is some loss function like logistic regression, R is regularization term that penalizes model complexity and alpha is non negative hyperparameter.\\[10pt]
 SGD's complexity is linear in number of training examples. For learning data of N samples with p variables each the training cost is O(kNp).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Experiments}
+After performing the theoretical complexity analysis we test our approach by taking 125 datasets with varying dimensions and performing two different kinds of experiments on them. The data for the experiments is collected by training classifier of given algorithm on each dataset individually and recording how much time it takes to train different sizes of that dataset. For example if dataset has total 100 records then it is recorded that how much time it takes to train the classifier for 10, 20, 30, 40 etc records of that dataset. In this experiment one hypothesis that is also tested is that since 'K'(number of features) remain constant within each dataset it can be factored out from the model without any effect on quality of predictions.\\[10pt]
+In the first set of experiments each dataset is taken individually. Then model is trained on it by only looking how much time it took to train first few samples of that data. For example if data has 100 records then we would train model only based on how long it took to train 10 records of that dataset. In the experiments we train model using this approach by taking 9, 13, 19 and 28 percent of data and see how performance of prediction changes. The idea of these experiments is that when user starts training a classifier for machine learning algorithm then he can learn how long will it take to train whole model after only few iterations.\\[10pt]
+In the second set of experiments a single model is trained on 100 of 125 datasets and then that model is used to predict running times of rest of 25 datasets individually. The idea of this experiment is that a model is learned from all past runs and then for each new dataset the training time can be instantly predicted just by looking at its dimensions.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results}
+\subsection{Predictions using initial runtime data}
+Results for this set of experiments are obtained by first comparing different models of the given algorithm, After which on one of the better models the difference in quality of predictions due to different amounts of initial data are analyzed.
+%%%%%%%%%%%%%%%%%
+\subsubsection*{Decision Trees}
+As discussed earlier the model for average case of Decision Trees is $a + bKN(LogN)^2$. Since $K$ remains constant for each dataset it can be factored out of model equation, so model becomes $a + bN(LogN)^2$. The model for worst case of Decision Trees training time is $a + bKN^2(LogN)$.
+Following boxplot shows the quality of predictions of the given models with 28\% initial data.
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=165mm]{dt_models_comparison2.png}
+\end{center}
+\caption{Quality of Decision Trees Runtime Prediction models}
+\label{fig:dt_models}
+\end{figure}
+
+The y-axis of the Figure~\ref{fig:dt_models} shows that for each dataset how much its predicted value differed from the true value. The worst case model always over predicted, for about 75\% of datasets it predicted more than double time and for about 25\% data it predicted over three times the true training time. This model never under predicted and for few huge datasets its prediction quality was good.\\
+The average case model predicted the training time of about 25\% datasets within 5\% accuracy and 50\% datasets within 15\% accuracy. The median accuracy of this model is about 5\%. It can also be observed that removal of 'K' from the model doesn't affect its predictions because for each individual dataset 'K' is constant.\\[10pt]
+
+% Now that we have idea about prediction quality of the two models we can see how much effect does the quantity of initial runtime data have on quality of the predictions. Figure~\ref{fig:dt_datasize} gives this comparison.
+
+% \begin{figure}[h!]
+% \begin{center}
+% \includegraphics[width=165mm]{dt_datasize_comparison.png}
+% \end{center}
+% \caption{Decision Trees Datasize vs Prediction quality}
+% \label{fig:dt_datasize}
+% \end{figure}
+% The median prediction accuracy when 13\% initial data is used is 18\%, it changes to 12\% when 28\% data is used. Although median prediction accuracy is not that bad for small initial datasize of 13\% the upper quartile range and extreme values are very high at 37\% and 78\% respectively. For 28\% initial data these values 23\% and 50\% only. Also using only 9\% of initial data the prediction quality is very poor with median of about 38\% and and extreme value of 120\%.
+
+%%%%%%%%%%%%%%%
+\subsubsection*{Random Forests}
+The average case model of Random Forests is $a + bMKN(Log(N))^2$, where $M$ is average number of trees and like $K$ it also factors out for individual datasets, so model becomes $a + bN(LogN)^2$. Similarly the model for worst case training time of Random Forests is $a + bKN^2(Log(N))$.
+Following boxplot shows the quality of predictions of the given models with 28\% initial data.
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=165mm]{rf_models_comparison.png}
+\end{center}
+\caption{Quality of Random Forests Runtime Prediction models}
+\label{fig:rf_models}
+\end{figure}
+
+Figure~\ref{fig:rf_models} shows that the worst case model always over predicted, for about 60\% of datasets it predicted more than double time and for about 30\% data it predicted three times the true training time. This model never under predicted but its predictions were not very good, even the best prediction was 25\% different from the true value.\\
+The average case model predicted the training time of about 25\% datasets within 3\% accuracy and 80\% datasets within 20\% accuracy. The median accuracy of this model is about 8\%.\\[10pt]
+Random Forests and Decision Trees have same model but in Figure~\ref{fig:rf_vs_ds} it can be observed that prediction quality on Random Forests is much better. Even with only 9\% data 75\% of predictions had less than 40\% difference from true values for RF case. Also with only 13\% data RF model had alomost same prediction quality as DT's model have for 28\% data. REASONS?\\[10pt]
+
+%Figure~\ref{fig:rf_datasize} shows how initial datasize effect the prediction quality for Random Forest's model.
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=165mm]{rf_vs_dt.png}
+\end{center}
+\caption{Random Forests vs Decision Trees Prediction quality}
+\label{fig:rf_vs_ds}
+\end{figure}
+
+%%%%%%%%%%%%%%%%
+\subsubsection*{SGD}
+The average case model of SGD is $a + bKN$, where $K$ factors out for individual datasets and model becomes $a + bN$.
+Figure~\ref{fig:sgd_models} shows the quality of predictions of the given model with 28\% initial data. Overall SGD's model predictions are quite good with median of -2.5\% and over 75\% predictions within 8\% accuracy. The problem with this model is that there are more under predictions than over predictions and 5-6 datasets of high dimensions were under predicted with inaccuracy of 20\%-40\%. Figure~\ref{fig:sgd_datasize} shows effect of initial data size on prediction quality.
+\clearpage
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=165mm]{sgd_models_comparison.png}
+\end{center}
+\caption{Quality of SGD Runtime Prediction model}
+\label{fig:sgd_models}
+\end{figure}
+
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=165mm]{sgd_datasize_comparison.png}
+\end{center}
+\caption{SGD Datasize vs Prediction quality}
+\label{fig:sgd_datasize}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Predictions using single model}
 
 
 
 
 
+
+
+%%%%%%%%%%%%%%%%5%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=1.7]{universe.jpg}

@@ -1,3 +1,5 @@
+# this script takes all the csv data files from inside 'datasets' folder and converts them to np arrays and put them
+# in runtimes folder.
 import os
 import csv
 import sys
@@ -16,12 +18,15 @@ if __name__ == "__main__":
     test = "_test/"
     # test = "/"
     # path = "datasets/2016_runtime_data_sparse" + test
-    path = "datasets/randforest" + test
+    # path = "datasets/randforest" + test
     # path = "datasets/allData" + test
+    # path = "datasets/all_rf" + test
+
+    path = "datasets/allData/0/test/"
     train = 1 if test == "/" else 0
 
     print(path)
-    files = next(os.walk(path))[2]
+    files = next(os.walk(os.path.abspath(path)))[2]
     for i in range(len(files)):
         files[i] = path + files[i]
 
@@ -124,6 +129,12 @@ if __name__ == "__main__":
             x_datasize = list()
             y_runtime = list()
             data_name = list()
+
+            x_features_summary = list()
+            x_datasize_summary = list()
+            y_runtime_summary = list()
+            data_name_summary = list()
+
             for dataset in algo:
                 surf = ax.plot(dataset[1], dataset[0], dataset[2])
 
@@ -131,6 +142,11 @@ if __name__ == "__main__":
                 x_features.extend(dataset[0])
                 y_runtime.extend(dataset[2])
                 data_name.extend(dataset[3])
+
+                x_datasize_summary.append(str(dataset[1][-1]))
+                x_features_summary.append(str(dataset[0][-1]))
+                y_runtime_summary.append(str(dataset[2][-1]))
+                data_name_summary.append(str(dataset[3]))
 
                 x_tmp = np.column_stack((dataset[1], dataset[0]))
                 x_tmp_csv = np.column_stack((dataset[1], dataset[0], dataset[2]))
@@ -142,28 +158,36 @@ if __name__ == "__main__":
                     np.savetxt("runtimes/test/" + algo_string[a] + "/y_runtime_train_" + dataset[3] + ".np", y_tmp, fmt=y_format)
                     # np.savetxt("runtimes/test/" + algo_string[a] + "/y_runtime_train_" + dataset[3] + ".csv", x_tmp_csv,
                     #            delimiter=",", fmt=["%d", "%d", "%0.6f"], header='#Data,#Feat,Runtime')
-                if train == 1:
-                    np.savetxt("runtimes/train/" + algo_string[a] + "/x_runtime_train_" + dataset[3] + ".np", x_tmp, fmt="%0.1f")
-                    np.savetxt("runtimes/train/" + algo_string[a] + "/y_runtime_train_" + dataset[3] + ".np", y_tmp, fmt=y_format)
-                    # np.savetxt("runtimes/train/" + algo_string[a] + "/y_runtime_train_" + dataset[3] + ".csv",x_tmp_csv,
-                    #            delimiter=",", fmt=["%d", "%d", "%0.6f"], header='#Data,#Feat,Runtime')
+                # if train == 1:
+                #     np.savetxt("runtimes/train/" + algo_string[a] + "/x_runtime_train_" + dataset[3] + ".np", x_tmp, fmt="%0.1f")
+                #     np.savetxt("runtimes/train/" + algo_string[a] + "/y_runtime_train_" + dataset[3] + ".np", y_tmp, fmt=y_format)
+                #     # np.savetxt("runtimes/train/" + algo_string[a] + "/y_runtime_train_" + dataset[3] + ".csv",x_tmp_csv,
+                #     #            delimiter=",", fmt=["%d", "%d", "%0.6f"], header='#Data,#Feat,Runtime')
 
             x = np.column_stack((x_datasize, x_features))
             y = np.array(y_runtime)
             y = y[:, np.newaxis]
             x_csv = np.column_stack((x_datasize, x_features, y_runtime))
+            x_summary = np.column_stack((data_name_summary, x_datasize_summary, x_features_summary, y_runtime_summary))
+
             # y = np.column_stack((data_name, y_runtime))
             if test == "_test/":
-                np.savetxt("runtimes/x_runtime_train_allTest_" + algo_string[a] + ".np", x, fmt="%0.1f")
-                np.savetxt("runtimes/y_runtime_train_allTest_" + algo_string[a] + ".np", y, fmt=y_format)
-                # np.savetxt("runtimes/y_runtime_train_allTest_" + algo_string[a] + ".csv", x_csv, delimiter=',',
-                #            fmt=["%d", "%d", "%0.6f"], header='#Data,#Feat,Runtime')
+                print('no combined file for the tests')
+                # np.savetxt("runtimes/x_runtime_train_allTest_" + algo_string[a] + ".np", x, fmt="%0.1f")
+                # np.savetxt("runtimes/y_runtime_train_allTest_" + algo_string[a] + ".np", y, fmt=y_format)
+                # # np.savetxt("runtimes/y_runtime_train_allTest_" + algo_string[a] + ".csv", x_csv, delimiter=',',
+                # #            fmt=["%d", "%d", "%0.6f"], header='#Data,#Feat,Runtime')
+                # np.savetxt("runtimes/" + algo_string[a] + "_summary.csv", x_summary, delimiter=',',
+                #            fmt=["%s","%d", "%d", "%0.6f"], header='Name,#Data,#Feat,Runtime')
 
             else:
                 np.savetxt("runtimes/x_runtime_train_allTrain_" + algo_string[a] + ".np", x, fmt="%0.1f")
                 np.savetxt("runtimes/y_runtime_train_allTrain_" + algo_string[a] + ".np", y, fmt=y_format)
                 # np.savetxt("runtimes/y_runtime_train_allTest_" + algo_string[a] + ".csv", x_csv, delimiter=',',
                 #            fmt=["%d", "%d", "%0.6f"], header='#Data,#Feat,Runtime')
+                # np.savetxt("runtimes/" + algo_string[a] + "_summary.csv", x_summary, delimiter=',',
+                #             fmt=["%s", "%s", "%s", "%s"],
+                #             header='Name,#Data,#Feat,Runtime')
 
             print("done putting data in arrays, saved in .np files")
             # ax.zaxis.set_major_locator(LinearLocator(10))
