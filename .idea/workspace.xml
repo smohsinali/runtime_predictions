@@ -2,17 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f7f63254-29fd-48f3-bbc3-4e9800dff0ab" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boxplots/dt_datasize_comparison.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boxplots/dt_models_comparison.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boxplots/dt_models_comparison2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boxplots/rf_ds_comparison.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boxplots/rf_models_comparison.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boxplots/rf_vs_dt.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boxplots/sgd_ds_comparison.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boxplots/sgd_models_boxplot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boxplots/sgd_models_comparison.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boxplots/u_rf_models_boxplot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data_sheets.ods" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5april dt 28/a+bn(logn)/mc_1000_bac__dt_predicted.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5april dt 28/a+bn(logn)/mc_1002_bac__dt_predicted.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/5april dt 28/a+bn(logn)/mc_1018_bac__dt_predicted.png" />
@@ -3191,18 +3180,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/9_apr_sgd_cluster/model_sgd_avg.pickle" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/9_apr_sgd_cluster/model_sgd_lower.pickle" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/9_apr_sgd_cluster/model_sgd_lower_2.pickle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.~lock.data_sheets.ods#" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boxplots/boxplot_dt.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boxplots/boxplot_dt_datasize (-ive).np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boxplots/boxplot_dt_datasize.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boxplots/boxplot_rf.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boxplots/boxplot_rf_datasize (-ive).np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boxplots/boxplot_rf_datasize.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boxplots/boxplot_rf_new.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boxplots/boxplot_sgd.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boxplots/boxplot_sgd_datasize (-ive).np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/boxplots/boxplot_sgd_datasize.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cluster_data.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/allData/0/test/results_1021_bac.csv" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/allData/0/test/results_1053_bac.csv" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/allData/0/test/results_1116_bac.csv" />
@@ -3578,7 +3555,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/all_rf/results_991_bac.csv" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/all_rf/results_993_bac.csv" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/all_rf/results_995_bac.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dt_test.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/results/9_apr_sgd_cluster/rf_test.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/all_sgd/0/test/x_runtime_train_1000_bac__sgd.np" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/all_sgd/0/test/x_runtime_train_1002_bac__sgd.np" />
@@ -6173,23 +6149,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/sgd_graphs/y_runtime_train_897_bac__sgd.np" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/sgd_graphs/y_runtime_train_914_bac__sgd.np" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtimes/test/sgd_graphs/y_runtime_train_958_bac__sgd.np" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sgd_test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tables/dt_upper_28_5k.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tables/rf_28.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tables/rf_avg_13.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tables/rf_avg_19.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tables/rf_avg_9.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tables/rf_test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tables/rf_upper28.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tables/sgd_28.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tables/sgd_28.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tables/sgd_avg_13.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tables/sgd_avg_19.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tables/sgd_avg_9.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/boxplot_dt_avg.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dt_upper_28.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dt_upper_28_5k.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/rf_28.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scatter.py" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/test/dt/x_runtime_train_1002_bac__dt.np" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/test/dt/x_runtime_train_1040_bac__dt.np" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/test/dt/x_runtime_train_1056_bac__dt.np" afterPath="" />
@@ -7822,12 +7782,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_allTest_rf_graphs.np" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_allTest_sgd_graphs.np" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_allTrain_rf_graphs.np" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sgd_28.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sgd_upper_28.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/what.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/boxplots.py" afterPath="$PROJECT_DIR$/boxplots.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/csv2np.py" afterPath="$PROJECT_DIR$/csv2np.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datasets/randforest/results_1000_bac.csv" afterPath="$PROJECT_DIR$/datasets/randforest/results_1000_bac.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datasets/randforest/results_1018_bac.csv" afterPath="$PROJECT_DIR$/datasets/randforest/results_1018_bac.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datasets/randforest/results_1019_bac.csv" afterPath="$PROJECT_DIR$/datasets/randforest/results_1019_bac.csv" />
@@ -7928,16 +7883,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datasets/randforest/results_991_bac.csv" afterPath="$PROJECT_DIR$/datasets/randforest/results_991_bac.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datasets/randforest/results_993_bac.csv" afterPath="$PROJECT_DIR$/datasets/randforest/results_993_bac.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datasets/randforest/results_995_bac.csv" afterPath="$PROJECT_DIR$/datasets/randforest/results_995_bac.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcmc.py" afterPath="$PROJECT_DIR$/mcmc.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcmc_prediction.py" afterPath="$PROJECT_DIR$/mcmc_prediction.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcmc_prediction_individual.py" afterPath="$PROJECT_DIR$/mcmc_prediction_individual.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plotting.py" afterPath="$PROJECT_DIR$/plotting.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report.latex" afterPath="$PROJECT_DIR$/report.latex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtimes/x_runtime_train_allTrain_dt_graphs.np" afterPath="$PROJECT_DIR$/runtimes/x_runtime_train_allTrain_dt_graphs.np" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtimes/x_runtime_train_allTrain_sgd_graphs.np" afterPath="$PROJECT_DIR$/runtimes/x_runtime_train_allTrain_sgd_graphs.np" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_allTrain_dt_graphs.np" afterPath="$PROJECT_DIR$/runtimes/y_runtime_train_allTrain_dt_graphs.np" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtimes/y_runtime_train_allTrain_sgd_graphs.np" afterPath="$PROJECT_DIR$/runtimes/y_runtime_train_allTrain_sgd_graphs.np" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tables/dt_upper_28.html" afterPath="$PROJECT_DIR$/tables/dt_upper_28.html" />
     </list>
     <ignored path="code.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -7983,120 +7932,114 @@
     <favorites_list name="code" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.46160132">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="plotting.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/plotting.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="21" column="65" lean-forward="false" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
-                  <folding>
-                    <element signature="e#0#31#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="cluster_data.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/cluster_data.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="673">
-                  <caret line="56" column="61" lean-forward="false" selection-start-line="56" selection-start-column="61" selection-end-line="56" selection-end-column="61" />
-                  <folding>
-                    <element signature="e#1#19#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="mcmc.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/mcmc.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-347">
-                  <caret line="96" column="26" lean-forward="false" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="26" />
-                  <folding>
-                    <element signature="e#0#9#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/test.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="43" column="104" lean-forward="false" selection-start-line="43" selection-start-column="104" selection-end-line="43" selection-end-column="104" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="mcmc_prediction.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/mcmc_prediction.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="682">
-                  <caret line="97" column="21" lean-forward="false" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
-                  <folding>
-                    <element signature="e#0#9#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="data.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/data.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1258">
-                  <caret line="104" column="26" lean-forward="false" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
-                  <folding>
-                    <element signature="e#86#95#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="boxplots.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/boxplots.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#18#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="dt_prediction_grid.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/old stuff/dt_prediction_grid.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="615">
-                  <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
-                  <folding>
-                    <element signature="e#0#9#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="report.latex" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/report.latex">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="837">
-                  <caret line="197" column="0" lean-forward="false" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="plotting.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plotting.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="21" column="65" lean-forward="false" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cluster_data.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cluster_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1064">
+              <caret line="56" column="61" lean-forward="false" selection-start-line="56" selection-start-column="61" selection-end-line="56" selection-end-column="61" />
+              <folding>
+                <element signature="e#1#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mcmc.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mcmc.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1824">
+              <caret line="96" column="26" lean-forward="false" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="817">
+              <caret line="43" column="104" lean-forward="false" selection-start-line="43" selection-start-column="104" selection-end-line="43" selection-end-column="104" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mcmc_prediction.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mcmc_prediction.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1976">
+              <caret line="104" column="26" lean-forward="false" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
+              <folding>
+                <element signature="e#86#95#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="boxplots.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/boxplots.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="551">
+              <caret line="29" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dt_prediction_grid.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/old stuff/dt_prediction_grid.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="779">
+              <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scatter.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scatter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="30" column="85" lean-forward="false" selection-start-line="30" selection-start-column="85" selection-end-line="30" selection-end-column="85" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -8166,6 +8109,7 @@
         <option value="$PROJECT_DIR$/csv2np.py" />
         <option value="$PROJECT_DIR$/mcmc_prediction.py" />
         <option value="$PROJECT_DIR$/report.latex" />
+        <option value="$PROJECT_DIR$/scatter.py" />
       </list>
     </option>
   </component>
@@ -8176,9 +8120,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="50" />
+    <option name="y" value="27" />
     <option name="width" value="1920" />
-    <option name="height" value="1005" />
+    <option name="height" value="1029" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -8218,6 +8162,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -8230,28 +8175,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime_prediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtime_prediction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runtimes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/dt_prediction_grid.py" />
     <property name="Console.TableResult.DefaultCopyAction" value="Tab Separated Values (TSV)" />
@@ -8268,25 +8198,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.mcmc_prediction">
-    <configuration default="false" name="mcmc_prediction_individual" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="runtime_prediction" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mcmc_prediction_individual.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.scatter">
     <configuration default="false" name="boxplots" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -8355,6 +8267,24 @@
       <module name="runtime_prediction" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cluster_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="scatter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="runtime_prediction" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scatter.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -8512,19 +8442,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.mcmc_prediction_individual" />
-      <item index="1" class="java.lang.String" itemvalue="Python.boxplots" />
-      <item index="2" class="java.lang.String" itemvalue="Python.mcmc_prediction" />
-      <item index="3" class="java.lang.String" itemvalue="Python.csv2np" />
-      <item index="4" class="java.lang.String" itemvalue="Python.cluster_data" />
+      <item index="0" class="java.lang.String" itemvalue="Python.boxplots" />
+      <item index="1" class="java.lang.String" itemvalue="Python.mcmc_prediction" />
+      <item index="2" class="java.lang.String" itemvalue="Python.csv2np" />
+      <item index="3" class="java.lang.String" itemvalue="Python.cluster_data" />
+      <item index="4" class="java.lang.String" itemvalue="Python.scatter" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.mcmc_prediction" />
-        <item index="1" class="java.lang.String" itemvalue="Python.csv2np" />
-        <item index="2" class="java.lang.String" itemvalue="Python.cluster_data" />
-        <item index="3" class="java.lang.String" itemvalue="Python.boxplots" />
-        <item index="4" class="java.lang.String" itemvalue="Python.mcmc_prediction_individual" />
+        <item index="0" class="java.lang.String" itemvalue="Python.scatter" />
+        <item index="1" class="java.lang.String" itemvalue="Python.mcmc_prediction" />
+        <item index="2" class="java.lang.String" itemvalue="Python.csv2np" />
+        <item index="3" class="java.lang.String" itemvalue="Python.cluster_data" />
+        <item index="4" class="java.lang.String" itemvalue="Python.boxplots" />
       </list>
     </recent_temporary>
   </component>
@@ -8682,7 +8612,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491413503784</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="cluster">
+      <created>1491886875808</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1491886875808</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView">
@@ -8695,15 +8632,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="50" width="1920" height="1005" extended-state="6" />
+    <frame x="0" y="27" width="1920" height="1029" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19925214" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20342612" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36818686" sideWeight="0.5021097" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32814237" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34615386" sideWeight="0.4978903" order="5" side_tool="false" content_ui="tabs" x="789" y="267" width="932" height="743" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34582442" sideWeight="0.4978903" order="5" side_tool="false" content_ui="tabs" x="789" y="267" width="932" height="743" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24941361" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -8769,7 +8706,8 @@
     <MESSAGE value="refactoring" />
     <MESSAGE value="new tables with hp values" />
     <MESSAGE value="backup" />
-    <option name="LAST_COMMIT_MESSAGE" value="backup" />
+    <MESSAGE value="cluster" />
+    <option name="LAST_COMMIT_MESSAGE" value="cluster" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -8801,7 +8739,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/oracle/lib/python3.4/site-packages/theano/tensor/type.py" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -8897,23 +8834,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/boxplots.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mcmc_prediction_individual.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
           <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#13#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -8921,7 +8845,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1260">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -8929,7 +8852,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="302" column="0" lean-forward="false" selection-start-line="302" selection-start-column="0" selection-end-line="302" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -8937,7 +8859,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="245" column="0" lean-forward="false" selection-start-line="245" selection-start-column="0" selection-end-line="245" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -8951,7 +8872,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plotting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="399">
           <caret line="21" column="65" lean-forward="false" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
@@ -8961,7 +8882,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
+        <state relative-caret-position="817">
           <caret line="43" column="104" lean-forward="false" selection-start-line="43" selection-start-column="104" selection-end-line="43" selection-end-column="104" />
           <folding />
         </state>
@@ -8969,7 +8890,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mcmc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-347">
+        <state relative-caret-position="1824">
           <caret line="96" column="26" lean-forward="false" selection-start-line="96" selection-start-column="26" selection-end-line="96" selection-end-column="26" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -8979,7 +8900,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
+        <state relative-caret-position="1976">
           <caret line="104" column="26" lean-forward="false" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
           <folding>
             <element signature="e#86#95#0" expanded="true" />
@@ -8991,15 +8912,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1695">
           <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-          <folding>
-            <element signature="e#139#148#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cluster_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="673">
+        <state relative-caret-position="1064">
           <caret line="56" column="61" lean-forward="false" selection-start-line="56" selection-start-column="61" selection-end-line="56" selection-end-column="61" />
           <folding>
             <element signature="e#1#19#0" expanded="true" />
@@ -9007,19 +8925,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mcmc_prediction.py">
+    <entry file="file://$PROJECT_DIR$/report.latex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="97" column="21" lean-forward="false" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="736">
+          <caret line="197" column="0" lean-forward="false" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/old stuff/dt_prediction_grid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
+        <state relative-caret-position="779">
           <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -9027,11 +8942,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/report.latex">
+    <entry file="file://$PROJECT_DIR$/boxplots.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="197" column="0" lean-forward="false" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="551">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mcmc_prediction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scatter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="30" column="85" lean-forward="false" selection-start-line="30" selection-start-column="85" selection-end-line="30" selection-end-column="85" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
