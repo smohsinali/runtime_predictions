@@ -2,6 +2,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{scrextend}
 \usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+
 
 \title{ML Training Time Prediction}
 \author{ }
@@ -13,67 +15,67 @@
 \begin{document}
 
 \maketitle
+\section{Abstract}
+In algorithm selection and configuration for a machine learning problem one important thing to consider is if model can be trained in a reasonable time with given hardware resources. In this project we investigate if its possible to predict model training time for Decision Trees, Random Forests and Stochastic Gradient Decent(SGD) which are few of most commonly used machine learning algorithms. We handle this problem of training time prediction as linear regression problem and use Monte Carlo Markov Chain(MCMC) sampling methods to find the closed form solution with uncertainty quantification. We show that for each dataset we can find a good model and predict the total training time with reasonable uncertainty by looking at how long it takes to train the model for few samples of that dataset, but these models are unique for each dataset and one single model cannot be used to predict training time of every dataset.
 
 \section{Introduction}
-Training times for machine learning algorithms can vary from few milliseconds to couple of days depending on couple of factors. These factors can include type of algorithm used, its hyperparameters, size of training data, data structures used in implementation of the algorithm and hardware resources available for the training.\\[10pt]
-Knowing how much training time will be taken by algorithm given all the factors can help algorithm designer make decisions about what hardware resources to use, which hyperparameters to use and how much data can be used for training model within some time constraints.\\[10pt]
-Some machine learning practitioners might do complexity analysis of the algorithms they use but unfortunately no work on predicting run times of these algorithms have been done until now. In this project first steps are taken towards this task by predicting training times of three of popular machine learning algorithms. They are decision trees, random forests and stochastic gradient decent (SGD).\\[10pt]
-We understand that predicting exact run times with full certainty might not be possible as there can be many factors which can be overlooked or not possible to consider. For example it is very hard to consider number of background processes and resources they consume. So to consider uncertainties due to such uncontrollable factors in our predictions we solve regression problem of run time prediction using Markov Chain Monte Carlo Methods (MCMC).
+Training times for machine learning algorithms can vary from few milliseconds to couple of the days depending on different factors. These factors include the algorithm used, its hyperparameters, size of the training data, data structures used in implementation of the algorithm and hardware resources available for the training. If the machine learning scientist knows how much time the training will take he would be able to make more informed decisions about which algorithm to use, which hyperparameters to use, what hardware resources to use and how much data should be used for training model within given time constraints for best performance.\\[10pt]
+Some machine learning scientists do complexity analysis of the algorithms and their configurations to see how they will scale to large data sizes but very little work on predicting run times of these algorithms have been done until now. In this project we explore the possibility of predicting run times of three of popular machine learning algorithms: Decision Trees, Random Forests and SGD.\\[10pt]
+We understand that predicting exact run times with full certainty is not possible as there are many factors which are unknown or not possible to consider. For example number of background processes, the total resources they consume, the operating system overhead and the processor speeds and architectures are some of such factors. So to consider uncertainties due to such uncontrollable factors in our predictions we solve the regression problem of run time predictions using MCMC methods.
 
 \section{Methodology}
-Scikit-learn is popular open source machine learning library, in this project its implementation of Decision Trees, Random Forests and SGD is used to analyse their complexities and get their run time performances. For building Bayesian model and MCMC sampling PyMC3 is used which is python module for Bayesian statistical modeling and model fitting focusing on MCMC algorithms. Specifically following steps are used for predicting run times of these algorithms.\\[10pt]
+Scikit-learn\citep{pedregosa2011scikit} is a popular open source machine learning library. In this project implementations of Decision Trees, Random Forests and SGD from scikit-learn are used to analyze complexities of these algorithms and get their runtime performances. For building Bayesian model and MCMC sampling we use PyMC3\citep{salvatier2016pymc3} which is python module for Bayesian statistical modeling and model fitting focusing on MCMC algorithms. Specifically following steps are used for predicting runtimes of these algorithms.\\[10pt]
 \begin{itemize}
-    \item Complexity of algorithm's implementation in scikit-learn is analysed. This is done by breaking the algorithm in its constituent steps and then for each step analysing its complexity depending on data structure used to implement it.
-    \item Using scikit-learn classifiers are trained for 125 datasets of different dimensions. For each data set its dimensions and and time taken to train the classifier for given algorithm is recorded.
-    \item Results of first step are used to create a model in PyMC3 and results of second step are used as observation to solve for parameter values of that model.
-    \item Once the model is fully known the run times for new data sets are predicted by using their dimensions as input variables to the model. Since MCMC sampling is used to find the model parameters we also have access to uncertainties in their values which in turn give uncertainties in the final predictions.
+    \item Computational Complexity of algorithm's implementation in scikit-learn is analyzed. This is done by breaking the algorithm in its constituent steps and then for every step analyzing its complexity based on implementation details, E.g if the step being analyzed is sorting operation then we see what sorting algorithm is used for implementing it and what is its computational complexity.
+    \item For each algorithm its classifier is trained for 125 different datasets and for each training the datasize and time to train is recorded.
+    \item Results of first step are used to create a model in PyMC3 and results of second step are used as observation to find the parameter values of that model.
+    \item Finally when the model is fully known it can be used to predict the runtimes. Since MCMC methods are used to find the model parameters we also have access to uncertainties in their values which can be used to find uncertainties in the final predictions.
 \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Analysis of Decision Trees}
 
 \subsection{Algorithm}
-Decision trees is among the basic machine learning algorithms and is also basis of Random Forests algorithm which is one of most used and powerful of ML algorithms. The algorithm of Decision Trees is as follows, For more formal definition look at \citep{}:\\
+Decision trees are among the most popular machine learning algorithms and are also the building blocks of Random Forests. The algorithm of Decision Trees is as follows, For more formal definition look at\citep{louppe2014understanding}:\\
 \begin{addmargin}[1em]{0em}
-Create a root node t0 that contains all learning data L\\
-	Until stopping criteria is met:
+    Create a root node $t_0$ that contains all learning data $L$\\
+    Set $currentNode = t_0$\\
+	Repeat until stopping criteria is met:
 	\begin{itemize}
-	    \item Find best split $s*$ in all variables which maximizes impurity decrease
-	    \item Label the node with best split variable and its value
-	    \item Divide the available learning data L into Ll and Lr
-	    \item Create nodes tl and tr with Ll and Lr respectively
-	    \item Repeat with $tl$, $Ll$
-	    \item Repeat with $tr$, $Lr$
+	    \item Find best split $s^*$ in all variables which maximizes impurity decrease
+	    \item Label the $currentNode$ with best split variable and its value
+	    \item Divide the available learning data $L$ into $L_l$ and $L_r$
+	    \item Create nodes $t_l$ and $t_r$ which contains data $L_l$ and $L_r$ respectively
+	    \item Repeat with $currentNode=t_l$ and data $L_l$
+	    \item Repeat with $currentNode=t_r$ and data $L_r$
 	\end{itemize}
 \end{addmargin}
 
-\subsection{Implementation Details}
-The heart of algorithm is measuring changes in impurity and finding best split based on those measurements. The changes in impurity decrease are measured using impurity function which can be either Gini index or Shannon entropy:
-			\begin{itemize}
-			    \item Gini Index:$.$
-			    \item Shannon Entropy:$.$
-			\end{itemize}
-For each variable finding the best split can be expensive if impurity decrease is evaluated for each change in value of that variable. but exhaustive evaluations of all the splits can be carried out efficiently if the variable is sorted. for this sorted case each change in impurity can be computed from previous one in linear number of operations. So complexity of induction of decision tree is upper bounded by this sorting operation, which would be O(Nlog(N)).\\
-The Scikit-learn implementation of Decision trees has three main components:
-\begin{itemize}
-    \item First one is Builder object which creates tree array representation of the tree. the arrays contain for each node the information about its children, feature used for dividing it, the threshold value on which it is divided, impurity, number of samples that it divides and number of samples of each class that the node has. All this information is stored in dynamic tables so memory consumption is low and insertion of new node has amortized cost of $O(1)$. Also to keep the track of samples at each node instead of making new arrays which would waste lot of memory the builder object just keeps all information in one array and use reordering  so elements from [start:pos] would represent elements going to left child and [pos:end] would represent elements in right child.
-
-    \item Second main component is Splitter object which searches for best split for given node. As mentioned previously this boils down keeping the values of each variable sorted so that impurity values can be calculated in linear time. Scikit learn uses Introsort which is combination of Heapsort and Quicksort algorithms. The idea is that sorting begins using Quicksort which has average complexity of $O(Nlog(N))$ in average case and towards the end the algorithm switches to Heap-sort which is upper bounded by $O(Nlog(N))$. Also Quicksort is implemented using median-of-three as pivot which has better than average performance if data has lot of similar values.
-
-    \item Third component is Criterion object which evaluates goodness of splits using Gini index or Shannon entropy for classification and MSE for regression. All of these evaluations are done using a special update procedure \citep{} which makes their complexity only $O(Nt)$
-\end{itemize}
-
-\newpage
 \subsection{Complexity Analysis}
-Suppose $T(N)$ is time complexity of building tree from $N$ samples. When the  node with $N$ samples is split into two nodes with $Nl$ and $Nr$ samples then the $T(N)$ can be written as sum of cost $C(N)$ of finding the split and recursively splitting the children nodes with cost $T(Nl)$ and $T(Nr)$ respectively. This can be written in form of recurrence equation as follows:
-\begin{itemize}
-    \item
-\end{itemize}
+The heart of Decision Trees algorithm computes change in impurity and finds best split based on those measurements. The changes in impurity decrease are measured using impurity function which can be either Gini index or Shannon entropy.\\[10pt]
+For each variable finding the best split can be expensive if impurity decrease is evaluated for each change in value of that variable. But if variable is stored in sorted arrays then exhaustive evaluations of all the splits can be carried out efficiently by computing change in impurity from value of change in impurity of previous split in linear number of operations. We know from \citep{} that sorting of arrays is \textit{Lower Bounded}(LB) by:\\[10pt]
+                    % \hspace*{5cm}$O(Nlog(N))\qquad \textit{LB of sorting operation}\quad(1)$ \\
+                    \hspace*{3cm}$O(Nlog(N)) \quad(1)$ \\[10pt]
+So if there are total $k$ number of variable then complexity of induction of Decision Tree would have LB:\\[5pt]
+                    \hspace*{3cm}$O(kNlog(N))\quad(2)$ \\
+% The Scikit-learn implementation of Decision trees has three main components:
+\newpage
+% \subsection{Complexity Analysis}
+Suppose $T(N)$ is time complexity of building tree from $N$ samples. When the  node with $N$ samples is split into two nodes with $N_l$ and $N_r$ samples then the $T(N)$ can be written as sum of cost $C(N)$ of finding the split and recursively splitting the children nodes with cost $T(N_l)$ and $T(N_r)$ respectively. This can be written in form of recurrence equation as follows:\\[10pt]
+\hspace*{3cm}\begin{math}
+  \left\{
+    \begin{array}{l}
+      T(1) = c_1\\
+      T(N) = C(N) + T(N_l) + T(N_r)
+    \end{array}
+  \right.
+\end{math}\quad(3)\\[10pt]
 As mentioned previously the impurity criterion can be computed iteratively for consecutive thresholds and so most costly operation is sorting which has lower bound of $O(Nlog(N))$ so $C(N) = O(pNlog(N))$ where $p$ is number of features.\\[11pt]
-Now for solving the above recurrence equation to find exact complexity three cases can be considered:
+Equation can be solved for following three cases
+:
 \begin{itemize}
-    \item Best case would be when all nodes of size N are split into two nodes of size $N/2$
-    \item Worst case would be when all splits are uneven so nodes of size $N$ are split into two nodes one with size $N-1$ and other 1
-    \item Average case corresponds to average time complexity and here in this analysis it is assumed that all splits are equiprobable.
+    \item Best case: All nodes of size N are split into two nodes of size $N/2$
+    \item Worst case: All splits are uneven so nodes of size $N$ are split into two nodes with sizes $N-1$ and $1$ respectively.
+    \item Average case: Assume that all splits are equiprobable.
 \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Stochastic Gradient Decent(SGD)}

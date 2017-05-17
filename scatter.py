@@ -6,18 +6,16 @@ import matplotlib.pyplot as plt
 
 sns.set(font_scale=1.75)
 
-scatter_plot = 'dt_scatter'
 
+def scatter_plot(algo_datasize, num_classes):
 
-
-if scatter_plot == 'dt_scatter':
-
-    data = np.loadtxt('scatterplot/dt_scatter', skiprows=1)
+    file_path = 'scatterplot/' + algo_datasize
+    data = np.loadtxt(file_path, skiprows=1)
 
     true = data[:,0]
     predicted = data[:,1]
     uncertainity = data[:,2]
-    classes = data[:,3]
+    classes = num_classes
 
     errors = predicted/100 * uncertainity
 
@@ -39,13 +37,23 @@ if scatter_plot == 'dt_scatter':
 
 
     plt.xlabel('True')
-    plt.ylabel('Preicted')
-    plt.xlim(0, 0.7)
-    plt.ylim(0, 0.7)
+    plt.ylabel('Predicted')
+    # plt.xlim(0, 0.7)
+    # plt.ylim(0, 0.7)
 
     # ax.title("Decision Tree Model: a + bKN(log(N))^2")
     plt.show()
 
+    # print(scatter_plot + " not found")
 
-else:
-    print(scatter_plot + " not found")
+# algo_datasize = 'dt_scatter_28.np'
+# algo_datasize = 'rf_scatter_13.np'
+# algo_datasize = 'rf_scatter_19.np'
+algo_datasize = 'rf_scatter_28.np'
+# algo_datasize = 'sgd_scatter_13.np'
+# algo_datasize = 'sgd_scatter_19.np'
+# algo_datasize = 'sgd_scatter_28.np'
+
+num_classes = np.loadtxt('scatterplot/num_classes.np', skiprows=1, dtype={'names':('ds_name', 'num_classes'),
+                                                                          'formats':('|S15', np.int )})
+scatter_plot(algo_datasize=algo_datasize, num_classes=num_classes['num_classes'])
