@@ -31,7 +31,7 @@ Scikit-learn\citep{pedregosa2011scikit} is a popular open source machine learnin
     \item Results of first step are used to create a model in PyMC3 and results of second step are used as observation to find the parameter values of that model.
     \item Finally when the model is fully known it can be used to predict the runtimes. Since MCMC methods are used to find the model parameters we also have access to uncertainties in their values which can be used to find uncertainties in the final predictions.
 \end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%     Decision Trees     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Analysis of Decision Trees}
 
 \subsection{Algorithm}
@@ -60,7 +60,7 @@ So if there are total $k$ number of variable then complexity of induction of Dec
 % The Scikit-learn implementation of Decision trees has three main components:
 \newpage
 % \subsection{Complexity Analysis}
-Suppose $T(N)$ is time complexity of building tree from $N$ samples. When the  node with $N$ samples is split into two nodes with $N_l$ and $N_r$ samples then the $T(N)$ can be written as sum of cost $C(N)$ of finding the split and recursively splitting the children nodes with cost $T(N_l)$ and $T(N_r)$ respectively. This can be written in form of recurrence equation as follows:\\[10pt]
+Suppose $T(N)$ is time complexity of building a Decision Tree from $N$ samples. When the  node with $N$ samples is split into two nodes with $N_l$ and $N_r$ samples then the $T(N)$ can be written as sum of cost of finding the split and recursively splitting the children nodes with cost $T(N_l)$ and $T(N_r)$ respectively. This can be written in form of recurrence equation as follows:\\[10pt]
 \hspace*{3cm}\begin{math}
   \left\{
     \begin{array}{l}
@@ -69,27 +69,86 @@ Suppose $T(N)$ is time complexity of building tree from $N$ samples. When the  n
     \end{array}
   \right.
 \end{math}\quad(3)\\[10pt]
-As mentioned previously the impurity criterion can be computed iteratively for consecutive thresholds and so most costly operation is sorting which has lower bound of $O(Nlog(N))$ so $C(N) = O(pNlog(N))$ where $p$ is number of features.\\[11pt]
-Equation can be solved for following three cases
-:
+Where $c_1$ is cost of making a leaf node from a sample and $C(N)$ is runtime complexity of finding a split and partitioning $N$ node samples into $t_l$ and $t_r$.
+As discussed cost of finding the best split equals to sorting, so from equation(2):\\[10pt]
+                $\hspace*{3cm}C(N) = O(kNlog(N)) \quad(4)$\\[10pt]
+Equation 3 can be solved for following three cases:
 \begin{itemize}
-    \item Best case: All nodes of size N are split into two nodes of size $N/2$
+    \item Best case: All nodes of size N are split into two nodes of size $N/2$.
     \item Worst case: All splits are uneven so nodes of size $N$ are split into two nodes with sizes $N-1$ and $1$ respectively.
     \item Average case: Assume that all splits are equiprobable.
-\end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{itemize}\\[10pt]
+From \citep{louppe2014understanding} solving equation 3 for these cases gives following results:\\
+\begin{align*}
+\textit{Best Case:} & \quad O(kNlog^2N) & \quad (5) \\
+\textit{Worst Case:} & \quad O(kN^2logN) & \quad (6) \\
+\textit{Avg. Case:} & \quad O(kNlog^2N) & \quad (7) \\
+\end{align*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%     Random Forests   %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Analysis of Random Forests}
+
+\subsection{Algorithm}
+Random Forests are among the most powerful and successfully used machine learning algorithms. Main idea of Random Forests is to build multiple Decision Trees, where each tree is built with subset of variables and bootstrapped data. This ensemble of trees is called Random Forests, it makes prediction by taking outputs of all trees and then averaging the result if its a regression problem or choosing the most popular answer if its a classification problem. The algorithm for creating a Random Forest is as follows, For more formal definition look at\citep{louppe2014understanding}:\\
+\begin{addmargin}[1em]{0em}
+    Set variable $M=\text{maximum number of trees}$\\
+    Set variable $p \leq k$, where $k$ is total number of variables\\
+    Set variable $\widetilde{N}=0.632N$ where $N$ is total number of samples\\
+    For $1..., M-1, M:$
+    \begin{addmargin}[1em]{0em}
+    Create a root node $t_0$ that contains bootstraped learning data $L$\\
+    Randomly choose $p$ variables
+    Set $currentNode = t_0$\\
+	Repeat until stopping criteria is met:
+	\begin{addmargin}[1em]{0em}    % 	\begin{itemize}
+	    Find best split $s^*$ in $p$ variables (randomly chosen in previous step) which maximizes impurity decrease\\
+	    Label the $currentNode$ with best split variable and its value\\
+	    Divide the available learning data $L$ into $L_l$ and $L_r$\\
+	    Create nodes $t_l$ and $t_r$ which contains data $L_l$ and $L_r$ respectively\\
+	    Repeat with $currentNode=t_l$ and data $L_l$\\
+	    Repeat with $currentNode=t_r$ and data $L_r$\\% 	\end{itemize}
+    \end{addmargin}
+    \end{addmargin}
+\end{addmargin}
+
+\subsection{Complexity Analysis}
+The heart of Decision Trees algorithm computes change in impurity and finds best split based on those measurements. The changes in impurity decrease are measured using impurity function which can be either Gini index or Shannon entropy.\\[10pt]
+For each variable finding the best split can be expensive if impurity decrease is evaluated for each change in value of that variable. But if variable is stored in sorted arrays then exhaustive evaluations of all the splits can be carried out efficiently by computing change in impurity from value of change in impurity of previous split in linear number of operations. We know from \citep{} that sorting of arrays is \textit{Lower Bounded}(LB) by:\\[10pt]
+                    % \hspace*{5cm}$O(Nlog(N))\qquad \textit{LB of sorting operation}\quad(1)$ \\
+                    \hspace*{3cm}$O(Nlog(N)) \quad(1)$ \\[10pt]
+So if there are total $k$ number of variable then complexity of induction of Decision Tree would have LB:\\[5pt]
+                    \hspace*{3cm}$O(kNlog(N))\quad(2)$ \\
+% The Scikit-learn implementation of Decision trees has three main components:
+\newpage
+% \subsection{Complexity Analysis}
+
+From \citep{louppe2014understanding} solving equation 3 for these cases gives following results:\\
+\begin{align*}
+\textit{Best Case:} & \quad O(kNlog^2N) & \quad (5) \\
+\textit{Worst Case:} & \quad O(kN^2logN) & \quad (6) \\
+\textit{Avg. Case:} & \quad O(kNlog^2N) & \quad (7) \\
+\end{align*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%     SGD  %%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Stochastic Gradient Decent(SGD)}
-SGD is an optimization algorithm used to find parameter values of a function such that value of its cost function is minimized. The idea of the algorithm is very simple, it has following steps:
-\begin{itemize}
-    \item Parameters of the model are initialized with some random values.
-    \item Function is evaluated using those values.
-    \item Error rate is measured using expected output value and evaluated value and then parameter values are updated accordingly depending on error value.
-\end{itemize}
-New parameter values are used to repeat above steps until convergence.\\[10pt]
-In scikit-learn SGD is used to learn parameter values for a linear scoring function $f(x)=wtx+b$ with model param w and intercept b. The param values are found by minimizing following error function:
-	$E(w,b) = 1/n sum(L(y, f(x))) + aR(w)$
-where L is some loss function like logistic regression, R is regularization term that penalizes model complexity and alpha is non negative hyperparameter.\\[10pt]
-SGD's complexity is linear in number of training examples. For learning data of N samples with p variables each the training cost is O(kNp).
+\subsection{Algorithm}
+SGD is an optimization algorithm used to find parameter values of a function such that the value of its cost function is minimized. The idea of the algorithm is very simple, it has the following steps:\\[10pt]
+Initialize parameters with random values\\
+Repeat until convergence:
+\begin{enumerate}
+    \item Evaluate the function using current parameter values.
+    \item Measure error rate using expected output value and evaluated output value and then update parameter values depending on error rate.
+\end{enumerate}\\
+In scikit-learn SGD learns parameter values for a linear scoring function $f(x)=w^tx+b$ where $w$ is model parameter and $b$ is y-intercept. The parameter values are optimized by minimizing following error function:\\
+	$\hspace*{3cm}E(w,b) = \frac{1}{n} sum(L(y, f(x))) + \alpha R(w) \quad(8)$\\[10pt]
+where $L$ is some loss function, $R$ is regularization term that penalizes model complexity and $\alpha$ is a non negative hyperparameter.\\[10pt]
+
+\subsection{Complexity Analysis}
+SGD's complexity is linear in number of training examples. Its given by:\\[10pt]
+	$\hspace*{3cm} O(kNp) \quad(9)$\\[10pt]
+Where $N$ is number of samples, $p$ is number of variables and $k$ is number of iterations.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Experiments}
 After performing the theoretical complexity analysis we test our approach by taking 125 datasets with varying dimensions and performing two different kinds of experiments on them. The data for the experiments is collected by training classifier of given algorithm on each dataset individually and recording how much time it takes to train different sizes of that dataset. For example if dataset has total 100 records then it is recorded that how much time it takes to train the classifier for 10, 20, 30, 40 etc records of that dataset. In this experiment one hypothesis that is also tested is that since 'K'(number of features) remain constant within each dataset it can be factored out from the model without any effect on quality of predictions.\\[10pt]
