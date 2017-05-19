@@ -3,7 +3,9 @@
 \usepackage{scrextend}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath}
-
+\usepackage{subfig}
+\usepackage{mdframed}
+\usepackage{float}
 
 \title{ML Training Time Prediction}
 \author{ }
@@ -11,6 +13,9 @@
 
 \usepackage{natbib}
 \usepackage{graphicx}
+
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist
 
 \begin{document}
 
@@ -54,36 +59,46 @@ Decision trees are among the most popular machine learning algorithms and are al
 The heart of Decision Trees algorithm computes change in impurity and finds best split based on those measurements. The changes in impurity decrease are measured using impurity function which can be either Gini index or Shannon entropy.\\[10pt]
 For each variable finding the best split can be expensive if impurity decrease is evaluated for each change in value of that variable. But if variable is stored in sorted arrays then exhaustive evaluations of all the splits can be carried out efficiently by computing change in impurity from value of change in impurity of previous split in linear number of operations. We know from \citep{} that sorting of arrays is \textit{Lower Bounded}(LB) by:\\[10pt]
                     % \hspace*{5cm}$O(Nlog(N))\qquad \textit{LB of sorting operation}\quad(1)$ \\
-                    \hspace*{3cm}$O(Nlog(N)) \quad(1)$ \\[10pt]
+                    \begin{equation}
+                        O(Nlog(N)) \\[10pt]
+                    \end{equation}
 So if there are total $k$ number of variable then complexity of induction of Decision Tree would have LB:\\[5pt]
-                    \hspace*{3cm}$O(kNlog(N))\quad(2)$ \\
+                    \begin{equation}
+                        O(kNlog(N))
+                    \end{equation} \\
 % The Scikit-learn implementation of Decision trees has three main components:
 \newpage
 % \subsection{Complexity Analysis}
 Suppose $T(N)$ is time complexity of building a Decision Tree from $N$ samples. When the  node with $N$ samples is split into two nodes with $N_l$ and $N_r$ samples then the $T(N)$ can be written as sum of cost of finding the split and recursively splitting the children nodes with cost $T(N_l)$ and $T(N_r)$ respectively. This can be written in form of recurrence equation as follows:\\[10pt]
-\hspace*{3cm}\begin{math}
+\begin{equation}\label{eq:recurrence}
   \left\{
     \begin{array}{l}
       T(1) = c_1\\
       T(N) = C(N) + T(N_l) + T(N_r)
     \end{array}
   \right.
-\end{math}\quad(3)\\[10pt]
+\end{equation}\\[10pt]
 Where $c_1$ is cost of making a leaf node from a sample and $C(N)$ is runtime complexity of finding a split and partitioning $N$ node samples into $t_l$ and $t_r$.
 As discussed cost of finding the best split equals to sorting, so from equation(2):\\[10pt]
-                $\hspace*{3cm}C(N) = O(kNlog(N)) \quad(4)$\\[10pt]
-Equation 3 can be solved for following three cases:
+\begin{equation}
+                        C(N) = O(kNlog(N))
+\end{equation}
+Equation \ref{eq:recurrence} can be solved for following three cases:
 \begin{itemize}
     \item Best case: All nodes of size N are split into two nodes of size $N/2$.
     \item Worst case: All splits are uneven so nodes of size $N$ are split into two nodes with sizes $N-1$ and $1$ respectively.
     \item Average case: Assume that all splits are equiprobable.
-\end{itemize}\\[10pt]
+\end{itemize}
 From \citep{louppe2014understanding} solving equation 3 for these cases gives following results:\\
-\begin{align*}
-\textit{Best Case:} & \quad O(kNlog^2N) & \quad (5) \\
-\textit{Worst Case:} & \quad O(kN^2logN) & \quad (6) \\
-\textit{Avg. Case:} & \quad O(kNlog^2N) & \quad (7) \\
-\end{align*}
+\begin{equation}
+\textit{Best Case:}\quad O(kNlog^2N)
+\end{equation}
+\begin{equation}
+\textit{Worst Case:}\quad O(kN^2logN)
+\end{equation}
+\begin{equation}
+\textit{Avg. Case:}\quad O(kNlog^2N)
+\end{equation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%     Random Forests   %%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -113,22 +128,23 @@ Random Forests are among the most powerful and successfully used machine learnin
 \end{addmargin}
 
 \subsection{Complexity Analysis}
-The heart of Decision Trees algorithm computes change in impurity and finds best split based on those measurements. The changes in impurity decrease are measured using impurity function which can be either Gini index or Shannon entropy.\\[10pt]
-For each variable finding the best split can be expensive if impurity decrease is evaluated for each change in value of that variable. But if variable is stored in sorted arrays then exhaustive evaluations of all the splits can be carried out efficiently by computing change in impurity from value of change in impurity of previous split in linear number of operations. We know from \citep{} that sorting of arrays is \textit{Lower Bounded}(LB) by:\\[10pt]
-                    % \hspace*{5cm}$O(Nlog(N))\qquad \textit{LB of sorting operation}\quad(1)$ \\
-                    \hspace*{3cm}$O(Nlog(N)) \quad(1)$ \\[10pt]
-So if there are total $k$ number of variable then complexity of induction of Decision Tree would have LB:\\[5pt]
-                    \hspace*{3cm}$O(kNlog(N))\quad(2)$ \\
-% The Scikit-learn implementation of Decision trees has three main components:
-\newpage
-% \subsection{Complexity Analysis}
+Random Forests are built upon Decision Trees so their complexity analysis are very similar complexity analysis. The differences are:\\[10pt]
+\begin{itemize}
+    \item There are $M$ number of trees instead of only one tree
+    \item There are $p$ number of variables in each tree instead of $k$, where $p\leq k$ and $k$ is total number of variables
+    \item Each tree is built using $\widetilde{N}$ number of samples, where $\widetilde{N}$ is 63.2\% of total number of samples $N$
+\end{itemize}
+Considering these differences the complexities of Random Forests turn out to be:\\
+\begin{equation}
+\textit{Best Case:} \quad O(Mp\widetilde{N}log^2\widetilde{N}) \\
+\end{equation}
+\begin{equation}
+\textit{Worst Case:} \quad O(Mp\widetilde{N}^2log\widetilde{N}) \\
+\end{equation}
+\begin{equation}
+\textit{Avg. Case:} \quad O(Mp\widetilde{N}log^2\widetilde{N}) \\
+\end{equation}
 
-From \citep{louppe2014understanding} solving equation 3 for these cases gives following results:\\
-\begin{align*}
-\textit{Best Case:} & \quad O(kNlog^2N) & \quad (5) \\
-\textit{Worst Case:} & \quad O(kN^2logN) & \quad (6) \\
-\textit{Avg. Case:} & \quad O(kNlog^2N) & \quad (7) \\
-\end{align*}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%     SGD  %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -140,39 +156,91 @@ Repeat until convergence:
 \begin{enumerate}
     \item Evaluate the function using current parameter values.
     \item Measure error rate using expected output value and evaluated output value and then update parameter values depending on error rate.
-\end{enumerate}\\
-In scikit-learn SGD learns parameter values for a linear scoring function $f(x)=w^tx+b$ where $w$ is model parameter and $b$ is y-intercept. The parameter values are optimized by minimizing following error function:\\
-	$\hspace*{3cm}E(w,b) = \frac{1}{n} sum(L(y, f(x))) + \alpha R(w) \quad(8)$\\[10pt]
-where $L$ is some loss function, $R$ is regularization term that penalizes model complexity and $\alpha$ is a non negative hyperparameter.\\[10pt]
+\end{enumerate}
+In scikit-learn SGD learns parameter values for a linear scoring function $f(x)=w^tx+b$ where $w$ is model parameter and $b$ is y-intercept. The parameter values are optimized by minimizing following error function:
+\begin{equation}
+E(w,b) = \frac{1}{n} sum(L(y, f(x))) + \alpha R(w)
+\end{equation}
+where $L$ is some loss function, $R$ is regularization term that penalizes model complexity and $\alpha$ is a non negative hyperparameter.
 
 \subsection{Complexity Analysis}
 SGD's complexity is linear in number of training examples. Its given by:\\[10pt]
-	$\hspace*{3cm} O(kNp) \quad(9)$\\[10pt]
+\begin{equation}
+O(kNp)
+\end{equation}
 Where $N$ is number of samples, $p$ is number of variables and $k$ is number of iterations.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%   MCMC   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Monte Carlo Markov Chain (MCMC)}
+Values of unknown parameters of a model can be found using different methods like maximum likelihood estimate(MLE) or maximum a posteriori(MAP). Another way of finding the unknown parameter values is to treat them as random variables with some prior distribution and then use MCMC methods to sample their values from the posterior distribution. One major advantage of using MCMC methods is that it doesn't only return one potential value but whole distribution of values, which can be used to get uncertainties in the predictions as well.\\[10pt]
+We use python's PyMC3 library for doing MCMC sampling. We take following approach for finding the parameter values:
+\begin{enumerate}
+    \item Create a model from output of complexity analysis we did in previous sections (see below).
+    \item Define prior normal distribution over unknown parameters of the model.
+    \item Define normal distribution over output(runtimes), use model from step 1 as expected value and experimental data we obtained from building models in scikit-learn as data likelihood.
+    \item Use MCMC sampling to get samples from distribution defined in step 3.
+    \item Output of step 4 also contains sampling distribution of the unknown parameters we wanted to find.
+\end{enumerate}
+From the sampling distribution of the parameters we can use the mean value as primary value of the parameter and use other values to get uncertainties in that primary value. These values are then substituted in model defined in step 1 to get predicted runtimes.\\[10pt]
+The models that we create from the output of complexity analysis of the algorithms and fit using MCMC methods are as follows:\\[10pt]
+\begin{addmargin}[1em]{0em}
+Decision Tree Models:
+\begin{equation}
+\textit{Best Case:}\quad \alpha + \beta kNlog^2N
+\end{equation}
+\begin{equation}
+\textit{Worst Case:}\quad \alpha + \beta kN^2logN
+\end{equation}
+\begin{equation}
+\textit{Avg. Case:}\quad \alpha + \beta kNlog^2N
+\end{equation}
+Random Forests Models:
+\begin{equation}
+\textit{Best Case:} \quad \alpha + \beta Mp\widetilde{N}log^2\widetilde{N}
+\end{equation}
+\begin{equation}
+\textit{Worst Case:} \quad \alpha + \beta Mp\widetilde{N}^2log\widetilde{N}
+\end{equation}
+\begin{equation}
+\textit{Avg. Case:} \quad \alpha + \beta Mp\widetilde{N}log^2\widetilde{N}
+\end{equation}
+SGD Models:
+\begin{equation}
+\textit{Worst Case:} \quad \alpha + \beta kNp
+\end{equation}
+\end{addmargin}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%    Experiments  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Experiments}
-After performing the theoretical complexity analysis we test our approach by taking 125 datasets with varying dimensions and performing two different kinds of experiments on them. The data for the experiments is collected by training classifier of given algorithm on each dataset individually and recording how much time it takes to train different sizes of that dataset. For example if dataset has total 100 records then it is recorded that how much time it takes to train the classifier for 10, 20, 30, 40 etc records of that dataset. In this experiment one hypothesis that is also tested is that since 'K'(number of features) remain constant within each dataset it can be factored out from the model without any effect on quality of predictions.\\[10pt]
-In the first set of experiments each dataset is taken individually. Then model is trained on it by only looking how much time it took to train first few samples of that data. For example if data has 100 records then we would train model only based on how long it took to train 10 records of that dataset. In the experiments we train model using this approach by taking 9, 13, 19 and 28 percent of data and see how performance of prediction changes. The idea of these experiments is that when user starts training a classifier for machine learning algorithm then he can learn how long will it take to train whole model after only few iterations.\\[10pt]
-In the second set of experiments a single model is trained on 100 of 125 datasets and then that model is used to predict running times of rest of 25 datasets individually. The idea of this experiment is that a model is learned from all past runs and then for each new dataset the training time can be instantly predicted just by looking at its dimensions.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+After performing the theoretical complexity analysis we test our approach by taking 125 datasets from \textit{openml.org}\citep{OpenML2013} and performing two different kinds of experiments on them. These datasets are of classification type and most of them have only 2 classes with few exceptions. The data for the experiments is collected by training the algorithms on each dataset and recording how much time it takes to train on different sizes of that dataset. For example if a dataset has a total of 100 samples then it is recorded how much time it takes to train the classifier for 3, 6, 9, 12, 15 etc samples of that dataset.\\[10pt]
+In the first set of experiments we find different parameter values of the model for every dataset, so that each dataset has its own unique model. We do this by using runtime data of training first few samples of that dataset as likelihood data (see step3 in section 7). For example if dataset has 100 samples then we would fit the model only based on how long it took to train 10 records of that dataset. In the experiments we fit the model using this approach by taking approximately 9, 13, 19 and 28 percent of data and see how quality of predictions changes with more data. The idea of these experiments is that when user starts training a classifier then he uses runtime predictions to estimate how long training on the whole dataset may take after only training on a few samples.\\[10pt]
+In the second set of experiments a single model is fitted on 100 of 125 datasets and then that model is used to predict running times of rest of 25 datasets individually. The idea of this experiment is that a model is trained on past runs and then the training time for each new dataset can be instantly predicted just by looking at the size and number of features.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Results}
 \subsection{Predictions using initial runtime data}
-Results for this set of experiments are obtained by first comparing different models of the given algorithm, After which on one of the better models the difference in quality of predictions due to different amounts of initial data are analyzed.
+In this section we summarize results of first set of experiments using box plots. For each algorithm we first compare results from using different models of that algorithm from section 7. Then we choose whichever model looks best and fit it with different sizes of initial data to see how much initial data is required to make reasonable predictions for that algorithm.
 %%%%%%%%%%%%%%%%%
 \subsubsection*{Decision Trees}
 As discussed earlier the model for average case of Decision Trees is $a + bKN(LogN)^2$. Since $K$ remains constant for each dataset it can be factored out of model equation, so model becomes $a + bN(LogN)^2$. The model for worst case of Decision Trees training time is $a + bKN^2(LogN)$.
 Following boxplot shows the quality of predictions of the given models with 28\% initial data.
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[width=165mm]{dt_models_comparison2.png}
-\end{center}
-\caption{Quality of Decision Trees Runtime Prediction models}
-\label{fig:dt_models}
-\end{figure}
-
+% \begin{figure}[h!]
+% \begin{center}
+% \includegraphics[width=10cm]{dt_models.png}
+% \end{center}
+% \caption{Quality of Decision Trees Runtime Prediction models}
+% \label{fig:dt_models}
+% \end{figure}
 The y-axis of the Figure~\ref{fig:dt_models} shows that for each dataset how much its predicted value differed from the true value. The worst case model always over predicted, for about 75\% of datasets it predicted more than double time and for about 25\% data it predicted over three times the true training time. This model never under predicted and for few huge datasets its prediction quality was good.\\
 The average case model predicted the training time of about 25\% datasets within 5\% accuracy and 50\% datasets within 15\% accuracy. The median accuracy of this model is about 5\%. It can also be observed that removal of 'K' from the model doesn't affect its predictions because for each individual dataset 'K' is constant.\\[10pt]
-
+\begin{figure}[H]%
+    \subfloat[label 1]{{\includegraphics[width=9cm, height=15cm]{boxplots/dt_models.png}}}%
+    % \qquad
+    \subfloat[label 2]{{\includegraphics[width=9cm, height=15cm]{boxplots/dt_size.png}}}%
+    \caption{2 Figures side by side}%
+    \label{fig:example}%
+\end{figure}
 % Now that we have idea about prediction quality of the two models we can see how much effect does the quantity of initial runtime data have on quality of the predictions. Figure~\ref{fig:dt_datasize} gives this comparison.
 
 % \begin{figure}[h!]
@@ -188,49 +256,63 @@ The average case model predicted the training time of about 25\% datasets within
 \subsubsection*{Random Forests}
 The average case model of Random Forests is $a + bMKN(Log(N))^2$, where $M$ is average number of trees and like $K$ it also factors out for individual datasets, so model becomes $a + bN(LogN)^2$. Similarly the model for worst case training time of Random Forests is $a + bKN^2(Log(N))$.
 Following boxplot shows the quality of predictions of the given models with 28\% initial data.
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[width=165mm]{rf_models_comparison.png}
-\end{center}
-\caption{Quality of Random Forests Runtime Prediction models}
-\label{fig:rf_models}
-\end{figure}
+% \begin{figure}[h!]
+% \begin{center}
+% \includegraphics[width=165mm]{rf_models.png}
+% \end{center}
+% \caption{Quality of Random Forests Runtime Prediction models}
+% \label{fig:rf_models}
+% \end{figure}
 
 Figure~\ref{fig:rf_models} shows that the worst case model always over predicted, for about 60\% of datasets it predicted more than double time and for about 30\% data it predicted three times the true training time. This model never under predicted but its predictions were not very good, even the best prediction was 25\% different from the true value.\\
 The average case model predicted the training time of about 25\% datasets within 3\% accuracy and 80\% datasets within 20\% accuracy. The median accuracy of this model is about 8\%.\\[10pt]
 Random Forests and Decision Trees have same model but in Figure~\ref{fig:rf_vs_ds} it can be observed that prediction quality on Random Forests is much better. Even with only 9\% data 75\% of predictions had less than 40\% difference from true values for RF case. Also with only 13\% data RF model had alomost same prediction quality as DT's model have for 28\% data. REASONS?\\[10pt]
 
 %Figure~\ref{fig:rf_datasize} shows how initial datasize effect the prediction quality for Random Forest's model.
-
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[width=165mm]{rf_vs_dt.png}
-\end{center}
-\caption{Random Forests vs Decision Trees Prediction quality}
-\label{fig:rf_vs_ds}
+\begin{figure}[H]
+    \subfloat[label 1]{{\includegraphics[width=9cm, height=15cm]{boxplots/rf_models.png}}}%
+    \subfloat[label 2]{{\includegraphics[width=9cm, height=15cm]{boxplots/rf_size.png}}}%
+    \caption{2 Figures side by side}%
+    \label{fig:example}%
 \end{figure}
+
+% \begin{figure}[h!]
+% \begin{center}
+% \includegraphics[width=165mm]{rf_vs_dt.png}
+% \end{center}
+% \caption{Random Forests vs Decision Trees Prediction quality}
+% \label{fig:rf_vs_ds}
+% \end{figure}
 
 %%%%%%%%%%%%%%%%
 \subsubsection*{SGD}
 The average case model of SGD is $a + bKN$, where $K$ factors out for individual datasets and model becomes $a + bN$.
 Figure~\ref{fig:sgd_models} shows the quality of predictions of the given model with 28\% initial data. Overall SGD's model predictions are quite good with median of -2.5\% and over 75\% predictions within 8\% accuracy. The problem with this model is that there are more under predictions than over predictions and 5-6 datasets of high dimensions were under predicted with inaccuracy of 20\%-40\%. Figure~\ref{fig:sgd_datasize} shows effect of initial data size on prediction quality.
-\clearpage
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[width=165mm]{sgd_models_comparison.png}
-\end{center}
-\caption{Quality of SGD Runtime Prediction model}
-\label{fig:sgd_models}
+
+\begin{figure}[H]%
+    \subfloat[label 1]{{\includegraphics[width=9cm, height=15cm]{boxplots/sgd_models.png}}}%
+    \subfloat[label 2]{{\includegraphics[width=9cm, height=15cm]{boxplots/sgd_size.png}}}%
+    \caption{2 Figures side by side}%
+    \label{fig:example}%
 \end{figure}
 
+% \clearpage
+% \begin{figure}[h!]
+% \begin{center}
+% \includegraphics[width=165mm]{sgd_models.png}
+% \end{center}
+% \caption{Quality of SGD Runtime Prediction model}
+% \label{fig:sgd_models}
+% \end{figure}
 
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[width=165mm]{sgd_datasize_comparison.png}
-\end{center}
-\caption{SGD Datasize vs Prediction quality}
-\label{fig:sgd_datasize}
-\end{figure}
+
+% \begin{figure}[h!]
+% \begin{center}
+% \includegraphics[width=165mm]{sgd_size.png}
+% \end{center}
+% \caption{SGD Datasize vs Prediction quality}
+% \label{fig:sgd_datasize}
+% \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

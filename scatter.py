@@ -36,8 +36,8 @@ def scatter_plot(algo_datasize, num_classes):
     ax.plot(lims, lims, 'k-', alpha=0.75, zorder=0)
 
 
-    plt.xlabel('True')
-    plt.ylabel('Predicted')
+    plt.xlabel('True (Time/s)')
+    plt.ylabel('Predicted (Time/s)')
     # plt.xlim(0, 0.7)
     # plt.ylim(0, 0.7)
 
@@ -46,10 +46,10 @@ def scatter_plot(algo_datasize, num_classes):
 
     # print(scatter_plot + " not found")
 
-# algo_datasize = 'dt_scatter_28.np'
+algo_datasize = 'dt_scatter_28.np'
 # algo_datasize = 'rf_scatter_13.np'
 # algo_datasize = 'rf_scatter_19.np'
-algo_datasize = 'rf_scatter_28.np'
+# algo_datasize = 'rf_scatter_28.np'
 # algo_datasize = 'sgd_scatter_13.np'
 # algo_datasize = 'sgd_scatter_19.np'
 # algo_datasize = 'sgd_scatter_28.np'

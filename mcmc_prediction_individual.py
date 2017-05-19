@@ -11,9 +11,9 @@ if __name__ == "__main__":
     # equations = ["w0 + w1*(K*N*(logN)^2)", "w0 + w1*K + w2*(K*N^(2)*logN)", "w0 + w1*K + w2*(K*N^(w3)*logN)"]
 
     equations = {
-        'dt_lower' : 'a + bN(log(N))^2',
-        'dt_avg' : 'a + bKN(logN)^2',
-        'dt_upper' : 'a + bKN^2(log(N))',
+        'dt_lower' : r'$\alpha + \beta Nlog^2N$',
+        'dt_avg' : r'$\alpha + \beta kNlog^2N$',
+        'dt_upper' : r'$\alpha + \beta KN^2logN$',
         'rf_lower' : 'a + bN*sqrt(K)*(log(N))^2',
         'rf_lower_2' : 'a + bN(log(N))^2 + c(sqrt(K))',
         'rf_avg' : 'a + bKN(log(N))^2',
@@ -29,8 +29,8 @@ if __name__ == "__main__":
     # likelihood function has multiple versions of eqs. here define which ones will be used.
     used_eq = [
         # 'dt_lower',
-        # 'dt_avg',
-        # 'dt_upper',
+        'dt_avg',
+        'dt_upper',
         # 'rf_lower',
         # 'rf_lower_2'
         # 'rf_avg',
@@ -38,16 +38,19 @@ if __name__ == "__main__":
         # 'rf_upper_2',
         # 'sgd_lower',
         # 'sgd_lower_2',
-        'sgd_avg',
+        # 'sgd_avg',
         # 'sgd_upper'
     ]
 
     # table = pd.DataFrame()
-    train_folder_path, training_data_sets = datasets_names(folder_path='runtimes/all_sgd')
+    # train_folder_path, training_data_sets = datasets_names(folder_path='runtimes/all_sgd')
+    # train_folder_path, training_data_sets = datasets_names(folder_path='runtimes/all_dt')
+    # train_folder_path, training_data_sets = datasets_names(folder_path='runtimes/all_rf')
+    train_folder_path, training_data_sets = datasets_names(folder_path='runtimes/sample2')
 
     # data_used = [9.0, 13.0, 19.0, 28.0]
     # for du in data_used:
-    du = 19
+    du = 28
     table=pd.DataFrame()
     # find and load training data files
     for data_set in training_data_sets:

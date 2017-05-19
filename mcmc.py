@@ -109,12 +109,12 @@ def mcmc_model(no_of_features, data_size, training_time, equation):
         # ## Priors for unknown model params
         alpha = HalfNormal('alpha', sd=1)
         beta = Normal('beta', mu=0, sd=1)
-        ceta = Normal('ceta', mu=1.2, sd=1)
+        # ceta = Normal('ceta', mu=1.2, sd=1)
         # gamma = Normal('gamma', mu=0, sd=.5)
         sigma = HalfNormal('sigma', sd=1)
         # sigma = Normal('sigma', mu=0, sd=1)
 
-        params = (alpha, beta, ceta)
+        params = (alpha, beta)
         # ## Expected value of outcome
         mu = likelihood_knlogn(params, no_of_features, data_size, equation)
 
@@ -130,7 +130,7 @@ def mcmc_model(no_of_features, data_size, training_time, equation):
         # trace = sample(50, start=start)
 
         # using metropolis hastings with 2000 burin steps
-        step1 = Metropolis([alpha, beta, ceta, sigma])
+        step1 = Metropolis([alpha, beta, sigma])
         sample(10000, start=start, step=step1)
         trace = sample(20000, start=start, step=step1)
 
@@ -172,9 +172,9 @@ def mcmc_predict(trace, no_of_features, data_size, equation):
     mu_beta = np.average(beta)
     std_beta = standard_dev * np.std(beta)
 
-    ceta = np.array(trace.get_values('ceta'))
-    mu_ceta = np.average(ceta)
-    std_ceta = standard_dev * np.std(ceta)
+    # ceta = np.array(trace.get_values('ceta'))
+    # mu_ceta = np.average(ceta)
+    # std_ceta = standard_dev * np.std(ceta)
     #
     # gamma = np.array(trace.get_values('gamma'))
     # mu_gamma = np.average(gamma)
@@ -184,13 +184,13 @@ def mcmc_predict(trace, no_of_features, data_size, equation):
     # params_upper = (mu_alpha + std_alpha, mu_beta + std_beta, mu_ceta + std_ceta, mu_gamma + std_gamma)
     # params_lower = (mu_alpha - std_alpha, mu_beta - std_beta, mu_ceta - std_ceta, mu_gamma - std_gamma)
 
-    params = (mu_alpha, mu_beta, mu_ceta)
-    params_upper = (mu_alpha + std_alpha, mu_beta + std_beta, mu_ceta + std_ceta)
-    params_lower = (mu_alpha - std_alpha, mu_beta - std_beta, mu_ceta - std_ceta)
+    # params = (mu_alpha, mu_beta, mu_ceta)
+    # params_upper = (mu_alpha + std_alpha, mu_beta + std_beta, mu_ceta + std_ceta)
+    # params_lower = (mu_alpha - std_alpha, mu_beta - std_beta, mu_ceta - std_ceta)
     #
-    # params = (mu_alpha, mu_beta)
-    # params_upper = (mu_alpha + std_alpha, mu_beta + std_beta)
-    # params_lower = (mu_alpha - std_alpha, mu_beta - std_beta)
+    params = (mu_alpha, mu_beta)
+    params_upper = (mu_alpha + std_alpha, mu_beta + std_beta)
+    params_lower = (mu_alpha - std_alpha, mu_beta - std_beta)
 
     y_pred = likelihood_knlogn(params, no_of_features, data_size, equation)
     y_pred_upper = likelihood_knlogn(params_upper, no_of_features, data_size, equation)

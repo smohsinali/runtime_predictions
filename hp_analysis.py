@@ -13,8 +13,8 @@ def hp_analysis(algo_datasize):
     data = np.loadtxt(file_path, skiprows=1)
 
     alpha = data[:,0]
-    beta = data[:,1]
-    # beta = np.log(data[:,1])
+    # beta = data[:,1]
+    beta = np.log(data[:,1])
 
     df = pd.DataFrame({ 'alpha': alpha,
                         'beta': beta,
@@ -32,8 +32,8 @@ def hp_analysis(algo_datasize):
     # ax.plot(lims, lims, 'k-', alpha=0.75, zorder=0)
 
 
-    plt.xlabel('alpha')
-    plt.ylabel('beta')
+    plt.xlabel(r'$\alpha$')
+    plt.ylabel(r'$log \beta$')
     # plt.xlim(0, 0.7)
     # plt.ylim(0, 0.7)
 
