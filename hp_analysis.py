@@ -4,10 +4,16 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
+
 sns.set(font_scale=1.75)
 
 
 def hp_analysis(algo_datasize):
+    """
+    Draws a scatter plot showing values of parameters alpha and beta for different datasets
+    :param algo_datasize: input file containing data of the parameters
+    :return:
+    """
 
     file_path = 'alphabeta/' + algo_datasize
     data = np.loadtxt(file_path, skiprows=1)

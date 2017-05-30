@@ -147,30 +147,30 @@ import matplotlib.pyplot as plt
 #
 # print(ans(x_test), result)
 # print(x)
-# print(y)
-N=1000
-a,b = 2.0, 2300.0
-np.random.seed(47)
-# X = np.linspace(0, 100, N)
-X = np.arange(N)
-Y = a * X + b
-basic_model = Model()
-print(X,Y)
-with basic_model:
-
-    # ## Priors for unknown model params
-    alpha = Normal('alpha', mu=0, sd=1)
-    beta = Normal('beta', mu=10, sd=1)
-    sigma = HalfNormal('sigma', sd=1)
-    mu = alpha * X + beta
-
-    # ## Likelihood of obs
-    y_obs = Normal('Y_obs', mu=mu, sd=sigma, observed=Y)
-    # start = find_MAP()
-    # step = Metropolis(scaling=start)
-    # trace = sample(500, step, start=start)
-    # ## obtain starting values via MAP
-    start = find_MAP(fmin=optimize.fmin_powell)
+# # print(y)
+# N=1000
+# a,b = 2.0, 2300.0
+# np.random.seed(47)
+# # X = np.linspace(0, 100, N)
+# X = np.arange(N)
+# Y = a * X + b
+# basic_model = Model()
+# print(X,Y)
+# with basic_model:
+#
+#     # ## Priors for unknown model params
+#     alpha = Normal('alpha', mu=0, sd=1)
+#     beta = Normal('beta', mu=10, sd=1)
+#     sigma = HalfNormal('sigma', sd=1)
+#     mu = alpha * X + beta
+#
+#     # ## Likelihood of obs
+#     y_obs = Normal('Y_obs', mu=mu, sd=sigma, observed=Y)
+#     # start = find_MAP()
+#     # step = Metropolis(scaling=start)
+#     # trace = sample(500, step, start=start)
+#     # ## obtain starting values via MAP
+#     start = find_MAP(fmin=optimize.fmin_powell)
 
     # ## draw posterior samples
 
@@ -182,30 +182,31 @@ with basic_model:
     # trace = sample(2000, step, start=start)  # draw 2000 posterior samples using NUTS sampling
 
 
-    # using metropolis hastings with 2000 burin steps
-    step = Metropolis([alpha, beta])
-    sample(15000, start=start, step=step)
-    trace = sample(50000,start=start, step=step)
-
-mu_alpha = np.average(np.array(trace.get_values('alpha')))
-mu_beta = np.average(np.array(trace.get_values('beta')))
-
-print("\nalpha", mu_alpha)
-print("beta", mu_beta)
-predicted = [(mu_alpha*i+mu_beta) for i in X]
-print(predicted)
-plt.plot(X, Y)
-plt.plot(X, predicted)
-
+#     # using metropolis hastings with 2000 burin steps
+#     step = Metropolis([alpha, beta])
+#     sample(15000, start=start, step=step)
+#     trace = sample(50000,start=start, step=step)
+#
+# mu_alpha = np.average(np.array(trace.get_values('alpha')))
+# mu_beta = np.average(np.array(trace.get_values('beta')))
+#
+# print("\nalpha", mu_alpha)
+# print("beta", mu_beta)
+# predicted = [(mu_alpha*i+mu_beta) for i in X]
+# print(predicted)
+# plt.plot(X, Y)
+# plt.plot(X, predicted)
+#
+# # plt.show()
+#
+# ###################################################
+# ax, plt = traceplot(trace)
 # plt.show()
-
-###################################################
-ax, plt = traceplot(trace)
-plt.show()
-plt.savefig("what.png", dpi=200)
+# plt.savefig("what.png", dpi=200)
 
 
-
+# a = input("type something:")
+# print("you typed:" + a)
 
 
 

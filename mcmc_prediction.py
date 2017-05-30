@@ -10,11 +10,11 @@ from mcmc import mcmc_predict, mcmc_fit
 from data import load_test_data, load_training_data
 from plotting import plot_prediction, plot_get_hp_table
 
-
+"""
+This program trains a single model and then uses it to predict on some test datasets.
+In the report we show that this idea does not work well.
+"""
 if __name__ == "__main__":
-    # equations = ["w0+w1K+w2(KNlogN)", "w0+w1K+w2(KN²logN)", "w0+w1K+w2(KN^w3logN)"]
-    # equations = ["w0 + w1*(K*N*(logN)^2)", "w0 + w1*K + w2*(K*N^(2)*logN)", "w0 + w1*K + w2*(K*N^(w3)*logN)"]
-    # used_eq = [1, 2]  # likelihood function has multiple versions of eqs. here define which ones will be used.
 
     equations = {
         'dt_lower': 'a + bN(log(N))^2',

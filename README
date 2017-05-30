@@ -1,0 +1,79 @@
+Machine Learning's Algorithms Runtime Prediction
+================================================
+
+
+Scripts:
+========
+
+important scripts:
+------------------
+
+csv2np.py -> Reads csv files from "datasets/*" folders. These files have runtime information of all 125 datasets and each csv file contains runtime data for all three algorithms DT, RF and SGDs. The scripts then extracts runtime data for each algorithm separatly and writes it to numpy files in folder "runtimes/*".
+
+data.py -> Provides helper functions to load data sets in different scenarios (For details about each function see the comments inside the script.
+
+mcmc.py -> create "mcmc" model and sample values of parameters using it. also provides a funcition to make predictions using those samples values.
+
+plotting.py -> plots the results graphs.
+
+mcmc_prediction_individual.py -> its the main scripts for trainig models on individual datasets. It performs following steps:
+									--- selects the models to be trained
+									--- selects the runtime data folder. all three algorithms have their runtime data in separate folders so select folder of the algorithm for which model needs to be trained.
+									--- selects the runtime data size used for training the model
+									--- call a function from data.py to load the data
+									--- foreach dataset:
+										-- call "mcmc_fit"	 to sample the parameter values 
+										-- call "mcmc_predict" to get predicted runtime data using parameter values obtained by calling "mcmc_fit"
+										-- call plot function to show predicted values vs true values
+									--- save all runtime prediction data in table.
+
+mcmc_prediction.py -> same as mcmc_prediction_individual.py but train's a single model using data from multiple datasets and predicts on individual unseen datasets (test data). so "foreach" loop in other script is replaced by "foreach" loop over test data where each dataset is tested with one single model instead of training model for each data set individually.
+
+boxplots.py -> takes data from folder "boxplots/*" and plots boxplots using it. these plots summarizes how much predited runtime values differ from true value.
+
+scatter.py -> takes data form folder "scatterplot/*" and plots a scatter plot for it. these plots show true vs predicted values and uncertainties in them in form of error bars.
+
+hp_analysis -> takes data form folder "alphabeta/*" plots a scatter plot showing values for two hyperparameters "alpha" and "beta".
+
+
+
+Less used scripts:
+------------------
+
+cluster_data.py -> cluster datasets using KMeans.
+
+decisionTrees_training.py -> train decision trees on four datasets (mnist, covertype, gissete and adult). this was used at the beginning of project.
+
+mlp_prediction.py -> try to use MLPRegressor from scikit-learn to predict runtimes.
+
+rf_prediction.py -> try to use RandomForestRegressor from scikit-learn to predict runtimes.
+
+
+Folders:
+========
+
+runtimes -> contains data extracted from csv files. has subfolders specific to data for each algorithm, these subfolders contain the training data.
+			"runtimes/x_runtime_train_allTrain_*.np" -> these files contain runtime data from 100 datasets. these were used to try to train a single model to make all predictions.
+			"runtimes/all_sgd" -> this folder contains runtime data sgd algorithm for all 125 datasets. used when testing sgd models.
+			"runtimes/all_rf" -> this folder contains runtime data rf algorithm for all 125 datasets. used when testing rf models.
+			"runtimes/all_dt" -> this folder contains runtime data dt algorithm for all 125 datasets. used when testing dt models.
+			
+alphabeta -> contains data from plotting scatter plot showing values of parameters alpha and beta.
+
+boxplots -> contains data for plotting boxplots which summarizes performances of different models and datasizes for different algorithms.
+
+datasets -> contains original csv files containing runtime data.
+
+results -> output graphs showing predictions for each algorithm for each dataset for each model.
+
+scatterplot -> containd data for plotting scatter plots showing difference between true and predicted values with uncertainty in form of error bars.
+
+tables -> tables containing information about different predictions.
+
+old stuff -> some old scripts and other files.
+
+
+
+
+
+

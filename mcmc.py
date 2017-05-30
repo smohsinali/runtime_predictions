@@ -11,6 +11,14 @@ from scipy import optimize
 
 
 def likelihood_knlogn(w, k, n, equation):
+    """
+    implements the model equations
+    :param w: parameters array
+    :param k: # of features
+    :param n: # of samples
+    :param equation: model equation
+    :return: value
+    """
     val = 'not defined'
     if equation == 'dt_lower':
         # a + bN(log(N))^2
@@ -102,6 +110,14 @@ def likelihood_knlogn(w, k, n, equation):
 
 # defining the model with given params
 def mcmc_model(no_of_features, data_size, training_time, equation):
+    """
+    creates baysian model in pymc3 and samples the posterior
+    :param no_of_features: # of features
+    :param data_size: # of samples
+    :param training_time: runtimes
+    :param equation: model for which parameter values are sampled
+    :return: a trace object which contains samples values
+    """
 
     basic_model = Model()
     with basic_model:
@@ -139,6 +155,14 @@ def mcmc_model(no_of_features, data_size, training_time, equation):
 
 
 def mcmc_fit(xdata, ytime, eq_used, data_set):
+    """
+    works as wrapper function for mcmc_models. it gives it inputs and save its output in pickle files
+    :param xdata: 2D array containing dimensions of the data.
+    :param ytime: contains runtimes of xdata.
+    :param eq_used: list of models of which parameter values are samples
+    :param data_set: name of dataset
+    :return:
+    """
 
     print("length xdata:", len(xdata), "\nlength ytime:", len(ytime))
     trace = [] # [y_cal, y_cal_upper, y_cal_lower, size]
@@ -161,6 +185,14 @@ def mcmc_fit(xdata, ytime, eq_used, data_set):
 
 # predict values for y
 def mcmc_predict(trace, no_of_features, data_size, equation):
+    """
+    extracts parameter values from trace summary and find mean, max and min runtime predicted values using them.
+    :param trace: pymc3 trace object which contains all param values
+    :param no_of_features: # of features of dataset for which parameters were sampled.
+    :param data_size: # of samples in dataset for which parameters were sampled.
+    :param equation: model whose params were sampled
+    :return: array containing mean, min and max predicted values
+    """
 
     standard_dev = 1
 

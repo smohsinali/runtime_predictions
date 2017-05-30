@@ -2,17 +2,23 @@ import numpy as np
 import seaborn as sns
 import pandas as pd
 
-
+"""
+Draw boxplots to summarize and compare different experiments.
+Forexample comparing different models for DT side by side or comparing effect of different sizes of initial data.
+"""
 sns.set(font_scale=1.75)
-# bx_plot = 'dt_datasize'
+bx_plot = 'dt_datasize'
 # bx_plot = 'dt_models'
 # bx_plot = 'rf_datasize'
-bx_plot = 'rf_models'
+# bx_plot = 'rf_models'
 # bx_plot = 'sgd_datasize'
 # bx_plot = 'sgd_models'
 
 
 if bx_plot == 'dt_datasize':
+    """
+    Compare effect of different sizes of initial data on prediction quality of decision trees model.
+    """
 
     data = np.loadtxt('boxplots/boxplot_dt_datasize_neg.np', skiprows=1)
     # data = np.loadtxt('boxplots/boxplot_dt_datasize.np')
@@ -28,7 +34,7 @@ if bx_plot == 'dt_datasize':
                         '28%': bx4})
 
     order = ["9%", "13%", "19%", "28%"]
-    sns.swarmplot(data=df, order=order, color='black')
+    # sns.swarmplot(data=df, order=order, color='black')
     sns.boxplot(data=df, order=order)
 
     sns.plt.xlabel('Data used')
@@ -40,6 +46,9 @@ if bx_plot == 'dt_datasize':
 
 
 elif bx_plot == 'rf_datasize':
+    """
+    Compare effect of different sizes of initial data on prediction quality of random forests model.
+    """
 
     data = np.loadtxt('boxplots/boxplot_rf_datasize_neg.np', skiprows=1)
 
@@ -64,6 +73,9 @@ elif bx_plot == 'rf_datasize':
     sns.plt.show()
 
 if bx_plot == 'sgd_datasize':
+    """
+    Compare effect of different sizes of initial data on prediction quality of sgd model.
+    """
 
     data = np.loadtxt('boxplots/boxplot_sgd_datasize_neg.np', skiprows=1)
 
@@ -88,6 +100,10 @@ if bx_plot == 'sgd_datasize':
     sns.plt.show()
 
 elif bx_plot == 'dt_models':
+    """
+    Compare prediction quality of different decision tree models.
+    """
+
     data = np.loadtxt('boxplots/boxplot_dt.np', skiprows=1)
 
     bx1 = data[:,0]
@@ -120,6 +136,9 @@ elif bx_plot == 'dt_models':
     sns.plt.show()
 
 elif bx_plot == 'rf_models':
+    """
+    Compare prediction quality of different random forests models.
+    """
 
     data = np.loadtxt('boxplots/boxplot_rf_new.np', skiprows=1)
 
@@ -153,6 +172,9 @@ elif bx_plot == 'rf_models':
 
 
 elif bx_plot == 'sgd_models':
+    """
+    Compare prediction quality of different sgd models.
+    """
 
     data = np.loadtxt('boxplots/boxplot_sgd.np', skiprows=1)
 

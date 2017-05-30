@@ -26,6 +26,7 @@ def plot_prediction(x_features, x_datasize, y_true, y_predicted, data_test, data
     row.append(pd.DataFrame({data_test: [x_datasize[-1], x_features[-1]]},
                             index=['N', 'K']))
     keys.append('Dimensons')
+
     for i, predicted in enumerate(y_predicted):
         y_pred = predicted[0]
         y_pred_upper = predicted[1]
@@ -46,7 +47,7 @@ def plot_prediction(x_features, x_datasize, y_true, y_predicted, data_test, data
     plt.xlabel("Number of Samples")
     plt.ylabel("Time(s)")
     plt.title("Dataset:" + data_test + figtxt + "\nPrediction using " + data_train, fontsize=12)
-    plt.legend(loc='best', fontsize=8)
+    plt.legend(loc='best', fontsize=12)
 
     plt.savefig("results/mc_" + data_test + "_predicted.png", dpi=200)
     plt.close()

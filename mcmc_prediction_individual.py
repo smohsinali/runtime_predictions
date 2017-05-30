@@ -6,9 +6,16 @@ from mcmc import mcmc_predict, mcmc_fit
 from data import load_test_data, load_training_data, datasets_names, load_dataset, process_train_data
 from plotting import plot_prediction, plot_get_hp_table
 
+
+"""
+This program is used for first set of experiments where for each dataset its initial runtime data is used
+for making runtime predictions.
+
+It selects the models, loads the datasets, call mcmc_fit and mcmc_predict methods with
+that model and data and call ploting functions.
+
+"""
 if __name__ == "__main__":
-    # old_equations = ["w0+w1K+w2(KNlogN)", "w0+w1K+w2(KN²logN)", "w0+w1K+w2(KN^w3logN)"]
-    # equations = ["w0 + w1*(K*N*(logN)^2)", "w0 + w1*K + w2*(K*N^(2)*logN)", "w0 + w1*K + w2*(K*N^(w3)*logN)"]
 
     equations = {
         'dt_lower' : r'$\alpha + \beta Nlog^2N$',
@@ -26,7 +33,7 @@ if __name__ == "__main__":
 
     }
 
-    # likelihood function has multiple versions of eqs. here define which ones will be used.
+    # likelihood function has multiple versions of eqs. here uncomment the ones that are used.
     used_eq = [
         # 'dt_lower',
         'dt_avg',
@@ -42,17 +49,17 @@ if __name__ == "__main__":
         # 'sgd_upper'
     ]
 
-    # table = pd.DataFrame()
-    # train_folder_path, training_data_sets = datasets_names(folder_path='runtimes/all_sgd')
+    # select the runtime data folder by uncommenting it
+    train_folder_path, training_data_sets = datasets_names(folder_path='runtimes/all_sgd')
     # train_folder_path, training_data_sets = datasets_names(folder_path='runtimes/all_dt')
     # train_folder_path, training_data_sets = datasets_names(folder_path='runtimes/all_rf')
-    train_folder_path, training_data_sets = datasets_names(folder_path='runtimes/sample2')
+    # train_folder_path, training_data_sets = datasets_names(folder_path='runtimes/sample2')
 
     # data_used = [9.0, 13.0, 19.0, 28.0]
     # for du in data_used:
     du = 28
     table=pd.DataFrame()
-    # find and load training data files
+    # train and predict on each dataset found in train_folder_path
     for data_set in training_data_sets:
         print("dataset", data_set)
         x_data, y_data = load_dataset(data_set, train_folder_path)
@@ -64,6 +71,7 @@ if __name__ == "__main__":
 
         y_predicted = list()
         x_train, x_test, y_train, y_test = process_train_data(x_data, y_data, du/100, 0)
+
         # fit the model
         trace_pymc = mcmc_fit(x_train, y_train, used_eq, data_set)
 
@@ -73,6 +81,8 @@ if __name__ == "__main__":
         y_runtime = y_test
         hp_values = []
         equation = ""
+
+        # for each model used for training do the predictions
         for equation in used_eq:
             model = Model()
             with model:
@@ -94,7 +104,7 @@ if __name__ == "__main__":
         #                                      data_set, du)])
         y_predicted = list()
         # table.to_csv("rf_" + str(du) + ".csv")
-        table.to_html("sgd_avg_" + str(du) + ".html")
+        table.to_html("tables/dt_sample" + str(du) + ".html")
         print("end")
         # pdb.set_trace()
 

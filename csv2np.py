@@ -1,5 +1,4 @@
-# this script takes all the csv data files from inside 'datasets' folder and converts them to np arrays and put them
-# in runtimes folder.
+
 import os
 import csv
 import sys
@@ -10,6 +9,9 @@ from mpl_toolkits.mplot3d import Axes3D
 from matplotlib import cm
 from matplotlib.ticker import LinearLocator, FormatStrFormatter
 
+
+# this script takes all the csv data files from inside 'datasets' folder and converts them to np arrays and put them
+# in "runtimes" folder.
 if __name__ == "__main__":
 
     sgd_graphs = list()

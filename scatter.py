@@ -8,6 +8,12 @@ sns.set(font_scale=1.75)
 
 
 def scatter_plot(algo_datasize, num_classes):
+    """
+    plots a scatter plot comparing predicted vs true runtimes
+    :param algo_datasize: file that contains the data
+    :param num_classes: array that contains number of classes of each dataset
+    :return:
+    """
 
     file_path = 'scatterplot/' + algo_datasize
     data = np.loadtxt(file_path, skiprows=1)
